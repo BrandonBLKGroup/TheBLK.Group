@@ -49,7 +49,7 @@
 ## 📋 What's Included
 
 ### Pages
-- **Home:** Dual value prop (sellers/buyers), awards bar, stats (700+ homes, 12 years, 6 agents)
+- **Home:** Dual value prop (sellers/buyers), awards bar, stats (700+ homes, 35+ years combined experience, 6 agents)
 - **Selling:** 30 Day Marketing Strategy breakdown, 3% commission callout, inquiry form
 - **Buying:** Off-market access, showing scheduler, home details form
 - **Team:** Brandon Bruning, Amanda Mitchell, Shelley Lisko, Brad Lisko, Kevin Cloud
