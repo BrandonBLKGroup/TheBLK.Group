@@ -36,8 +36,8 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #111111;
-            color: #ffffff;
+            background: #FAFAFA;
+            color: #111111;
             line-height: 1.6;
         }
         
@@ -49,12 +49,11 @@
         
         /* Header */
         header {
-            background: #111111;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            background: #FFFFFF;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid #222;
         }
         
         nav {
@@ -67,13 +66,13 @@
         .logo {
             font-size: 24px;
             font-weight: 700;
-            color: #ffffff;
+            color: #111111;
         }
         
         .logo-lpt {
             font-size: 14px;
-            color: #B8960C;
-            font-weight: 500;
+            color: #666666;
+            font-weight: 400;
         }
         
         .nav-links {
@@ -84,7 +83,7 @@
         
         .nav-links a {
             text-decoration: none;
-            color: #ffffff;
+            color: #333333;
             font-weight: 500;
             transition: color 0.3s;
         }
@@ -95,12 +94,11 @@
         
         .nav-links a.active {
             color: #B8960C;
-            border-bottom: 2px solid #B8960C;
         }
         
         /* Hero */
         .hero {
-            background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+            background: #FFFFFF;
             padding: 80px 0;
             text-align: center;
         }
@@ -109,12 +107,12 @@
             font-size: 48px;
             font-weight: 700;
             margin-bottom: 20px;
-            color: #ffffff;
+            color: #111111;
         }
         
         .hero .tagline {
             font-size: 24px;
-            color: #aaaaaa;
+            color: #666666;
             margin-bottom: 40px;
         }
         
@@ -126,29 +124,28 @@
         }
         
         .value-card {
-            background: #1a1a1a;
+            background: white;
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #222;
+            border: 1px solid #E8E8E8;
         }
         
         .value-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(184, 150, 12, 0.3);
-            border-color: #B8960C;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
         }
         
         .value-card h3 {
             font-size: 28px;
             margin-bottom: 15px;
-            color: #B8960C;
+            color: #111111;
         }
         
         .value-card p {
             font-size: 18px;
-            color: #aaaaaa;
+            color: #666666;
             margin-bottom: 20px;
         }
         
@@ -156,9 +153,9 @@
             display: inline-block;
             padding: 15px 40px;
             background: #B8960C;
-            color: #111111;
+            color: white;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 6px;
             font-weight: 600;
             transition: background 0.3s, transform 0.2s;
             border: none;
@@ -173,19 +170,21 @@
         
         /* Awards Bar */
         .awards {
-            background: #0a0a0a;
+            background: #111111;
             color: white;
-            padding: 30px 0;
+            padding: 40px 0;
             text-align: center;
-            border-top: 1px solid #222;
-            border-bottom: 1px solid #222;
+        }
+        
+        .awards h2 {
+            color: white;
+            margin-bottom: 30px;
         }
         
         .awards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
-            margin-top: 20px;
         }
         
         .award-item {
@@ -200,12 +199,12 @@
         
         .award-item p {
             font-size: 14px;
-            color: #cccccc;
+            color: #CCCCCC;
         }
         
         /* Stats */
         .stats {
-            background: #111111;
+            background: white;
             padding: 60px 0;
             text-align: center;
         }
@@ -225,13 +224,13 @@
         
         .stat-item p {
             font-size: 18px;
-            color: #aaaaaa;
+            color: #666666;
         }
         
         /* Section Pages */
         .section {
             display: none;
-            padding: 80px 0;
+            padding: 60px 0;
         }
         
         .section.active {
@@ -242,29 +241,30 @@
             font-size: 42px;
             margin-bottom: 30px;
             text-align: center;
-            color: #ffffff;
+            color: #111111;
         }
         
         .section-intro {
             font-size: 20px;
             text-align: center;
-            color: #aaaaaa;
+            color: #666666;
             max-width: 800px;
             margin: 0 auto 50px;
         }
         
         /* Selling Page */
         .marketing-strategy {
-            background: #1a1a1a;
-            padding: 60px;
-            border-radius: 12px;
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
             margin-bottom: 50px;
-            border: 1px solid #222;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border: 1px solid #E8E8E8;
         }
         
         .marketing-strategy h3 {
             font-size: 32px;
-            color: #B8960C;
+            color: #111111;
             margin-bottom: 20px;
         }
         
@@ -276,8 +276,8 @@
         .strategy-points li {
             font-size: 18px;
             padding: 15px 0;
-            border-bottom: 1px solid #333;
-            color: #cccccc;
+            border-bottom: 1px solid #E8E8E8;
+            color: #333333;
         }
         
         .strategy-points li:last-child {
@@ -286,34 +286,34 @@
         
         .commission-callout {
             background: linear-gradient(135deg, #B8960C 0%, #8B7209 100%);
-            color: #111111;
+            color: white;
             padding: 40px;
-            border-radius: 12px;
+            border-radius: 8px;
             text-align: center;
             margin-bottom: 50px;
-            box-shadow: 0 4px 20px rgba(184, 150, 12, 0.3);
+            box-shadow: 0 4px 16px rgba(184, 150, 12, 0.25);
         }
         
         .commission-callout h3 {
             font-size: 36px;
             margin-bottom: 15px;
-            color: #111111;
+            color: white;
         }
         
         .commission-callout p {
             font-size: 20px;
-            color: #111111;
+            color: white;
         }
         
         /* Forms */
         .form-container {
-            background: #1a1a1a;
+            background: white;
             padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             max-width: 700px;
             margin: 0 auto;
-            border: 1px solid #222;
+            border: 1px solid #E8E8E8;
         }
         
         .form-group {
@@ -324,7 +324,7 @@
             display: block;
             font-weight: 600;
             margin-bottom: 8px;
-            color: #ffffff;
+            color: #111111;
         }
         
         .form-group input,
@@ -332,12 +332,12 @@
         .form-group select {
             width: 100%;
             padding: 12px;
-            border: 2px solid #333;
-            border-radius: 8px;
+            border: 2px solid #E8E8E8;
+            border-radius: 6px;
             font-size: 16px;
             transition: border-color 0.3s;
-            background: #0a0a0a;
-            color: #ffffff;
+            background: #FAFAFA;
+            color: #111111;
         }
         
         .form-group input:focus,
@@ -345,6 +345,7 @@
         .form-group select:focus {
             outline: none;
             border-color: #B8960C;
+            background: white;
         }
         
         .form-group textarea {
@@ -353,66 +354,65 @@
         }
         
         .form-group select option {
-            background: #111111;
-            color: #ffffff;
+            background: white;
+            color: #111111;
         }
         
         /* Team */
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
+            gap: 30px;
             margin-top: 50px;
         }
         
         .team-member {
             text-align: center;
-            padding: 30px;
-            background: #1a1a1a;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-            border: 1px solid #222;
+            padding: 40px 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border: 1px solid #E8E8E8;
             transition: transform 0.3s, box-shadow 0.3s;
         }
         
         .team-member:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(184, 150, 12, 0.3);
-            border-color: #B8960C;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
         }
         
         .team-member-photo {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            background: #0a0a0a;
+            background: #F5F5F5;
             margin: 0 auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 48px;
+            font-size: 36px;
             color: #B8960C;
-            border: 3px solid #222;
+            border: 3px solid #E8E8E8;
+            font-weight: 700;
         }
         
         .team-member h4 {
             font-size: 22px;
             margin-bottom: 10px;
-            color: #ffffff;
+            color: #111111;
         }
         
         .team-member p {
-            color: #aaaaaa;
+            color: #666666;
             font-size: 16px;
         }
         
         /* Footer */
         footer {
-            background: #0a0a0a;
+            background: #111111;
             color: white;
             padding: 50px 0 30px;
             text-align: center;
-            border-top: 1px solid #222;
         }
         
         footer .footer-logo {
@@ -459,11 +459,7 @@
                 grid-template-columns: 1fr;
             }
             
-            .form-container {
-                padding: 30px 20px;
-            }
-            
-            .marketing-strategy {
+            .form-container, .marketing-strategy {
                 padding: 30px 20px;
             }
         }
@@ -801,7 +797,6 @@ Source: theblk.group/selling
 Timestamp: ${new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' })}
             `.trim();
             
-            // Send email (using mailto for now - can be upgraded to backend)
             window.location.href = `mailto:BrandonBLKGroup@Gmail.com?subject=New Seller Lead - ${data.name}&body=${encodeURIComponent(emailBody)}`;
             
             alert('Thank you! Your information has been sent. We will contact you within 24 hours.');
@@ -830,7 +825,6 @@ Source: theblk.group/buying
 Timestamp: ${new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' })}
             `.trim();
             
-            // Send email (using mailto for now - can be upgraded to backend)
             window.location.href = `mailto:BrandonBLKGroup@Gmail.com?subject=New Buyer Lead - ${data.name}&body=${encodeURIComponent(emailBody)}`;
             
             alert('Thank you! Your information has been sent. We will contact you within 24 hours.');
