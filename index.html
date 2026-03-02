@@ -390,7 +390,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.96);
+            background: rgba(0, 0, 0, 0.5);
             z-index: 3000;
             align-items: flex-start;
             justify-content: center;
@@ -731,10 +731,10 @@
     </footer>
     
     <!-- Seller Modal -->
-    <div id="seller-modal" class="modal">
+    <div id="seller-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="seller-modal-title">
         <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <h3>Sell Your Home</h3>
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h3 id="seller-modal-title">Sell Your Home</h3>
             <form id="seller-form">
                 <div class="form-group">
                     <label for="seller-name">Full Name *</label>
@@ -767,16 +767,16 @@
                     <label for="seller-notes">Additional Information</label>
                     <textarea id="seller-notes" name="notes"></textarea>
                 </div>
-                <button type="submit" class="btn" style="width: 100%; padding: 18px;">Get My Free Valuation</button>
+                <button type="submit" class="btn" style="width: 100%; padding: 18px;">See our 30 Day Listing Strategy</button>
             </form>
         </div>
     </div>
     
     <!-- Buyer Modal -->
-    <div id="buyer-modal" class="modal">
+    <div id="buyer-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="buyer-modal-title">
         <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <h3>Find Your Home</h3>
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h3 id="buyer-modal-title">Find Your Home</h3>
             <form id="buyer-form">
                 <div class="form-group">
                     <label for="buyer-name">Full Name *</label>
@@ -826,7 +826,7 @@
                     <label for="buyer-details">Dream Home Details</label>
                     <textarea id="buyer-details" name="details" placeholder="Bedrooms, bathrooms, must-haves..."></textarea>
                 </div>
-                <button type="submit" class="btn" style="width: 100%; padding: 18px;">Start My Home Search</button>
+                <button type="submit" class="btn" style="width: 100%; padding: 18px;">Start my home hunt</button>
             </form>
         </div>
     </div>
