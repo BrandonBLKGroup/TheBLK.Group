@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The BLK Group at LPT Realty | #1 Real Estate Team in Central Arkansas</title>
-    <meta name="description" content="The BLK Group at LPT Realty - Arkansas' #1 real estate team. 30 Day Marketing Strategy, 3% commission. 700+ homes sold, 12 years experience. Solutions for every corner of Arkansas.">
+    <meta name="description" content="The BLK Group at LPT Realty - Arkansas' #1 real estate team. 30 Day Marketing Strategy, 3% commission. 700+ homes sold, 35+ years combined experience.">
     <meta name="keywords" content="The BLK Group, LPT Realty, Arkansas real estate, Central Arkansas homes, Brandon Bruning, 30 Day Marketing Strategy">
     <link rel="canonical" href="https://theblk.group">
     
@@ -34,373 +34,404 @@
             box-sizing: border-box;
         }
         
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #FAFAFA;
-            color: #111111;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        /* LPT Banner */
+        .lpt-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 12px 0;
+            text-align: center;
+            z-index: 2000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lpt-banner img {
+            height: 50px;
+            width: auto;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url('hero-bg.png') center/cover no-repeat fixed;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 80px;
+        }
+        
+        .hero-logo {
+            width: 320px;
+            height: 320px;
+            margin: 0 auto 60px;
+            filter: brightness(0) invert(1);
+        }
+        
+        .hero h1 {
+            font-size: 72px;
+            font-weight: 200;
+            letter-spacing: 8px;
+            margin-bottom: 30px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+        
+        .hero .tagline {
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 5px;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 300;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+        
+        /* Content Sections */
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+            background: #000000;
+        }
+        
+        .section {
+            min-height: 100vh;
+            padding: 120px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            width: 100%;
         }
         
-        /* LPT Banner */
-        .lpt-banner {
-            background: #FFFFFF;
-            padding: 15px 0;
-            text-align: center;
-            border-bottom: 1px solid #E8E8E8;
-        }
-        
-        .lpt-banner img {
-            height: 60px;
-            width: auto;
-        }
-        
-        /* Header */
-        header {
-            background: #FFFFFF;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #111111;
-        }
-        
-        .logo-lpt {
-            font-size: 14px;
-            color: #666666;
-            font-weight: 400;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: #333333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: #B8960C;
-        }
-        
-        .nav-links a.active {
-            color: #B8960C;
-        }
-        
-        /* Hero */
-        .hero {
-            background: #FFFFFF;
-            padding: 80px 0;
-            text-align: center;
-        }
-        
-        .logo-hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 60px;
-            margin-bottom: 50px;
-            padding: 0 20px;
-        }
-        
-        .logo-hero-left {
-            flex-shrink: 0;
-        }
-        
-        .logo-hero-left img {
-            width: 200px;
-            height: 200px;
-            display: block;
-        }
-        
-        .logo-hero-divider {
-            width: 2px;
-            height: 150px;
-            background: #B8960C;
-            flex-shrink: 0;
-        }
-        
-        .logo-hero-right {
-            text-align: center;
-        }
-        
-        .logo-hero-right h1 {
-            font-size: 56px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #111111;
-            line-height: 1.1;
-        }
-        
-        .logo-hero-right .tagline {
-            font-size: 14px;
-            color: #999999;
-            font-weight: 300;
-            letter-spacing: 3px;
-        }
-        
-        .hero h1 {
+        .section-title {
             font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #111111;
-        }
-        
-        .hero .tagline {
-            font-size: 24px;
-            color: #666666;
-            margin-bottom: 40px;
-        }
-        
-        .value-props {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .value-card {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #E8E8E8;
-        }
-        
-        .value-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-        }
-        
-        .value-card h3 {
-            font-size: 28px;
-            margin-bottom: 15px;
-            color: #111111;
-        }
-        
-        .value-card p {
-            font-size: 18px;
-            color: #666666;
-            margin-bottom: 20px;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
-            background: #B8960C;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: background 0.3s, transform 0.2s;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        
-        .btn:hover {
-            background: #8B7209;
-            transform: translateY(-2px);
-        }
-        
-        /* Awards Bar */
-        .awards {
-            background: #111111;
-            color: white;
-            padding: 80px 0;
+            font-weight: 200;
+            letter-spacing: 8px;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 400px;
+            margin-bottom: 80px;
+            text-transform: uppercase;
+            color: #ffffff;
         }
         
-        .awards h2 {
-            color: #FFFFFF !important;
-            margin-bottom: 50px;
+        /* Awards Section */
+        .awards {
+            background: #000000;
         }
         
         .awards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            align-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 60px;
+            margin-top: 40px;
         }
         
         .award-item {
-            padding: 20px;
+            text-align: center;
+            padding: 40px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .award-item:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-10px);
         }
         
         .award-item h4 {
             font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 2px;
             color: #B8960C;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
         }
         
         .award-item p {
             font-size: 14px;
-            color: #CCCCCC;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 1px;
         }
         
-        /* Stats */
+        /* Stats Section */
         .stats {
-            background: white;
-            padding: 60px 0;
-            text-align: center;
+            background: #0a0a0a;
         }
         
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-top: 40px;
+            gap: 80px;
+            margin-top: 60px;
+        }
+        
+        .stat-item {
+            text-align: center;
         }
         
         .stat-item h3 {
-            font-size: 48px;
+            font-size: 72px;
+            font-weight: 200;
             color: #B8960C;
-            margin-bottom: 10px;
-        }
-        
-        .stat-item p {
-            font-size: 18px;
-            color: #666666;
-        }
-        
-        /* Section Pages */
-        .section {
-            display: none;
-            padding: 60px 0;
-        }
-        
-        .section.active {
-            display: block;
-        }
-        
-        .section h2 {
-            font-size: 42px;
-            margin-bottom: 30px;
-            text-align: center;
-            color: #111111;
-        }
-        
-        .section-intro {
-            font-size: 20px;
-            text-align: center;
-            color: #666666;
-            max-width: 800px;
-            margin: 0 auto 50px;
-        }
-        
-        /* Selling Page */
-        .marketing-strategy {
-            background: white;
-            padding: 50px;
-            border-radius: 8px;
-            margin-bottom: 50px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            border: 1px solid #E8E8E8;
-        }
-        
-        .marketing-strategy h3 {
-            font-size: 32px;
-            color: #111111;
             margin-bottom: 20px;
         }
         
-        .strategy-points {
-            list-style: none;
-            padding: 0;
+        .stat-item p {
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
         }
         
-        .strategy-points li {
-            font-size: 18px;
-            padding: 15px 0;
-            border-bottom: 1px solid #E8E8E8;
-            color: #333333;
+        /* Services Section */
+        .services {
+            background: #000000;
         }
         
-        .strategy-points li:last-child {
-            border-bottom: none;
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 60px;
         }
         
-        .commission-callout {
-            background: linear-gradient(135deg, #B8960C 0%, #8B7209 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 8px;
+        .service-card {
+            background: #0a0a0a;
+            padding: 80px 60px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
-            margin-bottom: 50px;
-            box-shadow: 0 4px 16px rgba(184, 150, 12, 0.25);
+            transition: all 0.4s;
         }
         
-        .commission-callout h3 {
+        .service-card:hover {
+            border-color: #B8960C;
+            transform: scale(1.02);
+        }
+        
+        .service-card h3 {
             font-size: 36px;
-            margin-bottom: 15px;
-            color: white;
+            font-weight: 200;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+            color: #ffffff;
+            text-transform: uppercase;
         }
         
-        .commission-callout p {
-            font-size: 20px;
-            color: white;
+        .service-card p {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+            letter-spacing: 1px;
         }
         
-        /* Forms */
-        .form-container {
-            background: white;
-            padding: 50px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            max-width: 700px;
-            margin: 0 auto;
-            border: 1px solid #E8E8E8;
+        .btn {
+            display: inline-block;
+            padding: 18px 50px;
+            background: transparent;
+            color: #ffffff;
+            text-decoration: none;
+            border: 1px solid #ffffff;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #B8960C;
+            border-color: #B8960C;
+            color: #000000;
+        }
+        
+        /* Team Section */
+        .team {
+            background: #0a0a0a;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .team-member {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.03);
+            transition: all 0.3s;
+        }
+        
+        .team-member:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .team-member-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(184, 150, 12, 0.2);
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 300;
+            color: #B8960C;
+            border: 1px solid rgba(184, 150, 12, 0.3);
+        }
+        
+        .team-member h4 {
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        
+        .team-member p {
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+        }
+        
+        /* Contact/Form Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: #0a0a0a;
+            padding: 60px;
+            max-width: 600px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 32px;
+            cursor: pointer;
+            font-weight: 200;
+        }
+        
+        .modal-content h3 {
+            font-size: 32px;
+            font-weight: 200;
+            letter-spacing: 4px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
         }
         
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
         
         .form-group label {
             display: block;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #111111;
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
         }
         
         .form-group input,
         .form-group textarea,
         .form-group select {
             width: 100%;
-            padding: 12px;
-            border: 2px solid #E8E8E8;
-            border-radius: 6px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-            background: #FAFAFA;
-            color: #111111;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 300;
+            transition: all 0.3s;
         }
         
         .form-group input:focus,
@@ -408,7 +439,7 @@
         .form-group select:focus {
             outline: none;
             border-color: #B8960C;
-            background: white;
+            background: rgba(255, 255, 255, 0.08);
         }
         
         .form-group textarea {
@@ -417,230 +448,117 @@
         }
         
         .form-group select option {
-            background: white;
-            color: #111111;
-        }
-        
-        /* Team */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .team-member {
-            text-align: center;
-            padding: 40px 30px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            border: 1px solid #E8E8E8;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .team-member:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-        }
-        
-        .team-member-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: #F5F5F5;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            color: #B8960C;
-            border: 3px solid #E8E8E8;
-            font-weight: 700;
-        }
-        
-        .team-member h4 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #111111;
-        }
-        
-        .team-member p {
-            color: #666666;
-            font-size: 16px;
+            background: #000000;
         }
         
         /* Footer */
         footer {
-            background: #111111;
-            color: white;
-            padding: 50px 0 30px;
+            background: #000000;
+            padding: 60px 20px 40px;
             text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        footer .footer-logo {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 10px;
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 6px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
         }
         
-        footer .footer-lpt {
-            font-size: 16px;
+        .footer-lpt {
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: 2px;
             color: #B8960C;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
         }
         
         footer p {
-            color: #888888;
-            font-size: 14px;
+            font-size: 11px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 1px;
         }
         
         /* Mobile */
         @media (max-width: 768px) {
-            .logo-hero {
-                flex-direction: column;
-                gap: 30px;
-                text-align: center;
-            }
-            
-            .logo-hero-left img {
-                width: 150px;
-                height: 150px;
-                margin: 0 auto;
-            }
-            
-            .logo-hero-divider {
-                width: 100px;
-                height: 2px;
-            }
-            
-            .logo-hero-right {
-                text-align: center;
-            }
-            
-            .logo-hero-right h1 {
-                font-size: 36px;
-            }
-            
-            .logo-hero-right .tagline {
-                font-size: 12px;
+            .hero-logo {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 40px;
             }
             
             .hero h1 {
-                font-size: 32px;
+                font-size: 36px;
+                letter-spacing: 4px;
             }
             
             .hero .tagline {
-                font-size: 18px;
+                font-size: 11px;
+                letter-spacing: 3px;
             }
             
-            .value-props {
+            .section-title {
+                font-size: 32px;
+                letter-spacing: 4px;
+                margin-bottom: 50px;
+            }
+            
+            .services-grid {
                 grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .service-card {
+                padding: 50px 30px;
             }
             
             .stats-grid {
                 grid-template-columns: 1fr;
+                gap: 50px;
             }
             
-            .nav-links {
-                flex-direction: column;
-                gap: 15px;
+            .stat-item h3 {
+                font-size: 56px;
             }
             
             .awards-grid {
                 grid-template-columns: 1fr;
+                gap: 40px;
             }
             
-            .form-container, .marketing-strategy {
-                padding: 30px 20px;
+            .modal-content {
+                padding: 40px 30px;
             }
-        }
-        
-        .hidden {
-            display: none;
         }
     </style>
 </head>
 <body>
-    <!-- LPT Realty Banner -->
+    <!-- LPT Banner -->
     <div class="lpt-banner">
-        <img src="lpt-logo.jpg" alt="LPT Realty - Real Estate Reimagined">
+        <img src="lpt-logo.jpg" alt="LPT Realty">
     </div>
     
-    <header>
-        <div class="container">
-            <nav>
-                <div>
-                    <div class="logo">THE BLK GROUP</div>
-                    <div class="logo-lpt">at LPT Realty</div>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#selling" class="nav-link">Selling</a></li>
-                    <li><a href="#buying" class="nav-link">Buying</a></li>
-                    <li><a href="#team" class="nav-link">Team</a></li>
-                </ul>
-            </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="blk-logo.png" alt="BLK Group Logo" class="hero-logo">
+            <h1>The BLK Group</h1>
+            <p class="tagline">Solutions for Every Corner of Arkansas</p>
         </div>
-    </header>
-
-    <!-- HOME SECTION -->
-    <section id="home-section" class="section active">
-        <div class="hero">
+        <div class="scroll-indicator">Scroll Down</div>
+    </section>
+    
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        
+        <!-- Stats Section -->
+        <section class="section stats">
             <div class="container">
-                <div class="logo-hero">
-                    <div class="logo-hero-left">
-                        <img src="blk-logo.png" alt="BLK Group Logo">
-                    </div>
-                    <div class="logo-hero-divider"></div>
-                    <div class="logo-hero-right">
-                        <h1>The BLK Group</h1>
-                        <p class="tagline">SOLUTIONS FOR EVERY CORNER OF ARKANSAS</p>
-                    </div>
-                </div>
-                
-                <div class="value-props">
-                    <div class="value-card">
-                        <h3>🏠 Sellers</h3>
-                        <p>Ready to sell? Ask us about our 30 Day, 3% Listing Strategy</p>
-                        <a href="#selling" class="btn">Learn More</a>
-                    </div>
-                    <div class="value-card">
-                        <h3>🔑 Buyers</h3>
-                        <p>Let Us Find Your Dream Home - Even If It's Not Listed Yet</p>
-                        <a href="#buying" class="btn">Start Your Search</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="awards">
-            <div class="container">
-                <h2>Award-Winning Excellence</h2>
-                <div class="awards-grid">
-                    <div class="award-item">
-                        <h4>🏆 #1 Team in Central Arkansas</h4>
-                        <p>2025 by Sales Volume</p>
-                    </div>
-                    <div class="award-item">
-                        <h4>🥇 #1 Team in LPT Realty Arkansas</h4>
-                        <p>2025</p>
-                    </div>
-                    <div class="award-item">
-                        <h4>💎 Pinnacle Diamond</h4>
-                        <p>30M+ in Sales 2025</p>
-                    </div>
-                    <div class="award-item">
-                        <h4>⭐ Best Realtors</h4>
-                        <p>Little Rock Soiree 2025</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="stats">
-            <div class="container">
-                <h2>Proven Track Record</h2>
+                <h2 class="section-title">By The Numbers</h2>
                 <div class="stats-grid">
                     <div class="stat-item">
                         <h3>700+</h3>
@@ -648,7 +566,7 @@
                     </div>
                     <div class="stat-item">
                         <h3>35+</h3>
-                        <p>Years of Combined Experience</p>
+                        <p>Years Combined Experience</p>
                     </div>
                     <div class="stat-item">
                         <h3>6</h3>
@@ -656,230 +574,230 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- SELLING SECTION -->
-    <section id="selling-section" class="section">
-        <div class="container">
-            <h2>Sell Your Home with The BLK Group at LPT Realty</h2>
-            <p class="section-intro">Get more money, pay less commission, and sell faster with our proven 30 Day Marketing Strategy.</p>
-
-            <div class="commission-callout">
-                <h3>Only 3% Commission</h3>
-                <p>Save thousands compared to traditional 6% rates while getting premium marketing and service</p>
-            </div>
-
-            <div class="marketing-strategy">
-                <h3>Our 30 Day Marketing Strategy</h3>
-                <ul class="strategy-points">
-                    <li>✓ Professional photography and video tours within 24 hours</li>
-                    <li>✓ Strategic pricing analysis using our proprietary market data</li>
-                    <li>✓ Multi-channel marketing: MLS, social media, email campaigns, direct mail</li>
-                    <li>✓ Targeted advertising to our database of active buyers</li>
-                    <li>✓ Weekly open houses and private showings</li>
-                    <li>✓ Daily communication and feedback from showings</li>
-                    <li>✓ Featured listing on our Make[Area]Home.com network</li>
-                    <li>✓ Access to our off-market buyer network</li>
-                </ul>
-            </div>
-
-            <div class="form-container">
-                <h3 style="text-align: center; margin-bottom: 30px;">Get Your Free Home Valuation</h3>
-                <form id="seller-form">
-                    <div class="form-group">
-                        <label for="seller-name">Full Name *</label>
-                        <input type="text" id="seller-name" name="name" required>
+        </section>
+        
+        <!-- Awards Section -->
+        <section class="section awards">
+            <div class="container">
+                <h2 class="section-title">Award-Winning Excellence</h2>
+                <div class="awards-grid">
+                    <div class="award-item">
+                        <h4>#1 Team</h4>
+                        <p>Central Arkansas 2025<br>by Sales Volume</p>
                     </div>
-                    <div class="form-group">
-                        <label for="seller-email">Email *</label>
-                        <input type="email" id="seller-email" name="email" required>
+                    <div class="award-item">
+                        <h4>#1 LPT Realty</h4>
+                        <p>Arkansas 2025</p>
                     </div>
-                    <div class="form-group">
-                        <label for="seller-phone">Phone *</label>
-                        <input type="tel" id="seller-phone" name="phone" required>
+                    <div class="award-item">
+                        <h4>Pinnacle Diamond</h4>
+                        <p>30M+ in Sales 2025</p>
                     </div>
-                    <div class="form-group">
-                        <label for="seller-address">Property Address *</label>
-                        <input type="text" id="seller-address" name="address" required>
+                    <div class="award-item">
+                        <h4>Best Realtors</h4>
+                        <p>Little Rock Soiree 2025</p>
                     </div>
-                    <div class="form-group">
-                        <label for="seller-timeline">When are you thinking of selling? *</label>
-                        <select id="seller-timeline" name="timeline" required>
-                            <option value="">Select timeline</option>
-                            <option value="asap">ASAP</option>
-                            <option value="1-3months">1-3 Months</option>
-                            <option value="3-6months">3-6 Months</option>
-                            <option value="6-12months">6-12 Months</option>
-                            <option value="exploring">Just Exploring</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="seller-notes">Additional Information</label>
-                        <textarea id="seller-notes" name="notes"></textarea>
-                    </div>
-                    <button type="submit" class="btn" style="width: 100%;">Get My Free Valuation</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- BUYING SECTION -->
-    <section id="buying-section" class="section">
-        <div class="container">
-            <h2>Find Your Dream Home with The BLK Group at LPT Realty</h2>
-            <p class="section-intro">Whether you're a first-time buyer or a seasoned homeowner, we have the tools and expertise to help you find the perfect home - even if it's not on the market yet.</p>
-
-            <div class="value-props" style="margin-bottom: 50px;">
-                <div class="value-card">
-                    <h3>Off-Market Access</h3>
-                    <p>We have exclusive access to homes that aren't listed publicly. Tell us what you're looking for, and we'll find it.</p>
-                </div>
-                <div class="value-card">
-                    <h3>Expert Guidance</h3>
-                    <p>From first-time buyers to experienced investors, we guide you through every step of the home buying process.</p>
                 </div>
             </div>
-
-            <div class="form-container">
-                <h3 style="text-align: center; margin-bottom: 30px;">Let's Find Your Perfect Home</h3>
-                <form id="buyer-form">
-                    <div class="form-group">
-                        <label for="buyer-name">Full Name *</label>
-                        <input type="text" id="buyer-name" name="name" required>
+        </section>
+        
+        <!-- Services Section -->
+        <section class="section services">
+            <div class="container">
+                <h2 class="section-title">What We Do</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Selling</h3>
+                        <p>Ready to sell? Ask us about our 30 Day, 3% Listing Strategy</p>
+                        <a href="#" class="btn open-seller-modal">Learn More</a>
                     </div>
-                    <div class="form-group">
-                        <label for="buyer-email">Email *</label>
-                        <input type="email" id="buyer-email" name="email" required>
+                    <div class="service-card">
+                        <h3>Buying</h3>
+                        <p>Let Us Find Your Dream Home - Even If It's Not Listed Yet</p>
+                        <a href="#" class="btn open-buyer-modal">Start Your Search</a>
                     </div>
-                    <div class="form-group">
-                        <label for="buyer-phone">Phone *</label>
-                        <input type="tel" id="buyer-phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="buyer-price">Price Range *</label>
-                        <select id="buyer-price" name="price" required>
-                            <option value="">Select price range</option>
-                            <option value="under200k">Under $200K</option>
-                            <option value="200-300k">$200K - $300K</option>
-                            <option value="300-400k">$300K - $400K</option>
-                            <option value="400-500k">$400K - $500K</option>
-                            <option value="500-750k">$500K - $750K</option>
-                            <option value="750k-1m">$750K - $1M</option>
-                            <option value="over1m">Over $1M</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="buyer-areas">Preferred Areas in Arkansas</label>
-                        <input type="text" id="buyer-areas" name="areas" placeholder="e.g. Chenal Valley, Hillcrest, Conway">
-                    </div>
-                    <div class="form-group">
-                        <label for="buyer-timeline">When are you looking to buy? *</label>
-                        <select id="buyer-timeline" name="timeline" required>
-                            <option value="">Select timeline</option>
-                            <option value="asap">ASAP</option>
-                            <option value="1-3months">1-3 Months</option>
-                            <option value="3-6months">3-6 Months</option>
-                            <option value="6-12months">6-12 Months</option>
-                            <option value="exploring">Just Exploring</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="buyer-showing">Want to Schedule a Showing?</label>
-                        <input type="text" id="buyer-showing" name="showing" placeholder="Property address (optional)">
-                    </div>
-                    <div class="form-group">
-                        <label for="buyer-details">Tell Us About Your Dream Home</label>
-                        <textarea id="buyer-details" name="details" placeholder="Bedrooms, bathrooms, must-haves, etc."></textarea>
-                    </div>
-                    <button type="submit" class="btn" style="width: 100%;">Start My Home Search</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- TEAM SECTION -->
-    <section id="team-section" class="section">
-        <div class="container">
-            <h2>Meet Our Team</h2>
-            <p class="section-intro">Six dedicated professionals committed to helping you achieve your real estate goals across Arkansas.</p>
-
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="team-member-photo">BB</div>
-                    <h4>Brandon Bruning</h4>
-                    <p>Team Leader</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-member-photo">AM</div>
-                    <h4>Amanda Mitchell</h4>
-                    <p>Realtor</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-member-photo">SL</div>
-                    <h4>Shelley Lisko</h4>
-                    <p>Realtor</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-member-photo">BL</div>
-                    <h4>Brad Lisko</h4>
-                    <p>Realtor</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-member-photo">KC</div>
-                    <h4>Kevin Cloud</h4>
-                    <p>Realtor</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
+        </section>
+        
+        <!-- Team Section -->
+        <section class="section team">
+            <div class="container">
+                <h2 class="section-title">Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-member-photo">BB</div>
+                        <h4>Brandon Bruning</h4>
+                        <p>Team Leader</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-photo">AM</div>
+                        <h4>Amanda Mitchell</h4>
+                        <p>Realtor</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-photo">SL</div>
+                        <h4>Shelley Lisko</h4>
+                        <p>Realtor</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-photo">BL</div>
+                        <h4>Brad Lisko</h4>
+                        <p>Realtor</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-photo">KC</div>
+                        <h4>Kevin Cloud</h4>
+                        <p>Realtor</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
             <div class="footer-logo">THE BLK GROUP</div>
             <div class="footer-lpt">at LPT Realty</div>
             <p>&copy; 2026 The BLK Group at LPT Realty. All rights reserved.</p>
-            <p style="margin-top: 10px;">Solutions for Every Corner of Arkansas</p>
+            <p style="margin-top: 15px;">Solutions for Every Corner of Arkansas</p>
+        </footer>
+        
+    </div>
+    
+    <!-- Seller Modal -->
+    <div id="seller-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3>Sell Your Home</h3>
+            <form id="seller-form">
+                <div class="form-group">
+                    <label for="seller-name">Full Name *</label>
+                    <input type="text" id="seller-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="seller-email">Email *</label>
+                    <input type="email" id="seller-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="seller-phone">Phone *</label>
+                    <input type="tel" id="seller-phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="seller-address">Property Address *</label>
+                    <input type="text" id="seller-address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="seller-timeline">Timeline *</label>
+                    <select id="seller-timeline" name="timeline" required>
+                        <option value="">Select timeline</option>
+                        <option value="asap">ASAP</option>
+                        <option value="1-3months">1-3 Months</option>
+                        <option value="3-6months">3-6 Months</option>
+                        <option value="6-12months">6-12 Months</option>
+                        <option value="exploring">Just Exploring</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="seller-notes">Additional Information</label>
+                    <textarea id="seller-notes" name="notes"></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Get My Free Valuation</button>
+            </form>
         </div>
-    </footer>
-
+    </div>
+    
+    <!-- Buyer Modal -->
+    <div id="buyer-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3>Find Your Home</h3>
+            <form id="buyer-form">
+                <div class="form-group">
+                    <label for="buyer-name">Full Name *</label>
+                    <input type="text" id="buyer-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="buyer-email">Email *</label>
+                    <input type="email" id="buyer-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="buyer-phone">Phone *</label>
+                    <input type="tel" id="buyer-phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="buyer-price">Price Range *</label>
+                    <select id="buyer-price" name="price" required>
+                        <option value="">Select price range</option>
+                        <option value="under200k">Under $200K</option>
+                        <option value="200-300k">$200K - $300K</option>
+                        <option value="300-400k">$300K - $400K</option>
+                        <option value="400-500k">$400K - $500K</option>
+                        <option value="500-750k">$500K - $750K</option>
+                        <option value="750k-1m">$750K - $1M</option>
+                        <option value="over1m">Over $1M</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="buyer-areas">Preferred Areas</label>
+                    <input type="text" id="buyer-areas" name="areas" placeholder="e.g. Chenal Valley, Hillcrest, Conway">
+                </div>
+                <div class="form-group">
+                    <label for="buyer-timeline">Timeline *</label>
+                    <select id="buyer-timeline" name="timeline" required>
+                        <option value="">Select timeline</option>
+                        <option value="asap">ASAP</option>
+                        <option value="1-3months">1-3 Months</option>
+                        <option value="3-6months">3-6 Months</option>
+                        <option value="6-12months">6-12 Months</option>
+                        <option value="exploring">Just Exploring</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="buyer-showing">Showing Request (Optional)</label>
+                    <input type="text" id="buyer-showing" name="showing" placeholder="Property address">
+                </div>
+                <div class="form-group">
+                    <label for="buyer-details">Dream Home Details</label>
+                    <textarea id="buyer-details" name="details" placeholder="Bedrooms, bathrooms, must-haves..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Start My Home Search</button>
+            </form>
+        </div>
+    </div>
+    
     <script>
-        // Navigation routing
-        const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('.section');
+        // Modal functionality
+        const sellerModal = document.getElementById('seller-modal');
+        const buyerModal = document.getElementById('buyer-modal');
+        const openSellerBtns = document.querySelectorAll('.open-seller-modal');
+        const openBuyerBtns = document.querySelectorAll('.open-buyer-modal');
+        const closeBtns = document.querySelectorAll('.modal-close');
         
-        function showSection(sectionId) {
-            sections.forEach(s => s.classList.remove('active'));
-            navLinks.forEach(l => l.classList.remove('active'));
-            
-            const targetSection = document.getElementById(sectionId + '-section');
-            if (targetSection) {
-                targetSection.classList.add('active');
-            }
-            
-            const targetLink = document.querySelector(`a[href="#${sectionId}"]`);
-            if (targetLink) {
-                targetLink.classList.add('active');
-            }
-            
-            window.scrollTo(0, 0);
-        }
-        
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
+        openSellerBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
                 e.preventDefault();
-                const sectionId = link.getAttribute('href').substring(1);
-                window.location.hash = sectionId;
-                showSection(sectionId);
+                sellerModal.classList.add('active');
             });
         });
         
-        // Handle hash on load
-        window.addEventListener('load', () => {
-            const hash = window.location.hash.substring(1);
-            if (hash) {
-                showSection(hash);
-            }
+        openBuyerBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                buyerModal.classList.add('active');
+            });
+        });
+        
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                sellerModal.classList.remove('active');
+                buyerModal.classList.remove('active');
+            });
+        });
+        
+        // Close modal on outside click
+        window.addEventListener('click', (e) => {
+            if (e.target === sellerModal) sellerModal.classList.remove('active');
+            if (e.target === buyerModal) buyerModal.classList.remove('active');
         });
         
         // Seller Form
@@ -898,7 +816,7 @@ Property Address: ${data.address}
 Timeline: ${data.timeline}
 Additional Notes: ${data.notes || 'None'}
 
-Source: theblk.group/selling
+Source: theblk.group
 Timestamp: ${new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' })}
             `.trim();
             
@@ -906,6 +824,7 @@ Timestamp: ${new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' })
             
             alert('Thank you! Your information has been sent. We will contact you within 24 hours.');
             e.target.reset();
+            sellerModal.classList.remove('active');
         });
         
         // Buyer Form
@@ -926,7 +845,7 @@ Timeline: ${data.timeline}
 Showing Request: ${data.showing || 'None'}
 Dream Home Details: ${data.details || 'None'}
 
-Source: theblk.group/buying
+Source: theblk.group
 Timestamp: ${new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' })}
             `.trim();
             
@@ -934,6 +853,7 @@ Timestamp: ${new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' })
             
             alert('Thank you! Your information has been sent. We will contact you within 24 hours.');
             e.target.reset();
+            buyerModal.classList.remove('active');
         });
     </script>
 </body>
