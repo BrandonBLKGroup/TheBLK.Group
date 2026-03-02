@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-Listing Checklist | The BLK Group</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  
+  * { margin:0; padding:0; box-sizing:border-box; }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+  }
+
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 0 32px;
+    border-bottom: 1px solid rgba(184,150,12,0.2);
+    margin-bottom: 36px;
+  }
+  .header h2 {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #B8960C;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .header h3 {
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #666;
+    text-transform: uppercase;
+  }
+
+  /* Title Block */
+  .title-block {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .title-block .icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+  .title-block h1 {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .title-block .subtitle {
+    font-size: 11px;
+    color: #888;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .title-block .line {
+    width: 60px;
+    height: 2px;
+    background: #B8960C;
+    margin: 16px auto 0;
+  }
+
+  /* Timing Badge */
+  .timing {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .timing span {
+    display: inline-block;
+    background: rgba(184,150,12,0.1);
+    border: 1px solid rgba(184,150,12,0.3);
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #B8960C;
+    letter-spacing: 1px;
+  }
+
+  /* Section */
+  .section {
+    margin-bottom: 32px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .section-icon {
+    font-size: 18px;
+  }
+  .section-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #B8960C;
+  }
+
+  /* Checklist Items */
+  .checklist {
+    list-style: none;
+  }
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ccc;
+  }
+  .checklist li:last-child {
+    border-bottom: none;
+  }
+  .check {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(184,150,12,0.4);
+    border-radius: 4px;
+    margin-top: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .check:hover {
+    border-color: #B8960C;
+    background: rgba(184,150,12,0.1);
+  }
+  .check.done {
+    background: #B8960C;
+    border-color: #B8960C;
+    position: relative;
+  }
+  .check.done::after {
+    content: '✓';
+    position: absolute;
+    top: -1px;
+    left: 3px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+  }
+  .item-text strong {
+    color: #fff;
+    font-weight: 600;
+  }
+  .item-note {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+  }
+
+  /* Pro Tip */
+  .pro-tip {
+    background: rgba(184,150,12,0.06);
+    border: 1px solid rgba(184,150,12,0.15);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-top: 8px;
+    margin-bottom: 32px;
+  }
+  .pro-tip .label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #B8960C;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .pro-tip p {
+    font-size: 13px;
+    color: #999;
+    line-height: 1.6;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding-top: 32px;
+    border-top: 1px solid rgba(184,150,12,0.2);
+    margin-top: 40px;
+  }
+  .footer .brand {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #444;
+    text-transform: uppercase;
+  }
+  .footer .sub {
+    font-size: 9px;
+    color: #333;
+    letter-spacing: 2px;
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+
+  /* Print */
+  @media print {
+    body { background: #fff; color: #000; }
+    .check { border-color: #999; }
+    .section-title { color: #333; }
+    .checklist li { color: #333; }
+    .item-text strong { color: #000; }
+    .pro-tip { border-color: #ccc; }
+    .pro-tip p { color: #555; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <h2>The BLK Group</h2>
+    <h3>at LPT Realty</h3>
+  </div>
+
+  <div class="title-block">
+    <div class="icon">✈️</div>
+    <h1>Pre-Listing Checklist</h1>
+    <div class="subtitle">Your house, photo-ready in one day</div>
+    <div class="line"></div>
+  </div>
+
+  <div class="timing">
+    <span>📸 Complete before photo day</span>
+  </div>
+
+  <!-- KITCHEN -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🍳</span>
+      <span class="section-title">Kitchen</span>
+    </div>
+    <ul class="checklist">
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Clear all countertops.</strong> Everything off. Toaster, knife block, mail, fruit bowl. All of it.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Clean appliance surfaces.</strong> Wipe down fridge, oven, microwave, dishwasher fronts.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Hide dish soap, sponges, and drying racks.</strong> Under the sink for now.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Remove everything from the fridge door.</strong> No magnets, no kids' drawings, no menus.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Empty the sink completely.</strong> No dishes, no standing water.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Clean the floors.</strong> Sweep and mop. Get the corners.</div></div></li>
+    </ul>
+  </div>
+
+  <!-- LIVING AREAS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🛋️</span>
+      <span class="section-title">Living Areas</span>
+    </div>
+    <ul class="checklist">
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Declutter every surface.</strong> Coffee tables, end tables, shelves. Less is more.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Dust everything.</strong> Ceiling fans, blinds, shelves, baseboards, light fixtures.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Fluff and arrange pillows and throws.</strong> Make it look styled, not lived-in.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Remove personal photos and memorabilia.</strong> Buyers need to imagine themselves here.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Hide all cords and cables.</strong> TV cords, chargers, power strips. Out of sight.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Vacuum carpets and rugs.</strong> Vacuum lines photograph well.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Open all blinds and curtains.</strong> Natural light is everything in photos.</div></div></li>
+    </ul>
+  </div>
+
+  <!-- BEDROOMS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🛏️</span>
+      <span class="section-title">Bedrooms</span>
+    </div>
+    <ul class="checklist">
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Make every bed. Hotel-style.</strong> Tight sheets, matching pillows, clean comforter. No wrinkles.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Clear nightstands.</strong> One lamp, maybe one book. That's it.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Empty the floor.</strong> No shoes, no clothes, no hampers visible.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Organize closets.</strong> Buyers WILL open them. Neat hangers, folded clothes, nothing on the floor.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Remove kids' clutter.</strong> Toys in bins, art off the walls. Keep it clean.</div></div></li>
+    </ul>
+  </div>
+
+  <!-- BATHROOMS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🚿</span>
+      <span class="section-title">Bathrooms</span>
+    </div>
+    <ul class="checklist">
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Clear all countertops.</strong> No toothbrushes, razors, or products. Bare counters only.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Put out fresh white towels.</strong> Folded or rolled. White reads clean in photos.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Scrub the shower and tub.</strong> No soap scum, no hair, no product bottles visible.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Close the toilet lid.</strong> Always. No exceptions.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Clean mirrors until they sparkle.</strong> Photographers notice. Buyers notice.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Remove trash cans and bath mats.</strong> For photos, take them out entirely.</div></div></li>
+    </ul>
+  </div>
+
+  <!-- EXTERIOR & CURB APPEAL -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🏡</span>
+      <span class="section-title">Exterior & Curb Appeal</span>
+    </div>
+    <ul class="checklist">
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Mow the lawn and edge the walkways.</strong> First impression is the front yard.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Clear the porch and front entry.</strong> One welcome mat, maybe one plant. That's it.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Hide trash cans and yard tools.</strong> In the garage or behind the house.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Clean the front door.</strong> Wipe it down. Polish the hardware. This is the money shot.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Power wash driveway and walkways</strong> if they need it. Stains photograph badly.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Move vehicles out of the driveway.</strong> Completely clear for photos.</div></div></li>
+    </ul>
+  </div>
+
+  <!-- GARAGE -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🚗</span>
+      <span class="section-title">Garage</span>
+    </div>
+    <ul class="checklist">
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Clear the garage floor.</strong> Buyers want to see space, not storage.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Organize shelving and wall storage.</strong> Neat and tidy beats stuffed and chaotic.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Sweep the floor.</strong> Oil stains? Hit them with degreaser.</div></div></li>
+    </ul>
+  </div>
+
+  <!-- FINAL TOUCHES -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">✨</span>
+      <span class="section-title">Final Touches</span>
+    </div>
+    <ul class="checklist">
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Replace any burnt-out light bulbs.</strong> Every. Single. One. Bright rooms sell.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Turn on every light for photos.</strong> Overhead, lamps, under-cabinet. All of them.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Remove pet items.</strong> Bowls, beds, toys, litter boxes. Not everyone loves pets.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Take out all trash.</strong> Every room. Empty the cans and remove the bags.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Set the thermostat to 72.</strong> Comfortable house feels bigger.</div></div></li>
+      <li><div class="check" onclick="this.classList.toggle('done')"></div><div><div class="item-text"><strong>Leave the house.</strong> You, the kids, the pets. Photographer works best alone.</div></div></li>
+    </ul>
+  </div>
+
+  <div class="pro-tip">
+    <div class="label">Pro Tip</div>
+    <p>The goal is not "clean." The goal is <strong>empty surfaces, maximum light, and zero distractions.</strong> Buyers scroll through photos in seconds. Every detail either helps or hurts. Make every frame count.</p>
+  </div>
+
+  <div class="pro-tip">
+    <div class="label">The #1 Mistake Sellers Make</div>
+    <p>Leaving "just a few things" on the counters. One toaster leads to "well, might as well leave the coffee maker." Before you know it, the kitchen looks lived-in instead of move-in ready. <strong>Clear it all. No exceptions.</strong></p>
+  </div>
+
+  <div class="footer">
+    <div class="brand">The BLK Group</div>
+    <div class="sub">at LPT Realty</div>
+  </div>
+
+</div>
+</body>
+</html>
