@@ -103,6 +103,49 @@
             text-align: center;
         }
         
+        .logo-hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 50px;
+            padding: 0 20px;
+        }
+        
+        .logo-hero-left {
+            flex-shrink: 0;
+        }
+        
+        .logo-hero-left img {
+            width: 200px;
+            height: 200px;
+            display: block;
+        }
+        
+        .logo-hero-divider {
+            width: 2px;
+            height: 150px;
+            background: #B8960C;
+            flex-shrink: 0;
+        }
+        
+        .logo-hero-right {
+            text-align: left;
+        }
+        
+        .logo-hero-right h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #111111;
+            line-height: 1.1;
+        }
+        
+        .logo-hero-right .tagline {
+            font-size: 24px;
+            color: #666666;
+        }
+        
         .hero h1 {
             font-size: 48px;
             font-weight: 700;
@@ -434,6 +477,35 @@
         
         /* Mobile */
         @media (max-width: 768px) {
+            .logo-hero {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+            
+            .logo-hero-left img {
+                width: 150px;
+                height: 150px;
+                margin: 0 auto;
+            }
+            
+            .logo-hero-divider {
+                width: 100px;
+                height: 2px;
+            }
+            
+            .logo-hero-right {
+                text-align: center;
+            }
+            
+            .logo-hero-right h1 {
+                font-size: 36px;
+            }
+            
+            .logo-hero-right .tagline {
+                font-size: 18px;
+            }
+            
             .hero h1 {
                 font-size: 32px;
             }
@@ -491,8 +563,16 @@
     <section id="home-section" class="section active">
         <div class="hero">
             <div class="container">
-                <h1>The BLK Group at LPT Realty</h1>
-                <p class="tagline">Solutions for Every Corner of Arkansas</p>
+                <div class="logo-hero">
+                    <div class="logo-hero-left">
+                        <img src="blk-logo.png" alt="BLK Group Logo">
+                    </div>
+                    <div class="logo-hero-divider"></div>
+                    <div class="logo-hero-right">
+                        <h1>The BLK Group<br>at LPT Realty</h1>
+                        <p class="tagline">Solutions for Every Corner of Arkansas</p>
+                    </div>
+                </div>
                 
                 <div class="value-props">
                     <div class="value-card">
