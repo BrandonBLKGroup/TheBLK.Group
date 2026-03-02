@@ -919,5 +919,54 @@ Time: ${new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' })}
             buyerModal.classList.remove('active');
         });
     </script>
+
+    <!-- JARVIS PUBLIC CHAT WIDGET -->
+    <style>
+      #jarvis-chat-btn{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:#B8960C;border:none;cursor:pointer;z-index:9999;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.3);transition:transform .2s}
+      #jarvis-chat-btn:hover{transform:scale(1.1)}
+      #jarvis-chat-btn svg{width:28px;height:28px;fill:#fff}
+      #jarvis-chat-panel{display:none;position:fixed;bottom:92px;right:24px;width:360px;max-width:calc(100vw - 48px);height:480px;max-height:calc(100vh - 120px);background:#111;border:1px solid rgba(184,150,12,0.3);border-radius:16px;z-index:9999;flex-direction:column;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.5)}
+      #jarvis-chat-panel.open{display:flex}
+      #jarvis-chat-header{padding:14px 18px;background:#0a0a0a;border-bottom:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:space-between}
+      #jarvis-chat-header .jch-title{font-size:14px;font-weight:600;color:#B8960C;letter-spacing:1px}
+      #jarvis-chat-header .jch-sub{font-size:10px;color:#888;margin-top:2px}
+      #jarvis-chat-header .jch-close{background:none;border:none;color:#666;font-size:20px;cursor:pointer;padding:0 4px}
+      #jarvis-chat-header .jch-close:hover{color:#fff}
+      #jarvis-chat-messages{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+      .jmsg{max-width:85%;padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;word-wrap:break-word}
+      .jmsg.user{align-self:flex-end;background:#B8960C;color:#000;border-bottom-right-radius:4px}
+      .jmsg.assistant{align-self:flex-start;background:#1a1a1a;color:#e0e0e0;border:1px solid rgba(255,255,255,0.08);border-bottom-left-radius:4px}
+      .jmsg.typing{align-self:flex-start;background:#1a1a1a;color:#888;border:1px solid rgba(255,255,255,0.05);font-style:italic}
+      #jarvis-chat-input-area{padding:12px;border-top:1px solid rgba(255,255,255,0.1);display:flex;gap:8px;background:#0a0a0a}
+      #jarvis-chat-input{flex:1;background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 12px;color:#fff;font-size:13px;outline:none;font-family:inherit}
+      #jarvis-chat-input::placeholder{color:#555}
+      #jarvis-chat-input:focus{border-color:rgba(184,150,12,0.5)}
+      #jarvis-chat-send{background:#B8960C;border:none;border-radius:8px;padding:8px 14px;cursor:pointer;color:#000;font-weight:600;font-size:13px}
+      #jarvis-chat-send:hover{background:#d4ac0d}
+    </style>
+
+    <button id="jarvis-chat-btn" onclick="toggleJarvisChat()" aria-label="Chat with Jarvis">
+      <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
+    </button>
+
+    <div id="jarvis-chat-panel">
+      <div id="jarvis-chat-header">
+        <div>
+          <div class="jch-title">JARVIS</div>
+          <div class="jch-sub">The BLK Group AI Assistant</div>
+        </div>
+        <button class="jch-close" onclick="toggleJarvisChat()">&times;</button>
+      </div>
+      <div id="jarvis-chat-messages">
+        <div class="jmsg assistant">Hey there! I'm Jarvis with The BLK Group at LPT Realty. Whether you're looking to buy, sell, or just have questions about real estate in Arkansas, I'm here to help. What can I do for you?</div>
+      </div>
+      <div id="jarvis-chat-input-area">
+        <input id="jarvis-chat-input" type="text" placeholder="Type a message..." autocomplete="off">
+        <button id="jarvis-chat-send" onclick="sendJarvisMsg()">Send</button>
+      </div>
+    </div>
+
+    <script src="chat-widget.js"></script>
+
 </body>
 </html>
