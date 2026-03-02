@@ -59,6 +59,50 @@
             width: auto;
         }
         
+        /* Navigation Header */
+        .nav-header {
+            position: fixed;
+            top: 74px;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1999;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            justify-content: flex-end;
+            gap: 50px;
+            list-style: none;
+            padding: 20px 0;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #B8960C;
+            border-bottom-color: #B8960C;
+        }
+        
         /* Hero Section */
         .hero {
             position: relative;
@@ -516,6 +560,94 @@
             letter-spacing: 1px;
         }
         
+        /* Listings Grid */
+        .listings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .listing-card {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .listing-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #B8960C;
+        }
+        
+        .listing-image {
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .listing-info {
+            padding: 30px;
+        }
+        
+        .listing-info h4 {
+            font-size: 22px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+        
+        .listing-location {
+            font-size: 13px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 15px;
+        }
+        
+        .listing-price {
+            font-size: 28px;
+            font-weight: 200;
+            color: #B8960C;
+            margin-bottom: 15px;
+        }
+        
+        .listing-specs {
+            font-size: 13px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+        
+        .listing-specs span {
+            margin: 0 5px;
+        }
+        
+        .listing-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+        
+        .listing-card:hover .listing-button {
+            background: #B8960C;
+            border-color: #B8960C;
+            color: #000000;
+        }
+        
         /* Mobile */
         @media (max-width: 768px) {
             .hero-logo {
@@ -605,6 +737,19 @@
     <!-- LPT Banner -->
     <div class="lpt-banner">
         <img src="lpt-logo.jpg" alt="LPT Realty">
+    </div>
+    
+    <!-- Navigation Header -->
+    <div class="nav-header">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#selling" class="nav-link">Selling</a></li>
+                <li><a href="#buying" class="nav-link">Buying</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#listings" class="nav-link">Our Listings</a></li>
+            </ul>
+        </div>
     </div>
     
     <!-- Hero Section -->
@@ -722,6 +867,32 @@
         </div>
     </section>
     
+    <!-- Listings Gallery Section (Black) -->
+    <section id="listings-section" class="black-section" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Our Active Listings</h2>
+            <div id="listings-grid" class="listings-grid">
+                <!-- Listing cards will be inserted here -->
+                <div class="listing-card" onclick="window.open('/listings/34-stonegate-shores.html', '_blank')">
+                    <div class="listing-image" style="background-image: url('parallax-1-new.jpg');"></div>
+                    <div class="listing-info">
+                        <h4>34 Stonegate Shores Dr</h4>
+                        <p class="listing-location">Hot Springs, AR 71913</p>
+                        <p class="listing-price">$1,390,000</p>
+                        <div class="listing-specs">
+                            <span>5 Beds</span>
+                            <span>•</span>
+                            <span>5 Baths</span>
+                            <span>•</span>
+                            <span>3,974 Sqft</span>
+                        </div>
+                        <div class="listing-button">View Property</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Footer -->
     <footer>
         <div class="footer-logo">THE BLK GROUP</div>
@@ -833,6 +1004,50 @@
     </div>
     
     <script>
+        // Navigation functionality
+        const navLinks = document.querySelectorAll('.nav-link');
+        const listingsSection = document.getElementById('listings-section');
+        const mainSections = document.querySelectorAll('section:not(#listings-section)');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = link.getAttribute('href').substring(1);
+                
+                // Update active state
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                
+                if (target === 'listings') {
+                    // Show listings, hide main sections
+                    mainSections.forEach(s => s.style.display = 'none');
+                    listingsSection.style.display = 'flex';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    // Show main sections, hide listings
+                    mainSections.forEach(s => s.style.display = '');
+                    listingsSection.style.display = 'none';
+                    
+                    // Scroll to appropriate section for other tabs
+                    if (target === 'home') {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+        
+        // Handle hash on page load
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.substring(1);
+            if (hash === 'listings') {
+                mainSections.forEach(s => s.style.display = 'none');
+                listingsSection.style.display = 'flex';
+                const listingsLink = document.querySelector('a[href="#listings"]');
+                navLinks.forEach(l => l.classList.remove('active'));
+                if (listingsLink) listingsLink.classList.add('active');
+            }
+        });
+        
         // Modal functionality
         const sellerModal = document.getElementById('seller-modal');
         const buyerModal = document.getElementById('buyer-modal');
