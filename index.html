@@ -179,30 +179,6 @@
             text-transform: uppercase;
         }
         
-        .hero-buttons {
-            margin-top: 40px;
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
-        
-        .hero-btn {
-            padding: 15px 40px;
-            font-size: 12px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            background: transparent;
-            color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.6);
-            transition: all 0.3s;
-        }
-        
-        .hero-btn:hover {
-            background: #B8960C;
-            border-color: #B8960C;
-            color: #000000;
-        }
-        
         /* Parallax Sections */
         .parallax-section {
             position: relative;
@@ -763,18 +739,6 @@
                 letter-spacing: 3px;
             }
             
-            .hero-buttons {
-                flex-direction: column;
-                gap: 15px;
-                margin-top: 30px;
-            }
-            
-            .hero-btn {
-                padding: 12px 30px;
-                font-size: 10px;
-                letter-spacing: 2px;
-            }
-            
             .section-title {
                 font-size: 32px;
                 letter-spacing: 5px;
@@ -873,10 +837,6 @@
             <img src="blk-logo.png" alt="BLK Group Logo" class="hero-logo">
             <h1>The BLK Group</h1>
             <p class="tagline">Solutions for Every Corner of Arkansas</p>
-            <div class="hero-buttons">
-                <a href="#selling" class="btn hero-btn">I'm Selling</a>
-                <a href="#buying" class="btn hero-btn">I'm Buying</a>
-            </div>
         </div>
     </section>
     
@@ -1277,6 +1237,12 @@
                     // Scroll to appropriate section for other tabs
                     if (target === 'home') {
                         window.scrollTo({ top: 0, behavior: 'smooth' });
+                    } else if (target === 'selling' || target === 'buying') {
+                        // Scroll to selling or buying section
+                        const targetElement = document.getElementById(target);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
                     }
                 }
                 
