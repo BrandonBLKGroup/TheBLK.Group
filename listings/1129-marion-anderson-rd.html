@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1129 Marion Anderson Rd - Hot Springs National Park, AR | The BLK Group</title>
+    <meta name="description" content="Beautiful lakefront home on Lake Hamilton! 3 bed, 3.5 bath, 2,111 sqft. Impeccably maintained with soaring ceilings, modern finishes, two master suites, and stunning lake views. $850,000">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #000000;
+            color: #ffffff;
+        }
+        
+        /* LPT Banner */
+        .lpt-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 12px 0;
+            text-align: center;
+            z-index: 2000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lpt-banner img {
+            height: 50px;
+            width: auto;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('https://images.homes.com/listings/120/9322693624-098247591/1129-marion-anderson-rd-hot-springs-national-park-ar-primaryphoto.jpg') center/cover no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 80px;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 200;
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .hero .price {
+            font-size: 36px;
+            font-weight: 300;
+            color: #B8960C;
+            margin-bottom: 30px;
+        }
+        
+        .hero .specs {
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* Parallax Specs Section */
+        .parallax-specs {
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('https://images.homes.com/listings/120/4522693624-098247591/1129-marion-anderson-rd-hot-springs-national-park-ar-buildingphoto-2.jpg') center/cover no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .parallax-specs::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        
+        .specs-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1000px;
+            padding: 60px 20px;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            margin-top: 40px;
+        }
+        
+        .spec-item {
+            text-align: center;
+        }
+        
+        .spec-item h3 {
+            font-size: 48px;
+            font-weight: 200;
+            color: #B8960C;
+            margin-bottom: 10px;
+        }
+        
+        .spec-item p {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Description Section */
+        .description-section {
+            background: #000000;
+            padding: 120px 40px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .description-section h2 {
+            font-size: 42px;
+            font-weight: 200;
+            letter-spacing: 8px;
+            text-align: center;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+        }
+        
+        .description-section p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .highlights {
+            margin-top: 60px;
+        }
+        
+        .highlights h3 {
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #B8960C;
+            text-transform: uppercase;
+        }
+        
+        .highlights ul {
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .highlights li {
+            font-size: 16px;
+            line-height: 2;
+            color: rgba(255, 255, 255, 0.8);
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .highlights li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #B8960C;
+            font-size: 24px;
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('https://images.homes.com/listings/120/2622693624-098247591/1129-marion-anderson-rd-hot-springs-national-park-ar-buildingphoto-3.jpg') center/cover no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .gallery-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .gallery-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            padding: 80px 20px;
+        }
+        
+        .gallery-content h2 {
+            font-size: 42px;
+            font-weight: 200;
+            letter-spacing: 8px;
+            text-align: center;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-cta {
+            background: rgba(184, 150, 12, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .gallery-cta:hover {
+            background: rgba(184, 150, 12, 1);
+        }
+        
+        .gallery-cta h3 {
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 4px;
+            color: #000000;
+            text-transform: uppercase;
+        }
+        
+        /* Showing Form Section */
+        .form-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('https://images.homes.com/listings/120/2722693624-098247591/1129-marion-anderson-rd-hot-springs-national-park-ar-buildingphoto-4.jpg') center/cover no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .form-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        .form-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            padding: 80px 20px;
+            width: 100%;
+        }
+        
+        .form-content h2 {
+            font-size: 42px;
+            font-weight: 200;
+            letter-spacing: 8px;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .form-content p {
+            text-align: center;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+        }
+        
+        form {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #B8960C;
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 18px;
+            background: transparent;
+            border: 1px solid #B8960C;
+            color: #B8960C;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background: #B8960C;
+            color: #000000;
+        }
+        
+        /* Footer */
+        footer {
+            background: #000000;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        footer p {
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 28px; letter-spacing: 4px; }
+            .hero .price { font-size: 24px; }
+            .hero .specs { font-size: 14px; }
+            .specs-grid { grid-template-columns: 1fr; gap: 30px; }
+            .spec-item h3 { font-size: 36px; }
+            .description-section h2, .gallery-content h2, .form-content h2 { font-size: 28px; letter-spacing: 4px; }
+            .description-section p { font-size: 16px; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            form { padding: 30px 20px; }
+            
+            /* Disable parallax on mobile */
+            .hero, .parallax-specs, .gallery-section, .form-section {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- LPT Realty Banner -->
+    <div class="lpt-banner">
+        <img src="../lpt-logo.jpg" alt="LPT Realty">
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Lake Hamilton Luxury</h1>
+            <div class="price">$850,000</div>
+            <div class="specs">3 Bed • 3.5 Bath • 2,111 sqft • Hot Springs National Park</div>
+        </div>
+    </section>
+    
+    <!-- Parallax Specs Section -->
+    <section class="parallax-specs">
+        <div class="specs-content">
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h3>3</h3>
+                    <p>Bedrooms</p>
+                </div>
+                <div class="spec-item">
+                    <h3>3.5</h3>
+                    <p>Bathrooms</p>
+                </div>
+                <div class="spec-item">
+                    <h3>2,111</h3>
+                    <p>Square Feet</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Description Section -->
+    <section class="description-section">
+        <div class="container">
+            <h2>Property Details</h2>
+            <p>Discover this beautiful home on Lake Hamilton! Impeccably maintained, this rare opportunity features a practical layout with soaring ceilings, modern finishes, two master suites and an outdoor space ideal for entertaining or unwinding, all with breathtaking lake front views!</p>
+            <p>The property includes a boardwalk with tie-ups, and access to a boat ramp. This is low maintenance lake living at its finest!</p>
+            
+            <div class="highlights">
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Lake Front on Lake Hamilton</li>
+                    <li>Contemporary Architecture</li>
+                    <li>Two Master Suites</li>
+                    <li>Wood Flooring Throughout</li>
+                    <li>Outdoor Fireplace</li>
+                    <li>Boardwalk with Boat Tie-Ups</li>
+                    <li>Access to Boat Ramp</li>
+                    <li>Main Floor Primary Bedroom</li>
+                    <li>Soaring Ceilings & Modern Finishes</li>
+                    <li>Low Maintenance Lake Living</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section (Parallax) -->
+    <section class="gallery-section">
+        <div class="gallery-content">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.homes.com/listings/120/9322693624-098247591/1129-marion-anderson-rd-hot-springs-national-park-ar-primaryphoto.jpg" alt="1129 Marion Anderson Rd - Exterior">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.homes.com/listings/120/4522693624-098247591/1129-marion-anderson-rd-hot-springs-national-park-ar-buildingphoto-2.jpg" alt="1129 Marion Anderson Rd - Photo 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.homes.com/listings/120/2622693624-098247591/1129-marion-anderson-rd-hot-springs-national-park-ar-buildingphoto-3.jpg" alt="1129 Marion Anderson Rd - Photo 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.homes.com/listings/120/2722693624-098247591/1129-marion-anderson-rd-hot-springs-national-park-ar-buildingphoto-4.jpg" alt="1129 Marion Anderson Rd - Photo 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.homes.com/listings/120/3822693624-098247591/1129-marion-anderson-rd-hot-springs-national-park-ar-buildingphoto-5.jpg" alt="1129 Marion Anderson Rd - Photo 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.homes.com/listings/120/5922693624-098247591/1129-marion-anderson-rd-hot-springs-national-park-ar-buildingphoto-6.jpg" alt="1129 Marion Anderson Rd - Photo 6">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.homes.com/listings/120/0132693624-098247591/1129-marion-anderson-rd-hot-springs-national-park-ar-buildingphoto-7.jpg" alt="1129 Marion Anderson Rd - Photo 7">
+                </div>
+                <div class="gallery-cta" onclick="document.getElementById('showing-form').scrollIntoView({behavior: 'smooth'});">
+                    <h3>Want More<br>Information?</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Showing Form Section (Parallax) -->
+    <section id="showing-form" class="form-section">
+        <div class="form-content">
+            <h2>Schedule a Showing</h2>
+            <p>Interested in this property? Fill out the form below and we'll get back to you shortly.</p>
+            
+            <form action="mailto:BrandonBLKGroup@Gmail.com" method="post" enctype="text/plain">
+                <input type="hidden" name="property" value="1129 Marion Anderson Rd, Hot Springs National Park, AR - $850,000">
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message / Preferred Showing Times</label>
+                    <textarea id="message" name="message" placeholder="Let us know when you'd like to see this property..."></textarea>
+                </div>
+                
+                <button type="submit">Request Showing</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>The BLK Group at LPT Realty • Licensed in Arkansas</p>
+        <p style="margin-top: 10px; font-size: 10px;">MLS #25012847</p>
+    </footer>
+</body>
+</html>
