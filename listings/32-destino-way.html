@@ -3,547 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>32 Destino Way - Hot Springs Village, AR | The BLK Group</title>
-    <meta name="description" content="Fully renovated 2-bed/1-bath townhome in Hot Springs Village! Perfect as vacation retreat, VRBO rental, or full-time residence. End unit with privacy & back deck. $135,000">
+    <title>32 Destino Way | Hot Springs Village | The BLK Group</title>
+    <meta name="description" content="Fully renovated 2 bed, 1 bath townhome in Hot Springs Village. 1,086 sqft. $135,000. Schedule your showing today.">
+    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #000000;
-            color: #ffffff;
-        }
-        
-        /* LPT Banner */
-        .lpt-banner {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.98);
-            padding: 12px 0;
-            text-align: center;
-            z-index: 2000;
-            backdrop-filter: blur(10px);
-        }
-        
-        .lpt-banner img {
-            height: 50px;
-            width: auto;
-        }
-        
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: url('https://images.homes.com/listings/120/5597343974-770584612/32-destino-way-hot-springs-village-ar-primaryphoto.jpg') center/cover no-repeat;
-            background-attachment: fixed;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.4);
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            padding: 0 20px;
-            margin-top: 80px;
-        }
-        
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 200;
-            letter-spacing: 8px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-        
-        .hero .price {
-            font-size: 36px;
-            font-weight: 300;
-            color: #B8960C;
-            margin-bottom: 30px;
-        }
-        
-        .hero .specs {
-            font-size: 18px;
-            font-weight: 300;
-            letter-spacing: 3px;
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
-        /* Parallax Specs Section */
-        .parallax-specs {
-            position: relative;
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: url('https://images.homes.com/listings/120/7597343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-2.jpg') center/cover no-repeat;
-            background-attachment: fixed;
-        }
-        
-        .parallax-specs::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-        }
-        
-        .specs-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            max-width: 1000px;
-            padding: 60px 20px;
-        }
-        
-        .specs-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 50px;
-            margin-top: 40px;
-        }
-        
-        .spec-item {
-            text-align: center;
-        }
-        
-        .spec-item h3 {
-            font-size: 48px;
-            font-weight: 200;
-            color: #B8960C;
-            margin-bottom: 10px;
-        }
-        
-        .spec-item p {
-            font-size: 14px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        /* Description Section */
-        .description-section {
-            background: #000000;
-            padding: 120px 40px;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .description-section h2 {
-            font-size: 42px;
-            font-weight: 200;
-            letter-spacing: 8px;
-            text-align: center;
-            margin-bottom: 60px;
-            text-transform: uppercase;
-        }
-        
-        .description-section p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        
-        .highlights {
-            margin-top: 60px;
-        }
-        
-        .highlights h3 {
-            font-size: 24px;
-            font-weight: 300;
-            letter-spacing: 4px;
-            text-align: center;
-            margin-bottom: 30px;
-            color: #B8960C;
-            text-transform: uppercase;
-        }
-        
-        .highlights ul {
-            list-style: none;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .highlights li {
-            font-size: 16px;
-            line-height: 2;
-            color: rgba(255, 255, 255, 0.8);
-            padding-left: 30px;
-            position: relative;
-        }
-        
-        .highlights li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: #B8960C;
-            font-size: 24px;
-        }
-        
-        /* Gallery Section */
-        .gallery-section {
-            position: relative;
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: url('https://images.homes.com/listings/120/8597343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-3.jpg') center/cover no-repeat;
-            background-attachment: fixed;
-        }
-        
-        .gallery-section::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
-        }
-        
-        .gallery-content {
-            position: relative;
-            z-index: 2;
-            max-width: 1200px;
-            padding: 80px 20px;
-        }
-        
-        .gallery-content h2 {
-            font-size: 42px;
-            font-weight: 200;
-            letter-spacing: 8px;
-            text-align: center;
-            margin-bottom: 60px;
-            text-transform: uppercase;
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            aspect-ratio: 4/3;
-            cursor: pointer;
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        .gallery-cta {
-            background: rgba(184, 150, 12, 0.95);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .gallery-cta:hover {
-            background: rgba(184, 150, 12, 1);
-        }
-        
-        .gallery-cta h3 {
-            font-size: 24px;
-            font-weight: 300;
-            letter-spacing: 4px;
-            color: #000000;
-            text-transform: uppercase;
-        }
-        
-        /* Showing Form Section */
-        .form-section {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: url('https://images.homes.com/listings/120/3208343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-4.jpg') center/cover no-repeat;
-            background-attachment: fixed;
-        }
-        
-        .form-section::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.8);
-        }
-        
-        .form-content {
-            position: relative;
-            z-index: 2;
-            max-width: 600px;
-            padding: 80px 20px;
-            width: 100%;
-        }
-        
-        .form-content h2 {
-            font-size: 42px;
-            font-weight: 200;
-            letter-spacing: 8px;
-            text-align: center;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-        
-        .form-content p {
-            text-align: center;
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 40px;
-        }
-        
-        form {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .form-group {
-            margin-bottom: 25px;
-        }
-        
-        label {
-            display: block;
-            font-size: 12px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
-        input, textarea {
-            width: 100%;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #ffffff;
-            font-size: 14px;
-            transition: all 0.3s;
-        }
-        
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #B8960C;
-            background: rgba(255, 255, 255, 0.08);
-        }
-        
-        textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-        
-        button {
-            width: 100%;
-            padding: 18px;
-            background: transparent;
-            border: 1px solid #B8960C;
-            color: #B8960C;
-            font-size: 14px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        button:hover {
-            background: #B8960C;
-            color: #000000;
-        }
-        
-        /* Footer */
-        footer {
-            background: #000000;
-            padding: 40px 20px;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        footer p {
-            font-size: 12px;
-            letter-spacing: 2px;
-            color: rgba(255, 255, 255, 0.6);
-        }
-        
-        /* Mobile */
+        html { scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #000000; color: #ffffff; overflow-x: hidden; }
+        .lpt-banner { position: fixed; top: 0; left: 0; right: 0; background: rgba(255, 255, 255, 0.98); padding: 12px 0; text-align: center; z-index: 2000; backdrop-filter: blur(10px); }
+        .lpt-banner img { height: 50px; width: auto; }
+        .hero { position: relative; height: 100vh; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: url('https://images.homes.com/listings/120/5597343974-770584612/32-destino-way-hot-springs-village-ar-primaryphoto.jpg') center/cover no-repeat; background-attachment: fixed; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 20px; margin-top: 80px; }
+        .hero-logo { width: 180px; height: 180px; margin: 0 auto 40px; filter: brightness(0) invert(1); }
+        .hero h1 { font-size: 56px; font-weight: 200; letter-spacing: 8px; margin-bottom: 15px; color: #ffffff; text-transform: uppercase; }
+        .hero .subtitle { font-size: 18px; font-weight: 300; letter-spacing: 3px; color: rgba(255, 255, 255, 0.9); text-transform: uppercase; }
+        .parallax-section { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; padding: 100px 20px; }
+        .parallax-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.6); z-index: 1; }
+        .parallax-section .container { position: relative; z-index: 2; }
+        .parallax-specs { background-image: url('https://images.homes.com/listings/120/7597343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-2.jpg'); }
+        .parallax-gallery { background-image: url('https://images.homes.com/listings/120/8597343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-3.jpg'); }
+        .parallax-showing { background-image: url('https://images.homes.com/listings/120/3208343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-4.jpg'); }
+        .black-section { background: #000000; padding: 100px 20px; min-height: 100vh; display: flex; align-items: center; }
+        .container { max-width: 1200px; margin: 0 auto; width: 100%; }
+        .section-title { font-size: 48px; font-weight: 200; letter-spacing: 6px; text-transform: uppercase; text-align: center; margin-bottom: 60px; color: #ffffff; }
+        .specs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 60px; }
+        .spec-item { text-align: center; padding: 40px 20px; background: rgba(255, 255, 255, 0.04); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); }
+        .spec-item h3 { font-size: 48px; font-weight: 200; color: #B8960C; margin-bottom: 15px; }
+        .spec-item p { font-size: 14px; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; color: rgba(255, 255, 255, 0.7); }
+        .description { font-size: 18px; line-height: 1.8; font-weight: 300; color: rgba(255, 255, 255, 0.8); max-width: 900px; margin: 0 auto; text-align: center; }
+        .gallery-scroll { display: flex; gap: 20px; overflow-x: auto; padding: 20px 0; scroll-behavior: smooth; }
+        .gallery-scroll::-webkit-scrollbar { height: 8px; }
+        .gallery-scroll::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.1); }
+        .gallery-scroll::-webkit-scrollbar-thumb { background: #B8960C; border-radius: 4px; }
+        .gallery-item { flex: 0 0 400px; height: 300px; background-size: cover; background-position: center; border-radius: 8px; border: 2px solid transparent; transition: all 0.3s; cursor: pointer; }
+        .gallery-item:hover { border-color: #B8960C; transform: scale(1.02); }
+        .gallery-cta { flex: 0 0 400px; height: 300px; background: linear-gradient(135deg, rgba(184, 150, 12, 0.2), rgba(0, 0, 0, 0.8)); border: 2px solid #B8960C; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px; text-align: center; cursor: pointer; transition: all 0.3s; }
+        .gallery-cta:hover { background: linear-gradient(135deg, rgba(184, 150, 12, 0.3), rgba(0, 0, 0, 0.9)); transform: scale(1.02); }
+        .gallery-cta h3 { font-size: 28px; font-weight: 300; letter-spacing: 3px; color: #B8960C; margin-bottom: 15px; }
+        .gallery-cta p { font-size: 14px; font-weight: 300; letter-spacing: 1px; color: rgba(255, 255, 255, 0.8); margin-bottom: 20px; }
+        .gallery-cta-arrow { font-size: 36px; color: #B8960C; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .form-group { margin-bottom: 25px; }
+        .form-group label { display: block; font-size: 12px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; color: rgba(255, 255, 255, 0.7); margin-bottom: 10px; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 15px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 4px; color: #ffffff; font-size: 14px; font-family: inherit; transition: all 0.3s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #B8960C; background: rgba(255, 255, 255, 0.08); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .btn { display: inline-block; padding: 18px 50px; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.4); font-size: 12px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; transition: all 0.3s; cursor: pointer; }
+        .btn:hover { background: #B8960C; border-color: #B8960C; color: #000000; }
+        footer { background: #000000; padding: 60px 20px; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        .footer-logo { font-size: 32px; font-weight: 200; letter-spacing: 8px; color: #ffffff; margin-bottom: 10px; }
+        .footer-lpt { font-size: 14px; font-weight: 300; letter-spacing: 2px; color: rgba(255, 255, 255, 0.6); margin-bottom: 40px; }
+        footer p { font-size: 12px; color: rgba(255, 255, 255, 0.5); letter-spacing: 1px; }
         @media (max-width: 768px) {
-            .hero h1 { font-size: 28px; letter-spacing: 4px; }
-            .hero .price { font-size: 24px; }
-            .hero .specs { font-size: 14px; }
-            .specs-grid { grid-template-columns: 1fr; gap: 30px; }
+            .hero-logo { width: 120px; height: 120px; }
+            .hero h1 { font-size: 32px; letter-spacing: 4px; }
+            .hero .subtitle { font-size: 14px; letter-spacing: 2px; }
+            .section-title { font-size: 32px; letter-spacing: 3px; }
+            .specs-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
             .spec-item h3 { font-size: 36px; }
-            .description-section h2, .gallery-content h2, .form-content h2 { font-size: 28px; letter-spacing: 4px; }
-            .description-section p { font-size: 16px; }
-            .gallery-grid { grid-template-columns: 1fr; }
-            form { padding: 30px 20px; }
-            
-            /* Disable parallax on mobile */
-            .hero, .parallax-specs, .gallery-section, .form-section {
-                background-attachment: scroll;
-            }
+            .description { font-size: 16px; }
+            .gallery-item, .gallery-cta { flex: 0 0 300px; }
+            .parallax-section { background-attachment: scroll; }
+            .hero { background-attachment: scroll; }
         }
     </style>
 </head>
 <body>
-    <!-- LPT Realty Banner -->
-    <div class="lpt-banner">
-        <img src="../lpt-logo.jpg" alt="LPT Realty">
-    </div>
-    
-    <!-- Hero Section -->
+    <div class="lpt-banner"><img src="../lpt-logo.jpg" alt="LPT Realty"></div>
     <section class="hero">
         <div class="hero-content">
-            <h1>Village Retreat</h1>
-            <div class="price">$135,000</div>
-            <div class="specs">2 Bed • 1 Bath • 1,086 sqft • Hot Springs Village</div>
+            <img src="../blk-logo.png" alt="BLK Group Logo" class="hero-logo">
+            <h1>32 Destino Way</h1>
+            <p class="subtitle">Hot Springs Village, AR 71909</p>
         </div>
     </section>
-    
-    <!-- Parallax Specs Section -->
-    <section class="parallax-specs">
-        <div class="specs-content">
-            <div class="specs-grid">
-                <div class="spec-item">
-                    <h3>2</h3>
-                    <p>Bedrooms</p>
-                </div>
-                <div class="spec-item">
-                    <h3>1</h3>
-                    <p>Bathroom</p>
-                </div>
-                <div class="spec-item">
-                    <h3>1,086</h3>
-                    <p>Square Feet</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Description Section -->
-    <section class="description-section">
+    <section class="parallax-section parallax-specs">
         <div class="container">
-            <h2>Property Details</h2>
-            <p>This charming, fully renovated 2-bed/1-bath townhome is ideal as a vacation retreat, VRBO rental, or full-time residence. Conveniently located just minutes from the West Gate of HSV in Valencia Courts, it offers quick access to Desoto Marina, the golf course, nearby trails—all within five minutes, as well as all of the amazing amenities that The Village has to offer!</p>
-            <p>This single-story end unit provides extra privacy with adjacent common space and additional parking. Inside, you'll love the bright, open living area and thoughtful updates throughout. Enjoy a spacious back deck, stainless steel appliances, and more!</p>
-            
-            <div class="highlights">
-                <h3>Key Features</h3>
-                <ul>
-                    <li>Fully Renovated Throughout</li>
-                    <li>End Unit with Extra Privacy</li>
-                    <li>Spacious Back Deck</li>
-                    <li>Single-Story Living</li>
-                    <li>Bright, Open Floor Plan</li>
-                    <li>Stainless Steel Appliances</li>
-                    <li>Additional Parking Available</li>
-                    <li>5 Minutes to Desoto Marina</li>
-                    <li>5 Minutes to Golf Course</li>
-                    <li>Close to Trails & Amenities</li>
-                    <li>Perfect VRBO Rental Investment</li>
-                    <li>Traditional Architecture (1976)</li>
-                    <li>$200/Month HOA</li>
-                </ul>
+            <h2 class="section-title">Property Details</h2>
+            <div class="specs-grid">
+                <div class="spec-item"><h3>2</h3><p>Bedrooms</p></div>
+                <div class="spec-item"><h3>1</h3><p>Bathroom</p></div>
+                <div class="spec-item"><h3>$135,000</h3><p>Price</p></div>
+                <div class="spec-item"><h3>1,086</h3><p>Square Feet</p></div>
             </div>
         </div>
     </section>
-    
-    <!-- Gallery Section (Parallax) -->
-    <section class="gallery-section">
-        <div class="gallery-content">
-            <h2>Photo Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.homes.com/listings/120/5597343974-770584612/32-destino-way-hot-springs-village-ar-primaryphoto.jpg" alt="32 Destino Way - Exterior">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.homes.com/listings/120/7597343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-2.jpg" alt="32 Destino Way - Photo 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.homes.com/listings/120/8597343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-3.jpg" alt="32 Destino Way - Photo 3">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.homes.com/listings/120/3208343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-4.jpg" alt="32 Destino Way - Photo 4">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.homes.com/listings/120/4208343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-5.jpg" alt="32 Destino Way - Photo 5">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.homes.com/listings/120/5208343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-6.jpg" alt="32 Destino Way - Photo 6">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.homes.com/listings/120/6208343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-7.jpg" alt="32 Destino Way - Photo 7">
-                </div>
+    <section class="black-section">
+        <div class="container">
+            <h2 class="section-title">About This Home</h2>
+            <p class="description">This charming, fully renovated 2-bed/1-bath townhome is ideal as a vacation retreat, VRBO rental, or full-time residence. Conveniently located just minutes from the West Gate of HSV in Valencia Courts, it offers quick access to Desoto Marina, the golf course, nearby trails—all within five minutes, as well as all of the amazing amenities that The Village has to offer! This single-story end unit provides extra privacy with adjacent common space and additional parking. Inside, you'll love the bright, open living area and thoughtful updates throughout. Enjoy a spacious back deck, stainless steel appliances, and more!</p>
+        </div>
+    </section>
+    <section class="parallax-section parallax-gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-scroll">
+                <div class="gallery-item" style="background-image: url('https://images.homes.com/listings/120/5597343974-770584612/32-destino-way-hot-springs-village-ar-primaryphoto.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.homes.com/listings/120/7597343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-2.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.homes.com/listings/120/8597343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-3.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.homes.com/listings/120/3208343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-4.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.homes.com/listings/120/4208343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-5.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.homes.com/listings/120/5208343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-6.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.homes.com/listings/120/6208343974-770584612/32-destino-way-hot-springs-village-ar-buildingphoto-7.jpg');"></div>
                 <div class="gallery-cta" onclick="document.getElementById('showing-form').scrollIntoView({behavior: 'smooth'});">
-                    <h3>Want More<br>Information?</h3>
+                    <h3>Want More Information?</h3>
+                    <p>Fill out the form below to schedule a showing or ask questions</p>
+                    <div class="gallery-cta-arrow">↓</div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- Showing Form Section (Parallax) -->
-    <section id="showing-form" class="form-section">
-        <div class="form-content">
-            <h2>Schedule a Showing</h2>
-            <p>Interested in this property? Fill out the form below and we'll get back to you shortly.</p>
-            
-            <form action="mailto:BrandonBLKGroup@Gmail.com" method="post" enctype="text/plain">
-                <input type="hidden" name="property" value="32 Destino Way, Hot Springs Village, AR - $135,000">
-                
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message / Preferred Showing Times</label>
-                    <textarea id="message" name="message" placeholder="Let us know when you'd like to see this property..."></textarea>
-                </div>
-                
-                <button type="submit">Request Showing</button>
+    <section class="parallax-section parallax-showing" id="showing-form">
+        <div class="container">
+            <h2 class="section-title">Schedule a Showing</h2>
+            <form action="mailto:BrandonBLKGroup@Gmail.com" method="post" enctype="text/plain" style="max-width: 600px; margin: 0 auto;">
+                <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" name="name" required placeholder="John Doe"></div>
+                <div class="form-group"><label for="email">Email Address *</label><input type="email" id="email" name="email" required placeholder="john@example.com"></div>
+                <div class="form-group"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" required placeholder="(501) 555-1234"></div>
+                <div class="form-group"><label for="date">Preferred Date *</label><input type="date" id="date" name="date" required></div>
+                <div class="form-group"><label for="time">Preferred Time *</label><select id="time" name="time" required><option value="">Select time</option><option value="morning">Morning (8am - 12pm)</option><option value="afternoon">Afternoon (12pm - 5pm)</option><option value="evening">Evening (5pm - 8pm)</option></select></div>
+                <div class="form-group"><label for="message">Message (Optional)</label><textarea id="message" name="message" placeholder="Questions, special requests, etc."></textarea></div>
+                <button type="submit" class="btn" style="width: 100%; padding: 18px;">Request Showing</button>
             </form>
         </div>
     </section>
-    
-    <!-- Footer -->
     <footer>
-        <p>The BLK Group at LPT Realty • Licensed in Arkansas</p>
-        <p style="margin-top: 10px; font-size: 10px;">MLS #26006776 • Listed by Brandon Bruning & Shelley Lisko</p>
+        <div class="footer-logo">THE BLK GROUP</div>
+        <div class="footer-lpt">at LPT Realty</div>
+        <p style="margin-top: 15px; font-size: 13px; letter-spacing: 1px; color: rgba(255, 255, 255, 0.6);">11324 Arcade Drive, #23, Little Rock, AR</p>
+        <p style="margin-top: 30px;">&copy; 2026 The BLK Group at LPT Realty. All rights reserved.</p>
     </footer>
 </body>
 </html>
