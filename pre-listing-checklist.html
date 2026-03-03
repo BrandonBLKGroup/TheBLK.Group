@@ -11,8 +11,8 @@
   
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #000;
-    color: #fff;
+    background: #ffffff;
+    color: #1a1a1a;
     min-height: 100vh;
   }
 
@@ -22,18 +22,17 @@
     padding: 0 24px 60px;
   }
 
-  /* Header */
   .header {
     text-align: center;
     padding: 40px 0 32px;
-    border-bottom: 1px solid rgba(184,150,12,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
     margin-bottom: 36px;
   }
   .header h2 {
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 5px;
-    color: #B8960C;
+    color: #111;
     text-transform: uppercase;
     margin-bottom: 6px;
   }
@@ -41,11 +40,10 @@
     font-size: 9px;
     font-weight: 400;
     letter-spacing: 3px;
-    color: #666;
+    color: #999;
     text-transform: uppercase;
   }
 
-  /* Title Block */
   .title-block {
     text-align: center;
     margin-bottom: 40px;
@@ -59,11 +57,12 @@
     font-weight: 800;
     letter-spacing: 4px;
     text-transform: uppercase;
+    color: #111;
     margin-bottom: 8px;
   }
   .title-block .subtitle {
     font-size: 11px;
-    color: #888;
+    color: #999;
     letter-spacing: 2px;
     text-transform: uppercase;
   }
@@ -74,15 +73,14 @@
     margin: 16px auto 0;
   }
 
-  /* Timing Badge */
   .timing {
     text-align: center;
     margin-bottom: 36px;
   }
   .timing span {
     display: inline-block;
-    background: rgba(184,150,12,0.1);
-    border: 1px solid rgba(184,150,12,0.3);
+    background: rgba(184,150,12,0.08);
+    border: 1px solid rgba(184,150,12,0.25);
     border-radius: 20px;
     padding: 8px 20px;
     font-size: 11px;
@@ -91,7 +89,6 @@
     letter-spacing: 1px;
   }
 
-  /* Section */
   .section {
     margin-bottom: 32px;
   }
@@ -101,7 +98,7 @@
     gap: 10px;
     margin-bottom: 16px;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
   }
   .section-icon {
     font-size: 18px;
@@ -114,7 +111,6 @@
     color: #B8960C;
   }
 
-  /* Checklist Items */
   .checklist {
     list-style: none;
   }
@@ -123,10 +119,10 @@
     align-items: flex-start;
     gap: 12px;
     padding: 10px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
+    border-bottom: 1px solid rgba(0,0,0,0.04);
     font-size: 14px;
     line-height: 1.5;
-    color: #ccc;
+    color: #444;
   }
   .checklist li:last-child {
     border-bottom: none;
@@ -135,7 +131,7 @@
     flex-shrink: 0;
     width: 20px;
     height: 20px;
-    border: 2px solid rgba(184,150,12,0.4);
+    border: 2px solid #ccc;
     border-radius: 4px;
     margin-top: 2px;
     cursor: pointer;
@@ -143,7 +139,7 @@
   }
   .check:hover {
     border-color: #B8960C;
-    background: rgba(184,150,12,0.1);
+    background: rgba(184,150,12,0.08);
   }
   .check.done {
     background: #B8960C;
@@ -157,22 +153,16 @@
     left: 3px;
     font-size: 14px;
     font-weight: 700;
-    color: #000;
+    color: #fff;
   }
   .item-text strong {
-    color: #fff;
+    color: #111;
     font-weight: 600;
   }
-  .item-note {
-    font-size: 12px;
-    color: #666;
-    margin-top: 2px;
-  }
 
-  /* Pro Tip */
   .pro-tip {
-    background: rgba(184,150,12,0.06);
-    border: 1px solid rgba(184,150,12,0.15);
+    background: #f9f7f0;
+    border: 1px solid rgba(184,150,12,0.2);
     border-radius: 10px;
     padding: 16px 20px;
     margin-top: 8px;
@@ -188,41 +178,36 @@
   }
   .pro-tip p {
     font-size: 13px;
-    color: #999;
+    color: #666;
     line-height: 1.6;
   }
+  .pro-tip p strong {
+    color: #111;
+  }
 
-  /* Footer */
   .footer {
     text-align: center;
     padding-top: 32px;
-    border-top: 1px solid rgba(184,150,12,0.2);
+    border-top: 1px solid rgba(0,0,0,0.08);
     margin-top: 40px;
   }
   .footer .brand {
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 4px;
-    color: #444;
+    color: #111;
     text-transform: uppercase;
   }
   .footer .sub {
     font-size: 9px;
-    color: #333;
+    color: #999;
     letter-spacing: 2px;
     margin-top: 4px;
     text-transform: uppercase;
   }
 
-  /* Print */
   @media print {
-    body { background: #fff; color: #000; }
     .check { border-color: #999; }
-    .section-title { color: #333; }
-    .checklist li { color: #333; }
-    .item-text strong { color: #000; }
-    .pro-tip { border-color: #ccc; }
-    .pro-tip p { color: #555; }
   }
 </style>
 </head>
@@ -245,7 +230,6 @@
     <span>📸 Complete before photo day</span>
   </div>
 
-  <!-- KITCHEN -->
   <div class="section">
     <div class="section-header">
       <span class="section-icon">🍳</span>
@@ -261,7 +245,6 @@
     </ul>
   </div>
 
-  <!-- LIVING AREAS -->
   <div class="section">
     <div class="section-header">
       <span class="section-icon">🛋️</span>
@@ -278,7 +261,6 @@
     </ul>
   </div>
 
-  <!-- BEDROOMS -->
   <div class="section">
     <div class="section-header">
       <span class="section-icon">🛏️</span>
@@ -293,7 +275,6 @@
     </ul>
   </div>
 
-  <!-- BATHROOMS -->
   <div class="section">
     <div class="section-header">
       <span class="section-icon">🚿</span>
@@ -309,7 +290,6 @@
     </ul>
   </div>
 
-  <!-- EXTERIOR & CURB APPEAL -->
   <div class="section">
     <div class="section-header">
       <span class="section-icon">🏡</span>
@@ -325,7 +305,6 @@
     </ul>
   </div>
 
-  <!-- GARAGE -->
   <div class="section">
     <div class="section-header">
       <span class="section-icon">🚗</span>
@@ -338,7 +317,6 @@
     </ul>
   </div>
 
-  <!-- FINAL TOUCHES -->
   <div class="section">
     <div class="section-header">
       <span class="section-icon">✨</span>
