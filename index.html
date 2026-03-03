@@ -1197,8 +1197,16 @@
         
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                
+                // Only handle hash links (#home, #listings, etc.)
+                // Let external/page links work normally
+                if (!href.startsWith('#')) {
+                    return; // Let the browser handle the navigation
+                }
+                
                 e.preventDefault();
-                const target = link.getAttribute('href').substring(1);
+                const target = href.substring(1);
                 
                 // Update active state
                 navLinks.forEach(l => l.classList.remove('active'));
