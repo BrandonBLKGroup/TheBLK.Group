@@ -103,6 +103,25 @@
             border-bottom-color: #B8960C;
         }
         
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: #ffffff;
+            padding: 10px 20px;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .mobile-menu-toggle:hover {
+            border-color: #B8960C;
+            color: #B8960C;
+        }
+        
         /* Hero Section */
         .hero {
             position: relative;
@@ -650,26 +669,54 @@
         
         /* Mobile */
         @media (max-width: 768px) {
-            /* Navigation Mobile Optimization */
+            /* Navigation Mobile - Hamburger Menu */
             .nav-header {
-                top: 50px;
+                top: 74px;
             }
             
             .nav-container {
-                padding: 0 15px;
+                padding: 15px 20px;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
             }
             
             .nav-menu {
-                justify-content: center;
-                gap: 15px;
-                padding: 15px 0;
-                flex-wrap: wrap;
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.98);
+                flex-direction: column;
+                gap: 0;
+                padding: 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .nav-menu li {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             }
             
             .nav-menu a {
-                font-size: 9px;
-                letter-spacing: 1.5px;
-                padding-bottom: 3px;
+                display: block;
+                padding: 18px 20px;
+                font-size: 11px;
+                letter-spacing: 2px;
+                text-align: center;
+                border-bottom: none;
+            }
+            
+            .nav-menu a:hover,
+            .nav-menu a.active {
+                background: rgba(184, 150, 12, 0.1);
             }
             
             .hero-logo {
@@ -764,7 +811,8 @@
     <!-- Navigation Header -->
     <div class="nav-header">
         <div class="nav-container">
-            <ul class="nav-menu">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">Navigation</button>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#selling" class="nav-link">Selling</a></li>
                 <li><a href="#buying" class="nav-link">Buying</a></li>
@@ -1123,6 +1171,25 @@
     </div>
     
     <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                mobileMenuToggle.textContent = navMenu.classList.contains('active') ? 'Close' : 'Navigation';
+            });
+            
+            // Close menu when a link is clicked
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    mobileMenuToggle.textContent = 'Navigation';
+                });
+            });
+        }
+        
         // Navigation functionality
         const navLinks = document.querySelectorAll('.nav-link');
         const listingsSection = document.getElementById('listings-section');
