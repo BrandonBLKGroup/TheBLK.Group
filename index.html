@@ -1175,7 +1175,11 @@
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const navMenu = document.getElementById('navMenu');
         
-        if (mobileMenuToggle) {
+        if (mobileMenuToggle && navMenu) {
+            // Ensure menu starts closed
+            navMenu.classList.remove('active');
+            mobileMenuToggle.textContent = 'Navigation';
+            
             mobileMenuToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
                 mobileMenuToggle.textContent = navMenu.classList.contains('active') ? 'Close' : 'Navigation';
@@ -1226,6 +1230,12 @@
                     if (target === 'home') {
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                     }
+                }
+                
+                // Ensure mobile menu is closed after navigation
+                if (navMenu && mobileMenuToggle) {
+                    navMenu.classList.remove('active');
+                    mobileMenuToggle.textContent = 'Navigation';
                 }
             });
         });
