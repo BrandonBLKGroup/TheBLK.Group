@@ -908,7 +908,7 @@
     </section>
     
     <!-- Team Section (Black) -->
-    <section class="black-section">
+    <section id="team" class="black-section">
         <div class="container">
             <h2 class="section-title">Our Team</h2>
             <div class="team-grid">
@@ -1237,8 +1237,8 @@
                     // Scroll to appropriate section for other tabs
                     if (target === 'home') {
                         window.scrollTo({ top: 0, behavior: 'smooth' });
-                    } else if (target === 'selling' || target === 'buying') {
-                        // Scroll to selling or buying section
+                    } else if (target === 'selling' || target === 'buying' || target === 'team') {
+                        // Scroll to selling, buying, or team section
                         const targetElement = document.getElementById(target);
                         if (targetElement) {
                             targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
