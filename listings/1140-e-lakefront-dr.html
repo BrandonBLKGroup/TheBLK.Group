@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1140 E Lakefront Dr | Fayetteville Lakefront Estate | The BLK Group</title>
+    <meta name="description" content="Stunning 4 bed, 2.5 bath lakefront home by renowned architect James Lambeth. 4,007 sqft. $1,250,000. Schedule your showing today.">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #000000; color: #ffffff; overflow-x: hidden; }
+        .lpt-banner { position: fixed; top: 0; left: 0; right: 0; background: rgba(255, 255, 255, 0.98); padding: 12px 0; text-align: center; z-index: 2000; backdrop-filter: blur(10px); }
+        .lpt-banner img { height: 50px; width: auto; }
+        .hero { position: relative; height: 100vh; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: url('https://images.homes.com/listings/120/zx51yp215cdmk/1140-e-lakefront-dr-fayetteville-ar-primaryphoto.jpg') center/cover no-repeat; background-attachment: fixed; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 20px; margin-top: 80px; }
+        .hero-logo { width: 180px; height: 180px; margin: 0 auto 40px; filter: brightness(0) invert(1); }
+        .hero h1 { font-size: 56px; font-weight: 200; letter-spacing: 8px; margin-bottom: 15px; color: #ffffff; text-transform: uppercase; }
+        .hero .subtitle { font-size: 18px; font-weight: 300; letter-spacing: 3px; color: rgba(255, 255, 255, 0.9); text-transform: uppercase; }
+        .parallax-section { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; padding: 100px 20px; }
+        .parallax-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.6); z-index: 1; }
+        .parallax-section .container { position: relative; z-index: 2; }
+        .parallax-specs { background-image: url('https://images.homes.com/listings/120/zx51yp215cdmk/1140-e-lakefront-dr-fayetteville-ar-buildingphoto-2.jpg'); }
+        .parallax-gallery { background-image: url('https://images.homes.com/listings/120/zx51yp215cdmk/1140-e-lakefront-dr-fayetteville-ar-buildingphoto-3.jpg'); }
+        .parallax-showing { background-image: url('https://images.homes.com/listings/120/zx51yp215cdmk/1140-e-lakefront-dr-fayetteville-ar-buildingphoto-4.jpg'); }
+        .black-section { background: #000000; padding: 100px 20px; min-height: 100vh; display: flex; align-items: center; }
+        .container { max-width: 1200px; margin: 0 auto; width: 100%; }
+        .section-title { font-size: 48px; font-weight: 200; letter-spacing: 6px; text-transform: uppercase; text-align: center; margin-bottom: 60px; color: #ffffff; }
+        .specs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 60px; }
+        .spec-item { text-align: center; padding: 40px 20px; background: rgba(255, 255, 255, 0.04); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); }
+        .spec-item h3 { font-size: 48px; font-weight: 200; color: #B8960C; margin-bottom: 15px; }
+        .spec-item p { font-size: 14px; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; color: rgba(255, 255, 255, 0.7); }
+        .description { font-size: 18px; line-height: 1.8; font-weight: 300; color: rgba(255, 255, 255, 0.8); max-width: 900px; margin: 0 auto; text-align: center; }
+        .gallery-scroll { display: flex; gap: 20px; overflow-x: auto; padding: 20px 0; scroll-behavior: smooth; }
+        .gallery-scroll::-webkit-scrollbar { height: 8px; }
+        .gallery-scroll::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.1); }
+        .gallery-scroll::-webkit-scrollbar-thumb { background: #B8960C; border-radius: 4px; }
+        .gallery-item { flex: 0 0 400px; height: 300px; background-size: cover; background-position: center; border-radius: 8px; border: 2px solid transparent; transition: all 0.3s; cursor: pointer; }
+        .gallery-item:hover { border-color: #B8960C; transform: scale(1.02); }
+        .gallery-cta { flex: 0 0 400px; height: 300px; background: linear-gradient(135deg, rgba(184, 150, 12, 0.2), rgba(0, 0, 0, 0.8)); border: 2px solid #B8960C; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px; text-align: center; cursor: pointer; transition: all 0.3s; }
+        .gallery-cta:hover { background: linear-gradient(135deg, rgba(184, 150, 12, 0.3), rgba(0, 0, 0, 0.9)); transform: scale(1.02); }
+        .gallery-cta h3 { font-size: 28px; font-weight: 300; letter-spacing: 3px; color: #B8960C; margin-bottom: 15px; }
+        .gallery-cta p { font-size: 14px; font-weight: 300; letter-spacing: 1px; color: rgba(255, 255, 255, 0.8); margin-bottom: 20px; }
+        .gallery-cta-arrow { font-size: 36px; color: #B8960C; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .form-group { margin-bottom: 25px; }
+        .form-group label { display: block; font-size: 12px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; color: rgba(255, 255, 255, 0.7); margin-bottom: 10px; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 15px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 4px; color: #ffffff; font-size: 14px; font-family: inherit; transition: all 0.3s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #B8960C; background: rgba(255, 255, 255, 0.08); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .btn { display: inline-block; padding: 18px 50px; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.4); font-size: 12px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; transition: all 0.3s; cursor: pointer; }
+        .btn:hover { background: #B8960C; border-color: #B8960C; color: #000000; }
+        footer { background: #000000; padding: 60px 20px; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        .footer-logo { font-size: 32px; font-weight: 200; letter-spacing: 8px; color: #ffffff; margin-bottom: 10px; }
+        .footer-lpt { font-size: 14px; font-weight: 300; letter-spacing: 2px; color: rgba(255, 255, 255, 0.6); margin-bottom: 40px; }
+        footer p { font-size: 12px; color: rgba(255, 255, 255, 0.5); letter-spacing: 1px; }
+        @media (max-width: 768px) {
+            .hero-logo { width: 120px; height: 120px; }
+            .hero h1 { font-size: 32px; letter-spacing: 4px; }
+            .hero .subtitle { font-size: 14px; letter-spacing: 2px; }
+            .section-title { font-size: 32px; letter-spacing: 3px; }
+            .specs-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .spec-item h3 { font-size: 36px; }
+            .description { font-size: 16px; }
+            .gallery-item, .gallery-cta { flex: 0 0 300px; }
+            .parallax-section { background-attachment: scroll; }
+            .hero { background-attachment: scroll; }
+        }
+    </style>
+</head>
+<body>
+    <div class="lpt-banner"><img src="../lpt-logo.jpg" alt="LPT Realty"></div>
+    <section class="hero">
+        <div class="hero-content">
+            <img src="../blk-logo.png" alt="BLK Group Logo" class="hero-logo">
+            <h1>1140 E Lakefront Dr</h1>
+            <p class="subtitle">Fayetteville, AR 72703</p>
+        </div>
+    </section>
+    <section class="parallax-section parallax-specs">
+        <div class="container">
+            <h2 class="section-title">Property Details</h2>
+            <div class="specs-grid">
+                <div class="spec-item"><h3>4</h3><p>Bedrooms</p></div>
+                <div class="spec-item"><h3>2.5</h3><p>Bathrooms</p></div>
+                <div class="spec-item"><h3>$1,250,000</h3><p>Price</p></div>
+                <div class="spec-item"><h3>4,007</h3><p>Square Feet</p></div>
+            </div>
+        </div>
+    </section>
+    <section class="black-section">
+        <div class="container">
+            <h2 class="section-title">About This Home</h2>
+            <p class="description">Discover the final residential design by renowned solar architect James Lambeth—a unique, welcoming home on a peaceful half-acre overlooking Lake Lucille in downtown Fayetteville. Inside are four comfortable bedrooms and two and a half well-finished baths. A spacious family room connects to a flexible game/media room—currently climate-controlled for use as a garage—with a built-in entertainment center. Features include a maintenance free three-story elevator, home warranty, new roof, new windows, soft-water filtration, an underground electric pet fence, and a convenient laundry chute. A second-story deck with street-level access expands your outdoor living, and a home warranty adds peace of mind. The chef-friendly kitchen centers around a modern bar, while the living room showcases a dramatic travertine fireplace and a 17-foot wall of windows with lake views. A spiral staircase, built-in media center, and cozy wood-burning fireplace add charm. The primary suite offers a relaxing retreat with a marble bath, freestanding tub, fireplace, and double shower. A one-of-a-kind home ready for its next chapter—come see it for yourself! Schedule a showing today!</p>
+        </div>
+    </section>
+    <section class="parallax-section parallax-gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-scroll">
+                <div class="gallery-item" style="background-image: url('https://images.homes.com/listings/120/zx51yp215cdmk/1140-e-lakefront-dr-fayetteville-ar-primaryphoto.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.homes.com/listings/120/zx51yp215cdmk/1140-e-lakefront-dr-fayetteville-ar-buildingphoto-2.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.homes.com/listings/120/zx51yp215cdmk/1140-e-lakefront-dr-fayetteville-ar-buildingphoto-3.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.homes.com/listings/120/zx51yp215cdmk/1140-e-lakefront-dr-fayetteville-ar-buildingphoto-4.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.homes.com/listings/120/zx51yp215cdmk/1140-e-lakefront-dr-fayetteville-ar-buildingphoto-5.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.homes.com/listings/120/zx51yp215cdmk/1140-e-lakefront-dr-fayetteville-ar-buildingphoto-6.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.homes.com/listings/120/zx51yp215cdmk/1140-e-lakefront-dr-fayetteville-ar-buildingphoto-7.jpg');"></div>
+                <div class="gallery-cta" onclick="document.getElementById('showing-form').scrollIntoView({behavior: 'smooth'});">
+                    <h3>Want More Information?</h3>
+                    <p>Fill out the form below to schedule a showing or ask questions</p>
+                    <div class="gallery-cta-arrow">↓</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax-section parallax-showing" id="showing-form">
+        <div class="container">
+            <h2 class="section-title">Schedule a Showing</h2>
+            <form action="mailto:BrandonBLKGroup@Gmail.com" method="post" enctype="text/plain" style="max-width: 600px; margin: 0 auto;">
+                <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" name="name" required placeholder="John Doe"></div>
+                <div class="form-group"><label for="email">Email Address *</label><input type="email" id="email" name="email" required placeholder="john@example.com"></div>
+                <div class="form-group"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" required placeholder="(501) 555-1234"></div>
+                <div class="form-group"><label for="date">Preferred Date *</label><input type="date" id="date" name="date" required></div>
+                <div class="form-group"><label for="time">Preferred Time *</label><select id="time" name="time" required><option value="">Select time</option><option value="morning">Morning (8am - 12pm)</option><option value="afternoon">Afternoon (12pm - 5pm)</option><option value="evening">Evening (5pm - 8pm)</option></select></div>
+                <div class="form-group"><label for="message">Message (Optional)</label><textarea id="message" name="message" placeholder="Questions, special requests, etc."></textarea></div>
+                <button type="submit" class="btn" style="width: 100%; padding: 18px;">Request Showing</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-logo">THE BLK GROUP</div>
+        <div class="footer-lpt">at LPT Realty</div>
+        <p style="margin-top: 15px; font-size: 13px; letter-spacing: 1px; color: rgba(255, 255, 255, 0.6);">11324 Arcade Drive, #23, Little Rock, AR</p>
+        <p style="margin-top: 30px;">&copy; 2026 The BLK Group at LPT Realty. All rights reserved.</p>
+    </footer>
+</body>
+</html>
