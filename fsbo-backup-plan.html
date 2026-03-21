@@ -668,7 +668,13 @@
         <p style="margin-top: 20px;">&copy; 2026 The BLK Group. All rights reserved.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
+        // Initialize Supabase
+        const SUPABASE_URL = 'https://fzlwkbhpsklsgkinwljt.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6bHdrYmhwc2tsc2draW53bGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwNTE0MzEsImV4cCI6MjA4NzYyNzQzMX0.lc6A8RCUySU0Hn9MjPcR9rH1c8DjSj_A7MV8JuLvwik';
+        const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
         // Mobile navigation toggle
         function toggleNav() {
             const navMenu = document.getElementById('navMenu');
@@ -679,31 +685,37 @@
         document.getElementById('fsbo-form').addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            const formData = {
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Submitting...';
+            submitButton.disabled = true;
+            
+            const leadData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value,
-                address: document.getElementById('address').value,
+                property_address: document.getElementById('address').value,
                 timeline: document.getElementById('timeline').value,
                 message: document.getElementById('message').value,
-                type: 'FSBO Backup Plan'
+                status: 'new'
             };
             
-            // Send to email (using simple mailto as backup)
-            const subject = encodeURIComponent('FSBO Backup Plan Request - ' + formData.name);
-            const body = encodeURIComponent(`
-Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Property Address: ${formData.address}
-Timeline: ${formData.timeline}
-Message: ${formData.message}
-            `);
-            
-            // You can integrate with your email system here
-            // For now, showing success message
-            alert('Thank you! We\'ll email you the FSBO Backup Plan within 24 hours.');
-            document.getElementById('fsbo-form').reset();
+            try {
+                const { error } = await sb
+                    .from('fsbo_leads')
+                    .insert(leadData);
+                
+                if (error) throw error;
+                
+                alert('Thank you! We\'ll email you the FSBO Backup Plan within 24 hours.');
+                document.getElementById('fsbo-form').reset();
+            } catch (error) {
+                console.error('Error submitting lead:', error);
+                alert('There was an error submitting your request. Please call us at (479) 857-5994.');
+            } finally {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            }
         });
     </script>
 </body>
