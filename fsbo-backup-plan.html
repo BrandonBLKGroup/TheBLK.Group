@@ -705,11 +705,34 @@
             };
             
             try {
+                // Save to Supabase
                 const { error } = await sb
                     .from('fsbo_leads')
                     .insert(leadData);
                 
                 if (error) throw error;
+                
+                // Send email notification
+                const emailData = new FormData();
+                emailData.append('email', 'BrandonBLKGroup@Gmail.com');
+                emailData.append('subject', '🏡 New FSBO Backup Plan Lead - ' + leadData.name);
+                emailData.append('message', `
+NEW FSBO BACKUP PLAN LEAD
+
+Name: ${leadData.name}
+Email: ${leadData.email}
+Phone: ${leadData.phone}
+Property Address: ${leadData.property_address}
+Timeline: ${leadData.timeline}
+Message: ${leadData.message || '(none)'}
+
+Source: TheBLK.Group/fsbo-backup-plan
+                `);
+                
+                fetch('https://formsubmit.co/ajax/BrandonBLKGroup@Gmail.com', {
+                    method: 'POST',
+                    body: emailData
+                }).catch(err => console.error('Email send failed:', err));
                 
                 alert('Thank you! We\'ll email you the FSBO Backup Plan within 24 hours.');
                 document.getElementById('fsbo-form').reset();
