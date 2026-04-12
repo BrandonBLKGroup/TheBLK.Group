@@ -36,8 +36,8 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: #000000;
-            color: #ffffff;
+            background: #FFFFFF;
+            color: #1a1a1a;
             overflow-x: hidden;
         }
         
@@ -65,10 +65,10 @@
             top: 74px;
             left: 0;
             right: 0;
-            background: rgba(0, 0, 0, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             z-index: 1999;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid #E5E5E5;
         }
         
         .nav-container {
@@ -87,7 +87,7 @@
         
         .nav-menu a {
             text-decoration: none;
-            color: rgba(255, 255, 255, 0.8);
+            color: #666666;
             font-size: 12px;
             font-weight: 400;
             letter-spacing: 3px;
@@ -107,8 +107,8 @@
         .mobile-menu-toggle {
             display: none;
             background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            color: #ffffff;
+            border: 1px solid #E5E5E5;
+            color: #666666;
             padding: 10px 20px;
             font-size: 11px;
             letter-spacing: 2px;
@@ -143,7 +143,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 0.80);
             z-index: 1;
         }
         
@@ -159,7 +159,7 @@
             width: 280px;
             height: 280px;
             margin: 0 auto 50px;
-            filter: brightness(0) invert(1);
+            filter: brightness(0);
         }
         
         .hero h1 {
@@ -167,7 +167,7 @@
             font-weight: 200;
             letter-spacing: 10px;
             margin-bottom: 25px;
-            color: #ffffff;
+            color: #1a1a1a;
             text-transform: uppercase;
         }
         
@@ -175,7 +175,7 @@
             font-size: 14px;
             font-weight: 300;
             letter-spacing: 6px;
-            color: rgba(255, 255, 255, 0.9);
+            color: #666666;
             text-transform: uppercase;
         }
         
@@ -199,7 +199,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(255, 255, 255, 0.80);
             z-index: 1;
         }
         
@@ -223,14 +223,15 @@
             background-image: url('parallax-3-new.jpg');
         }
         
-        /* Solid Black Sections */
+        /* Solid Light Sections */
         .black-section {
-            background: #000000;
+            background: #FFFFFF;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 120px 40px;
+            border-top: 1px solid #E5E5E5;
         }
         
         #listings-section {
@@ -246,12 +247,11 @@
         /* Section Titles */
         .section-title {
             font-size: 52px;
-            font-weight: 200;
-            letter-spacing: 10px;
+            font-weight: 300;
+            letter-spacing: -0.5px;
             text-align: center;
             margin-bottom: 80px;
-            text-transform: uppercase;
-            color: #ffffff;
+            color: #1a1a1a;
         }
         
         /* Stats Grid */
@@ -273,7 +273,7 @@
             font-size: 16px;
             font-weight: 300;
             letter-spacing: 4px;
-            color: rgba(255, 255, 255, 0.8);
+            color: #888888;
             text-transform: uppercase;
         }
         
@@ -285,18 +285,20 @@
         }
         
         .service-card {
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(255, 255, 255, 0.6);
             padding: 80px 60px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(0, 0, 0, 0.08);
             text-align: center;
             backdrop-filter: blur(10px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border-radius: 8px;
             transition: all 0.4s;
         }
         
         .service-card:hover {
-            border-color: rgba(184, 150, 12, 0.8);
+            border-color: #B8960C;
             transform: translateY(-8px);
-            background: rgba(0, 0, 0, 0.75);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
         }
         
         .service-card .emoji {
@@ -307,40 +309,39 @@
         
         .service-card h3 {
             font-size: 36px;
-            font-weight: 200;
-            letter-spacing: 6px;
+            font-weight: 300;
+            letter-spacing: -0.5px;
             margin-bottom: 25px;
-            color: #ffffff;
-            text-transform: uppercase;
+            color: #1a1a1a;
         }
         
         .service-card p {
             font-size: 18px;
             font-weight: 300;
             line-height: 1.8;
-            color: rgba(255, 255, 255, 0.85);
+            color: #666666;
             margin-bottom: 40px;
-            letter-spacing: 1px;
         }
         
         .btn {
             display: inline-block;
             padding: 20px 55px;
-            background: transparent;
-            color: #ffffff;
+            background: #B8960C;
+            color: #FFFFFF;
             text-decoration: none;
-            border: 1px solid rgba(255, 255, 255, 0.6);
+            border: 1px solid #B8960C;
             font-size: 12px;
-            font-weight: 400;
-            letter-spacing: 4px;
+            font-weight: 500;
+            letter-spacing: 2px;
             text-transform: uppercase;
+            border-radius: 4px;
             transition: all 0.3s;
         }
         
         .btn:hover {
-            background: #B8960C;
-            border-color: #B8960C;
-            color: #000000;
+            background: #8B7209;
+            border-color: #8B7209;
+            color: #FFFFFF;
         }
         
         /* Awards Grid */
@@ -353,13 +354,18 @@
         .award-item {
             text-align: center;
             padding: 50px 30px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border-radius: 8px;
             transition: all 0.3s;
         }
         
         .award-item:hover {
-            border-color: rgba(255, 255, 255, 0.4);
+            border-color: #B8960C;
             transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
         }
         
         .award-item h4 {
@@ -374,8 +380,7 @@
         .award-item p {
             font-size: 14px;
             font-weight: 300;
-            color: rgba(255, 255, 255, 0.7);
-            letter-spacing: 1px;
+            color: #666666;
             line-height: 1.6;
         }
         
@@ -390,19 +395,24 @@
         .team-member {
             text-align: center;
             padding: 40px 20px;
-            background: rgba(255, 255, 255, 0.04);
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border-radius: 8px;
             transition: all 0.3s;
         }
         
         .team-member:hover {
-            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            border-color: #B8960C;
         }
         
         .team-member-photo {
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            background: rgba(184, 150, 12, 0.15);
+            background: #FAFAFA;
             margin: 0 auto 25px;
             display: flex;
             align-items: center;
@@ -410,22 +420,22 @@
             font-size: 32px;
             font-weight: 300;
             color: #B8960C;
-            border: 1px solid rgba(184, 150, 12, 0.3);
+            border: 1px solid #E5E5E5;
         }
         
         .team-member h4 {
             font-size: 18px;
-            font-weight: 300;
-            letter-spacing: 2px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
             margin-bottom: 10px;
-            color: #ffffff;
+            color: #1a1a1a;
         }
         
         .team-member p {
             font-size: 11px;
             font-weight: 300;
-            letter-spacing: 2px;
-            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 1px;
+            color: #888888;
             text-transform: uppercase;
             margin-bottom: 5px;
         }
@@ -471,11 +481,14 @@
         }
         
         .modal-content {
-            background: #0a0a0a;
+            background: rgba(255, 255, 255, 0.98);
             padding: 60px;
             max-width: 650px;
             width: 100%;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid #E5E5E5;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            backdrop-filter: blur(10px);
             position: relative;
             margin: auto;
             max-height: calc(100vh - 80px);
@@ -488,7 +501,7 @@
             right: 25px;
             background: none;
             border: none;
-            color: rgba(255, 255, 255, 0.6);
+            color: #888888;
             font-size: 36px;
             cursor: pointer;
             font-weight: 200;
@@ -496,15 +509,15 @@
         }
         
         .modal-close:hover {
-            color: #ffffff;
+            color: #1a1a1a;
         }
         
         .modal-content h3 {
             font-size: 36px;
-            font-weight: 200;
-            letter-spacing: 6px;
+            font-weight: 300;
+            letter-spacing: -0.5px;
             margin-bottom: 50px;
-            text-transform: uppercase;
+            color: #1a1a1a;
         }
         
         .form-group {
@@ -514,10 +527,10 @@
         .form-group label {
             display: block;
             font-size: 11px;
-            font-weight: 400;
-            letter-spacing: 2px;
+            font-weight: 500;
+            letter-spacing: 1px;
             margin-bottom: 12px;
-            color: rgba(255, 255, 255, 0.7);
+            color: #666666;
             text-transform: uppercase;
         }
         
@@ -526,9 +539,10 @@
         .form-group select {
             width: 100%;
             padding: 16px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #ffffff;
+            background: #FFFFFF;
+            border: 1px solid #E5E5E5;
+            border-radius: 4px;
+            color: #1a1a1a;
             font-size: 15px;
             font-weight: 300;
             transition: all 0.3s;
@@ -539,7 +553,7 @@
         .form-group select:focus {
             outline: none;
             border-color: #B8960C;
-            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 3px rgba(184,150,12,0.1);
         }
         
         .form-group textarea {
@@ -548,15 +562,15 @@
         }
         
         .form-group select option {
-            background: #0a0a0a;
+            background: #FFFFFF;
         }
         
         /* Footer */
         footer {
-            background: #000000;
+            background: #FAFAFA;
             padding: 80px 40px 50px;
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid #E5E5E5;
         }
         
         .footer-logo {
@@ -579,7 +593,7 @@
         footer p {
             font-size: 11px;
             font-weight: 300;
-            color: rgba(255, 255, 255, 0.4);
+            color: #888888;
             letter-spacing: 1px;
         }
         
@@ -592,17 +606,18 @@
         }
         
         .listing-card {
-            background: rgba(255, 255, 255, 0.04);
+            background: #FFFFFF;
             border-radius: 8px;
             overflow: hidden;
             transition: all 0.3s;
             cursor: pointer;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid #E5E5E5;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
         
         .listing-card:hover {
             transform: translateY(-8px);
-            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
             border-color: #B8960C;
         }
         
@@ -619,17 +634,16 @@
         
         .listing-info h4 {
             font-size: 22px;
-            font-weight: 300;
-            letter-spacing: 2px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
             margin-bottom: 8px;
-            color: #ffffff;
+            color: #1a1a1a;
         }
         
         .listing-location {
             font-size: 13px;
             font-weight: 300;
-            letter-spacing: 1px;
-            color: rgba(255, 255, 255, 0.6);
+            color: #888888;
             margin-bottom: 15px;
         }
         
@@ -643,8 +657,7 @@
         .listing-specs {
             font-size: 13px;
             font-weight: 300;
-            letter-spacing: 1px;
-            color: rgba(255, 255, 255, 0.7);
+            color: #666666;
             margin-bottom: 20px;
         }
         
@@ -655,20 +668,21 @@
         .listing-button {
             display: inline-block;
             padding: 12px 30px;
-            background: transparent;
-            color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.4);
+            background: #B8960C;
+            color: #FFFFFF;
+            border: 1px solid #B8960C;
             font-size: 11px;
-            font-weight: 400;
-            letter-spacing: 3px;
+            font-weight: 500;
+            letter-spacing: 2px;
             text-transform: uppercase;
+            border-radius: 4px;
             transition: all 0.3s;
         }
         
         .listing-card:hover .listing-button {
-            background: #B8960C;
-            border-color: #B8960C;
-            color: #000000;
+            background: #8B7209;
+            border-color: #8B7209;
+            color: #FFFFFF;
         }
         
         /* Mobile */
@@ -694,11 +708,12 @@
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: rgba(0, 0, 0, 0.98);
+                background: rgba(255, 255, 255, 0.98);
                 flex-direction: column;
                 gap: 0;
                 padding: 0;
-                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                border-top: 1px solid #E5E5E5;
+                backdrop-filter: blur(10px);
             }
             
             .nav-menu.active {
@@ -706,7 +721,7 @@
             }
             
             .nav-menu li {
-                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                border-bottom: 1px solid #E5E5E5;
             }
             
             .nav-menu a {
@@ -720,7 +735,7 @@
             
             .nav-menu a:hover,
             .nav-menu a.active {
-                background: rgba(184, 150, 12, 0.1);
+                background: rgba(184, 150, 12, 0.05);
             }
             
             .hero-logo {
@@ -1169,7 +1184,7 @@
     <footer>
         <div class="footer-logo">THE BLK GROUP</div>
         <div class="footer-lpt">at LPT Realty</div>
-        <p style="margin-top: 15px; font-size: 13px; letter-spacing: 1px; color: rgba(255, 255, 255, 0.6);">11324 Arcade Drive, #23, Little Rock, AR</p>
+        <p style="margin-top: 15px; font-size: 13px; letter-spacing: 1px; color: #888888;">11324 Arcade Drive, #23, Little Rock, AR</p>
         <p style="margin-top: 30px;">&copy; 2026 The BLK Group at LPT Realty. All rights reserved.</p>
         <p style="margin-top: 18px;">Solutions for Every Corner of Arkansas</p>
     </footer>
