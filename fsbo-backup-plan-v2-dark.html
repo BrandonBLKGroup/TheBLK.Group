@@ -23,8 +23,8 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #FFFFFF;
-            color: #1a1a1a;
+            background: #000;
+            color: #fff;
             line-height: 1.6;
             overflow-x: hidden;
             max-width: 100vw;
@@ -53,7 +53,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(rgba(255,255,255,0.80), rgba(255,255,255,0.80)), url('https://theblk.group/parallax-1-new.jpg') center center/cover fixed;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://theblk.group/parallax-1-new.jpg') center center/cover fixed;
             padding: 100px 20px 60px;
             position: relative;
         }
@@ -158,7 +158,7 @@
         .logo {
             width: 120px;
             margin-bottom: 30px;
-            filter: brightness(0);
+            filter: brightness(0) invert(1);
         }
         
         h1 {
@@ -166,7 +166,7 @@
             font-weight: 700;
             line-height: 1.1;
             margin-bottom: 20px;
-            color: #1a1a1a;
+            color: #fff;
         }
         
         .headline-sub {
@@ -227,12 +227,10 @@
         
         /* Form Card */
         .form-card {
-            background: rgba(255, 255, 255, 0.95);
+            background: #fff;
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 20px 60px rgba(184, 150, 12, 0.3);
         }
         
         .form-card h2 {
@@ -351,8 +349,7 @@
         /* Why Section */
         .why-section {
             padding: 80px 20px;
-            background: #FAFAFA;
-            border-top: 1px solid #E5E5E5;
+            background: #111;
         }
         
         .why-container {
@@ -362,11 +359,9 @@
         
         .why-section h2 {
             font-size: 42px;
-            font-weight: 300;
             text-align: center;
             margin-bottom: 60px;
-            color: #1a1a1a;
-            letter-spacing: -0.5px;
+            color: #B8960C;
         }
         
         .why-grid {
@@ -376,37 +371,27 @@
         }
         
         .why-card {
-            background: rgba(255, 255, 255, 0.6);
+            background: #1a1a1a;
             padding: 40px;
             border-radius: 12px;
-            border: 1px solid rgba(0, 0, 0, 0.08);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-            transition: all 0.3s;
-        }
-        
-        .why-card:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            border-color: #B8960C;
+            border: 1px solid #333;
         }
         
         .why-card h3 {
             font-size: 24px;
-            font-weight: 500;
-            color: #1a1a1a;
+            color: #B8960C;
             margin-bottom: 15px;
         }
         
         .why-card p {
-            color: #666666;
+            color: #ccc;
             line-height: 1.8;
         }
         
         /* Team Section */
         .team-section {
             padding: 80px 20px;
-            background: #FFFFFF;
-            border-top: 1px solid #E5E5E5;
+            background: #000;
         }
         
         .team-container {
@@ -418,9 +403,9 @@
             font-size: 42px;
             text-align: center;
             margin-bottom: 60px;
-            color: #1a1a1a;
+            color: #B8960C;
             font-weight: 300;
-            letter-spacing: -0.5px;
+            letter-spacing: 3px;
         }
         
         .team-grid {
@@ -432,24 +417,20 @@
         .team-member {
             text-align: center;
             padding: 30px 15px;
-            background: rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.04);
             border-radius: 8px;
-            border: 1px solid rgba(0, 0, 0, 0.08);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
             transition: all 0.3s;
         }
         
         .team-member:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            border-color: #B8960C;
+            background: rgba(255, 255, 255, 0.08);
         }
         
         .team-member-photo {
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            background: #FAFAFA;
+            background: rgba(184, 150, 12, 0.15);
             margin: 0 auto 20px;
             display: flex;
             align-items: center;
@@ -457,22 +438,22 @@
             font-size: 28px;
             font-weight: 300;
             color: #B8960C;
-            border: 1px solid #E5E5E5;
+            border: 1px solid rgba(184, 150, 12, 0.3);
         }
         
         .team-member h4 {
             font-size: 16px;
             font-weight: 400;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             margin-bottom: 8px;
-            color: #1a1a1a;
+            color: #ffffff;
         }
         
         .team-member p {
             font-size: 11px;
             font-weight: 300;
             letter-spacing: 1px;
-            color: #888888;
+            color: rgba(255, 255, 255, 0.5);
             text-transform: uppercase;
             margin-bottom: 5px;
         }
@@ -499,14 +480,13 @@
         .footer {
             padding: 40px 20px;
             text-align: center;
-            background: #FAFAFA;
-            border-top: 1px solid #E5E5E5;
+            background: #000;
+            border-top: 1px solid #333;
         }
         
         .footer p {
             color: #888;
             font-size: 14px;
-            font-weight: 300;
         }
         
         /* Mobile */
@@ -674,39 +654,39 @@
     </section>
 
     <!-- Pain Agitation Section -->
-    <section style="padding: 80px 20px; background: #FFFFFF; border-top: 1px solid #E5E5E5;">
+    <section style="padding: 80px 20px; background: #111;">
         <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-            <h2 style="font-size: 42px; color: #1a1a1a; margin-bottom: 30px; font-weight: 300; letter-spacing: -0.5px;">Let's Be Honest About What Other Realtors Are Telling You...</h2>
+            <h2 style="font-size: 42px; color: #B8960C; margin-bottom: 30px; font-weight: 300;">Let's Be Honest About What Other Realtors Are Telling You...</h2>
             
-            <p style="font-size: 20px; line-height: 1.8; color: #666666; margin-bottom: 25px;">
+            <p style="font-size: 20px; line-height: 1.8; color: #ccc; margin-bottom: 25px;">
                 You listed your house For Sale By Owner. Smart move. You're trying to save on commission. But within 24 hours, your phone started ringing off the hook.
             </p>
             
-            <p style="font-size: 20px; line-height: 1.8; color: #666666; margin-bottom: 25px;">
+            <p style="font-size: 20px; line-height: 1.8; color: #ccc; margin-bottom: 25px;">
                 Every realtor in town is calling you, texting you, emailing you. They all want the same thing: convince you that you CAN'T do this yourself. That you NEED them. That you're making a HUGE mistake.
             </p>
             
-            <p style="font-size: 20px; line-height: 1.8; color: #666666; margin-bottom: 25px;">
+            <p style="font-size: 20px; line-height: 1.8; color: #ccc; margin-bottom: 25px;">
                 They'll scare you with legal jargon. Tell you horror stories about contracts gone wrong. Demand 5-6% commission. Pressure you to sign a 6-month exclusive agreement. And if you don't bite? They'll move on to the next FSBO and forget you exist.
             </p>
             
-            <p style="font-size: 20px; line-height: 1.8; color: #666666; margin-bottom: 25px;">
+            <p style="font-size: 20px; line-height: 1.8; color: #ccc; margin-bottom: 25px;">
                 Here's what they WON'T tell you: selling FSBO can work, but it's exhausting. And when you DO need help, you shouldn't have to give up control or pay double the commission to get it.
             </p>
             
-            <p style="font-size: 24px; line-height: 1.8; color: #1a1a1a; font-weight: 600; margin-top: 40px; margin-bottom: 30px;">
+            <p style="font-size: 24px; line-height: 1.8; color: #fff; font-weight: 600; margin-top: 40px; margin-bottom: 30px;">
                 We're not here to scare you into listing with us. We're here to offer a backup plan.
             </p>
             
-            <p style="font-size: 20px; line-height: 1.8; color: #666666; margin-bottom: 15px;">
+            <p style="font-size: 20px; line-height: 1.8; color: #ccc; margin-bottom: 15px;">
                 Try it yourself first. We respect that.
             </p>
             
-            <p style="font-size: 20px; line-height: 1.8; color: #666666; margin-bottom: 15px;">
+            <p style="font-size: 20px; line-height: 1.8; color: #ccc; margin-bottom: 15px;">
                 But if 30-60 days go by and you're tired of the showings, the phone calls, the paperwork, and the lowball offers?
             </p>
             
-            <p style="font-size: 20px; line-height: 1.8; color: #666666; margin-bottom: 40px;">
+            <p style="font-size: 20px; line-height: 1.8; color: #ccc; margin-bottom: 40px;">
                 We'll take over for just 2% commission. 30 days. No long-term contract. No pressure. Just results.
             </p>
             
@@ -717,59 +697,59 @@
     </section>
     
     <!-- FSBO Challenges Section -->
-    <section style="padding: 80px 20px; background: #FFFFFF; border-top: 1px solid #E5E5E5;">
+    <section style="padding: 80px 20px; background: #0a0a0a;">
         <div style="max-width: 1000px; margin: 0 auto;">
-            <h2 style="font-size: 42px; color: #1a1a1a; margin-bottom: 20px; text-align: center; font-weight: 300;">The Reality of Selling FSBO</h2>
+            <h2 style="font-size: 42px; color: #B8960C; margin-bottom: 20px; text-align: center; font-weight: 300;">The Reality of Selling FSBO</h2>
             <p style="font-size: 18px; color: #888; text-align: center; margin-bottom: 50px;">We respect the hustle. But here's what you're really signing up for.</p>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 30px; border-radius: 8px; border-left: 4px solid #ff4444;">
+                <div style="background: #1a1a1a; padding: 30px; border-radius: 8px; border-left: 4px solid #ff4444;">
                     <div style="font-size: 32px; margin-bottom: 15px;">📄</div>
                     <h3 style="font-size: 20px; color: #ff4444; margin-bottom: 15px;">Legal Paperwork Complexity</h3>
-                    <p style="color: #666666; font-size: 16px; line-height: 1.7;">Purchase agreements, disclosures, title work, inspections. One mistake could cost you thousands or kill the deal entirely. Are you confident you know every Arkansas disclosure requirement?</p>
+                    <p style="color: #ccc; font-size: 16px; line-height: 1.7;">Purchase agreements, disclosures, title work, inspections. One mistake could cost you thousands or kill the deal entirely. Are you confident you know every Arkansas disclosure requirement?</p>
                 </div>
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 30px; border-radius: 8px; border-left: 4px solid #ff4444;">
+                <div style="background: #1a1a1a; padding: 30px; border-radius: 8px; border-left: 4px solid #ff4444;">
                     <div style="font-size: 32px; margin-bottom: 15px;">💰</div>
                     <h3 style="font-size: 20px; color: #ff4444; margin-bottom: 15px;">Pricing Without Data</h3>
-                    <p style="color: #666666; font-size: 16px; line-height: 1.7;">Zillow's estimate? Probably wrong. You don't have access to the same comparable sales data that realtors do. Overprice and you sit. Underprice and you leave money on the table.</p>
+                    <p style="color: #ccc; font-size: 16px; line-height: 1.7;">Zillow's estimate? Probably wrong. You don't have access to the same comparable sales data that realtors do. Overprice and you sit. Underprice and you leave money on the table.</p>
                 </div>
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 30px; border-radius: 8px; border-left: 4px solid #ff4444;">
+                <div style="background: #1a1a1a; padding: 30px; border-radius: 8px; border-left: 4px solid #ff4444;">
                     <div style="font-size: 32px; margin-bottom: 15px;">📸</div>
                     <h3 style="font-size: 20px; color: #ff4444; margin-bottom: 15px;">Marketing Costs Add Up</h3>
-                    <p style="color: #666666; font-size: 16px; line-height: 1.7;">Professional photos? $200-500. Yard sign? $50. Online listings? Some are free, but premium placement costs money. Facebook ads? You're competing against professional marketers.</p>
+                    <p style="color: #ccc; font-size: 16px; line-height: 1.7;">Professional photos? $200-500. Yard sign? $50. Online listings? Some are free, but premium placement costs money. Facebook ads? You're competing against professional marketers.</p>
                 </div>
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 30px; border-radius: 8px; border-left: 4px solid #ff4444;">
+                <div style="background: #1a1a1a; padding: 30px; border-radius: 8px; border-left: 4px solid #ff4444;">
                     <div style="font-size: 32px; margin-bottom: 15px;">⏰</div>
                     <h3 style="font-size: 20px; color: #ff4444; margin-bottom: 15px;">Time Investment Is Massive</h3>
-                    <p style="color: #666666; font-size: 16px; line-height: 1.7;">Answering calls at all hours. Scheduling showings around YOUR life. Hosting open houses on weekends. Following up with every tire-kicker. Negotiating with buyers who know you're desperate.</p>
+                    <p style="color: #ccc; font-size: 16px; line-height: 1.7;">Answering calls at all hours. Scheduling showings around YOUR life. Hosting open houses on weekends. Following up with every tire-kicker. Negotiating with buyers who know you're desperate.</p>
                 </div>
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 30px; border-radius: 8px; border-left: 4px solid #ff4444;">
+                <div style="background: #1a1a1a; padding: 30px; border-radius: 8px; border-left: 4px solid #ff4444;">
                     <div style="font-size: 32px; margin-bottom: 15px;">🏠</div>
                     <h3 style="font-size: 20px; color: #ff4444; margin-bottom: 15px;">Safety Concerns</h3>
-                    <p style="color: #666666; font-size: 16px; line-height: 1.7;">You're letting strangers into your home. Do you know how to screen them? How to protect your family and your belongings? What if someone gets hurt on your property during a showing?</p>
+                    <p style="color: #ccc; font-size: 16px; line-height: 1.7;">You're letting strangers into your home. Do you know how to screen them? How to protect your family and your belongings? What if someone gets hurt on your property during a showing?</p>
                 </div>
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 30px; border-radius: 8px; border-left: 4px solid #ff4444;">
+                <div style="background: #1a1a1a; padding: 30px; border-radius: 8px; border-left: 4px solid #ff4444;">
                     <div style="font-size: 32px; margin-bottom: 15px;">🔒</div>
                     <h3 style="font-size: 20px; color: #ff4444; margin-bottom: 15px;">No MLS Access</h3>
-                    <p style="color: #666666; font-size: 16px; line-height: 1.7;">80% of buyers work with agents who search the MLS. You're not on it. That means 80% of buyers will never see your home unless you pay a flat-fee MLS service (which still costs money).</p>
+                    <p style="color: #ccc; font-size: 16px; line-height: 1.7;">80% of buyers work with agents who search the MLS. You're not on it. That means 80% of buyers will never see your home unless you pay a flat-fee MLS service (which still costs money).</p>
                 </div>
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 30px; border-radius: 8px; border-left: 4px solid #ff4444;">
+                <div style="background: #1a1a1a; padding: 30px; border-radius: 8px; border-left: 4px solid #ff4444;">
                     <div style="font-size: 32px; margin-bottom: 15px;">🤝</div>
                     <h3 style="font-size: 20px; color: #ff4444; margin-bottom: 15px;">Negotiating With Buyer's Agents</h3>
-                    <p style="color: #666666; font-size: 16px; line-height: 1.7;">Buyer's agents know you're not a pro. They'll push you on price, terms, repairs. And they still want their 2.5-3% commission. Are you ready to negotiate against someone who does this for a living?</p>
+                    <p style="color: #ccc; font-size: 16px; line-height: 1.7;">Buyer's agents know you're not a pro. They'll push you on price, terms, repairs. And they still want their 2.5-3% commission. Are you ready to negotiate against someone who does this for a living?</p>
                 </div>
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 30px; border-radius: 8px; border-left: 4px solid #ff4444;">
+                <div style="background: #1a1a1a; padding: 30px; border-radius: 8px; border-left: 4px solid #ff4444;">
                     <div style="font-size: 32px; margin-bottom: 15px;">📋</div>
                     <h3 style="font-size: 20px; color: #ff4444; margin-bottom: 15px;">Closing Coordination</h3>
-                    <p style="color: #666666; font-size: 16px; line-height: 1.7;">Title company, lender, appraiser, inspector, buyer, buyer's agent. You're the quarterback coordinating all of it. Miss one deadline and the deal falls apart. Know what an estoppel letter is?</p>
+                    <p style="color: #ccc; font-size: 16px; line-height: 1.7;">Title company, lender, appraiser, inspector, buyer, buyer's agent. You're the quarterback coordinating all of it. Miss one deadline and the deal falls apart. Know what an estoppel letter is?</p>
                 </div>
                 
             </div>
@@ -781,99 +761,99 @@
     </section>
 
     <!-- Authority Section -->
-    <section style="padding: 80px 20px; background: #FAFAFA; border-top: 1px solid #E5E5E5;">
+    <section style="padding: 80px 20px; background: #000;">
         <div style="max-width: 1400px; margin: 0 auto;">
-            <h2 style="font-size: 42px; color: #1a1a1a; margin-bottom: 50px; text-align: center; font-weight: 300;">What Makes Us Different</h2>
+            <h2 style="font-size: 42px; color: #B8960C; margin-bottom: 50px; text-align: center; font-weight: 300;">What Makes Us Different</h2>
             
             <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 25px; margin-bottom: 50px;">
-                <div style="text-align: center; padding: 25px; background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border-radius: 8px;">
+                <div style="text-align: center; padding: 25px; background: #1a1a1a; border-radius: 8px;">
                     <div style="font-size: 44px; color: #B8960C; font-weight: 700; margin-bottom: 10px;">1000+</div>
-                    <div style="color: #666666; font-size: 14px; line-height: 1.4;">Homes Sold</div>
+                    <div style="color: #ccc; font-size: 14px; line-height: 1.4;">Homes Sold</div>
                 </div>
-                <div style="text-align: center; padding: 25px; background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border-radius: 8px;">
+                <div style="text-align: center; padding: 25px; background: #1a1a1a; border-radius: 8px;">
                     <div style="font-size: 44px; color: #B8960C; font-weight: 700; margin-bottom: 10px;">#1</div>
-                    <div style="color: #666666; font-size: 14px; line-height: 1.4;">Team 2025</div>
+                    <div style="color: #ccc; font-size: 14px; line-height: 1.4;">Team 2025</div>
                 </div>
-                <div style="text-align: center; padding: 25px; background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border-radius: 8px;">
+                <div style="text-align: center; padding: 25px; background: #1a1a1a; border-radius: 8px;">
                     <div style="font-size: 44px; color: #B8960C; font-weight: 700; margin-bottom: 10px;">💎</div>
-                    <div style="color: #666666; font-size: 14px; line-height: 1.4;">$30M+ Pinnacle Diamond 2025</div>
+                    <div style="color: #ccc; font-size: 14px; line-height: 1.4;">$30M+ Pinnacle Diamond 2025</div>
                 </div>
-                <div style="text-align: center; padding: 25px; background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border-radius: 8px;">
+                <div style="text-align: center; padding: 25px; background: #1a1a1a; border-radius: 8px;">
                     <div style="font-size: 44px; color: #B8960C; font-weight: 700; margin-bottom: 10px;">35+</div>
-                    <div style="color: #666666; font-size: 14px; line-height: 1.4;">Years Combined Experience</div>
+                    <div style="color: #ccc; font-size: 14px; line-height: 1.4;">Years Combined Experience</div>
                 </div>
-                <div style="text-align: center; padding: 25px; background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border-radius: 8px;">
+                <div style="text-align: center; padding: 25px; background: #1a1a1a; border-radius: 8px;">
                     <div style="font-size: 44px; color: #B8960C; font-weight: 700; margin-bottom: 10px;">🏆</div>
-                    <div style="color: #666666; font-size: 14px; line-height: 1.4;">Voted Best Realtors by Soiree 2025</div>
+                    <div style="color: #ccc; font-size: 14px; line-height: 1.4;">Voted Best Realtors by Soiree 2025</div>
                 </div>
             </div>
             
-            <p style="font-size: 20px; line-height: 1.8; color: #666666; text-align: center; max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 20px; line-height: 1.8; color: #ccc; text-align: center; max-width: 800px; margin: 0 auto;">
                 We didn't become the #1 team in Central Arkansas for homes sold by crossing our fingers. We got here by selling homes when other agents couldn't. By doing what others won't. By challenging the status quo. By treating every listing like it's our own.
             </p>
         </div>
     </section>
 
     <!-- The 30 Day Difference Section -->
-    <section style="padding: 80px 20px; background: #FFFFFF; border-top: 1px solid #E5E5E5;">
+    <section style="padding: 80px 20px; background: #0a0a0a;">
         <div style="max-width: 1100px; margin: 0 auto;">
-            <h2 style="font-size: 42px; color: #1a1a1a; margin-bottom: 20px; text-align: center; font-weight: 300;">Here's What You Get With Our 30 Day Strategy</h2>
+            <h2 style="font-size: 42px; color: #B8960C; margin-bottom: 20px; text-align: center; font-weight: 300;">Here's What You Get With Our 30 Day Strategy</h2>
             <p style="font-size: 18px; color: #888; text-align: center; margin-bottom: 50px;">This isn't just a listing. It's a full-scale marketing campaign built around YOUR property.</p>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
+                <div style="background: #1a1a1a; padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
                     <div style="font-size: 32px; margin-bottom: 15px;">🎯</div>
                     <h3 style="font-size: 22px; color: #B8960C; margin-bottom: 15px;">Custom Tailored Marketing Strategy</h3>
-                    <p style="color: #666666; font-size: 16px; line-height: 1.7;">Not a cookie-cutter approach. We build a marketing plan specifically for YOUR property, YOUR neighborhood, and YOUR target buyer. Every home is different. Every strategy should be too.</p>
+                    <p style="color: #ccc; font-size: 16px; line-height: 1.7;">Not a cookie-cutter approach. We build a marketing plan specifically for YOUR property, YOUR neighborhood, and YOUR target buyer. Every home is different. Every strategy should be too.</p>
                 </div>
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
+                <div style="background: #1a1a1a; padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
                     <div style="font-size: 32px; margin-bottom: 15px;">📸</div>
                     <h3 style="font-size: 22px; color: #B8960C; margin-bottom: 15px;">Professional Photography & Videography</h3>
-                    <p style="color: #666666; font-size: 16px; line-height: 1.7;">Twilight shots that make your home glow. Drone footage for acreage and unique properties. Walk-through videos that let buyers fall in love before they ever step foot inside.</p>
+                    <p style="color: #ccc; font-size: 16px; line-height: 1.7;">Twilight shots that make your home glow. Drone footage for acreage and unique properties. Walk-through videos that let buyers fall in love before they ever step foot inside.</p>
                 </div>
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
+                <div style="background: #1a1a1a; padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
                     <div style="font-size: 32px; margin-bottom: 15px;">📮</div>
                     <h3 style="font-size: 22px; color: #B8960C; margin-bottom: 15px;">Direct Mail & Physical Marketing</h3>
-                    <p style="color: #666666; font-size: 16px; line-height: 1.7;">Premium postcards, neighborhood door hangers, and targeted direct mail campaigns to get your listing in front of neighbors and potential buyers who might not be searching online. Physical presence matters.</p>
+                    <p style="color: #ccc; font-size: 16px; line-height: 1.7;">Premium postcards, neighborhood door hangers, and targeted direct mail campaigns to get your listing in front of neighbors and potential buyers who might not be searching online. Physical presence matters.</p>
                 </div>
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
+                <div style="background: #1a1a1a; padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
                     <div style="font-size: 32px; margin-bottom: 15px;">📱</div>
                     <h3 style="font-size: 22px; color: #B8960C; margin-bottom: 15px;">Social Media Blitz</h3>
-                    <p style="color: #666666; font-size: 16px; line-height: 1.7;">Organic posts PLUS paid Facebook & Instagram ads targeted to active buyers in your area. Your listing gets in front of 100,000+ extra eyeballs in the first 30 days. Real ad spend. Real reach.</p>
+                    <p style="color: #ccc; font-size: 16px; line-height: 1.7;">Organic posts PLUS paid Facebook & Instagram ads targeted to active buyers in your area. Your listing gets in front of 100,000+ extra eyeballs in the first 30 days. Real ad spend. Real reach.</p>
                 </div>
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
+                <div style="background: #1a1a1a; padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
                     <div style="font-size: 32px; margin-bottom: 15px;">🌐</div>
                     <h3 style="font-size: 22px; color: #B8960C; margin-bottom: 15px;">Custom Listing Website</h3>
-                    <p style="color: #666666; font-size: 16px; line-height: 1.7;">Your home gets its own premium website (like theblk.group/listings/your-address) with gallery, virtual tour, and scheduling. Not just another MLS listing. A complete digital showcase.</p>
+                    <p style="color: #ccc; font-size: 16px; line-height: 1.7;">Your home gets its own premium website (like theblk.group/listings/your-address) with gallery, virtual tour, and scheduling. Not just another MLS listing. A complete digital showcase.</p>
                 </div>
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
+                <div style="background: #1a1a1a; padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
                     <div style="font-size: 32px; margin-bottom: 15px;">📊</div>
                     <h3 style="font-size: 22px; color: #B8960C; margin-bottom: 15px;">Weekly 1-on-1 Deep-Dive Updates</h3>
-                    <p style="color: #666666; font-size: 16px; line-height: 1.7;">Every week, you get a deep-dive email and call from us. We tell you exactly where we stand in getting the offer you're looking for, how the listing is performing, and what we need to do to keep the momentum going. No guessing. Total transparency.</p>
+                    <p style="color: #ccc; font-size: 16px; line-height: 1.7;">Every week, you get a deep-dive email and call from us. We tell you exactly where we stand in getting the offer you're looking for, how the listing is performing, and what we need to do to keep the momentum going. No guessing. Total transparency.</p>
                 </div>
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
+                <div style="background: #1a1a1a; padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
                     <div style="font-size: 32px; margin-bottom: 15px;">💬</div>
                     <h3 style="font-size: 22px; color: #B8960C; margin-bottom: 15px;">24/7 Access to Your Agents</h3>
-                    <p style="color: #666666; font-size: 16px; line-height: 1.7;">Text us at 11pm with a question? We'll answer. Need an update on a Saturday? Call us. You're never left in the dark wondering what's happening with your biggest asset.</p>
+                    <p style="color: #ccc; font-size: 16px; line-height: 1.7;">Text us at 11pm with a question? We'll answer. Need an update on a Saturday? Call us. You're never left in the dark wondering what's happening with your biggest asset.</p>
                 </div>
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
+                <div style="background: #1a1a1a; padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
                     <div style="font-size: 32px; margin-bottom: 15px;">👥</div>
                     <h3 style="font-size: 22px; color: #B8960C; margin-bottom: 15px;">2 Agents Working Full Time</h3>
-                    <p style="color: #666666; font-size: 16px; line-height: 1.7;">You don't get one part-time agent juggling 30 listings. You get TWO full-time agents focused on selling YOUR home. Double the effort. Double the attention. Double the results.</p>
+                    <p style="color: #ccc; font-size: 16px; line-height: 1.7;">You don't get one part-time agent juggling 30 listings. You get TWO full-time agents focused on selling YOUR home. Double the effort. Double the attention. Double the results.</p>
                 </div>
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
+                <div style="background: #1a1a1a; padding: 35px; border-radius: 8px; border-left: 4px solid #B8960C;">
                     <div style="font-size: 32px; margin-bottom: 15px;">🏠</div>
                     <h3 style="font-size: 22px; color: #B8960C; margin-bottom: 15px;">Regularly Scheduled Open Houses</h3>
-                    <p style="color: #666666; font-size: 16px; line-height: 1.7;">We bring qualified buyers through your door, not just curious neighbors. Real feedback from real buyers helps us price and position your home for the fastest sale. Open houses mean offers, not just visitors.</p>
+                    <p style="color: #ccc; font-size: 16px; line-height: 1.7;">We bring qualified buyers through your door, not just curious neighbors. Real feedback from real buyers helps us price and position your home for the fastest sale. Open houses mean offers, not just visitors.</p>
                 </div>
                 
             </div>
@@ -885,65 +865,65 @@
     </section>
 
     <!-- Comparison Section -->
-    <section style="padding: 80px 20px; background: #FAFAFA; border-top: 1px solid #E5E5E5;">
+    <section style="padding: 80px 20px; background: #000;">
         <div style="max-width: 1100px; margin: 0 auto;">
-            <h2 style="font-size: 42px; color: #1a1a1a; margin-bottom: 50px; text-align: center; font-weight: 300;">Them vs. Us</h2>
+            <h2 style="font-size: 42px; color: #B8960C; margin-bottom: 50px; text-align: center; font-weight: 300;">Them vs. Us</h2>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 40px; border-radius: 8px; border: 1px solid rgba(0, 0, 0, 0.08);">
+                <div style="background: #1a1a1a; padding: 40px; border-radius: 8px; border: 1px solid #333;">
                     <h3 style="font-size: 24px; color: #ff4444; margin-bottom: 30px; text-align: center;">❌ Traditional Agents</h3>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="color: #666666; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
                             <span style="position: absolute; left: 0; color: #ff4444;">✗</span>
                             6-month contract (whether you sell or not)
                         </li>
-                        <li style="color: #666666; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
                             <span style="position: absolute; left: 0; color: #ff4444;">✗</span>
                             5-6% commission split
                         </li>
-                        <li style="color: #666666; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
                             <span style="position: absolute; left: 0; color: #ff4444;">✗</span>
                             "Set it and forget it" MLS listing
                         </li>
-                        <li style="color: #666666; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
                             <span style="position: absolute; left: 0; color: #ff4444;">✗</span>
                             Sporadic communication
                         </li>
-                        <li style="color: #666666; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
                             <span style="position: absolute; left: 0; color: #ff4444;">✗</span>
                             No real marketing budget
                         </li>
-                        <li style="color: #666666; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
                             <span style="position: absolute; left: 0; color: #ff4444;">✗</span>
                             You're stuck even if nothing happens
                         </li>
                     </ul>
                 </div>
                 
-                <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 40px; border-radius: 8px; border: 2px solid #B8960C;">
+                <div style="background: #1a1a1a; padding: 40px; border-radius: 8px; border: 2px solid #B8960C;">
                     <h3 style="font-size: 24px; color: #B8960C; margin-bottom: 30px; text-align: center;">✓ The BLK Group</h3>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="color: #666666; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
                             <span style="position: absolute; left: 0; color: #B8960C;">✓</span>
                             30-day agreement (results or you walk)
                         </li>
-                        <li style="color: #666666; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
                             <span style="position: absolute; left: 0; color: #B8960C;">✓</span>
                             2% commission (FSBO-friendly rate)
                         </li>
-                        <li style="color: #666666; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
                             <span style="position: absolute; left: 0; color: #B8960C;">✓</span>
                             Aggressive multi-channel marketing
                         </li>
-                        <li style="color: #666666; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
                             <span style="position: absolute; left: 0; color: #B8960C;">✓</span>
                             Weekly updates every Monday
                         </li>
-                        <li style="color: #666666; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
                             <span style="position: absolute; left: 0; color: #B8960C;">✓</span>
                             Real ad spend on YOUR home
                         </li>
-                        <li style="color: #666666; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
                             <span style="position: absolute; left: 0; color: #B8960C;">✓</span>
                             Zero risk, zero long-term trap
                         </li>
@@ -954,26 +934,26 @@
     </section>
 
     <!-- Social Proof / Results Section -->
-    <section style="padding: 80px 20px; background: #FAFAFA; border-top: 1px solid #E5E5E5;">
+    <section style="padding: 80px 20px; background: #111;">
         <div style="max-width: 1000px; margin: 0 auto;">
-            <h2 style="font-size: 42px; color: #1a1a1a; margin-bottom: 50px; text-align: center; font-weight: 300;">Real Results from Real Sellers</h2>
+            <h2 style="font-size: 42px; color: #B8960C; margin-bottom: 50px; text-align: center; font-weight: 300;">Real Results from Real Sellers</h2>
             
-            <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 40px; border-radius: 8px; margin-bottom: 30px; border-left: 4px solid #B8960C;">
-                <p style="font-size: 18px; line-height: 1.8; color: #666666; font-style: italic; margin-bottom: 20px;">
+            <div style="background: #1a1a1a; padding: 40px; border-radius: 8px; margin-bottom: 30px; border-left: 4px solid #B8960C;">
+                <p style="font-size: 18px; line-height: 1.8; color: #ccc; font-style: italic; margin-bottom: 20px;">
                     "My house sat on the market for 4 months with my previous agent. Within 3 weeks of listing with The BLK Group, I had multiple offers. Brandon's marketing strategy actually works."
                 </p>
                 <p style="color: #B8960C; font-weight: 600;">— Sarah M., Little Rock</p>
             </div>
             
-            <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 40px; border-radius: 8px; margin-bottom: 30px; border-left: 4px solid #B8960C;">
-                <p style="font-size: 18px; line-height: 1.8; color: #666666; font-style: italic; margin-bottom: 20px;">
+            <div style="background: #1a1a1a; padding: 40px; border-radius: 8px; margin-bottom: 30px; border-left: 4px solid #B8960C;">
+                <p style="font-size: 18px; line-height: 1.8; color: #ccc; font-style: italic; margin-bottom: 20px;">
                     "I was skeptical about the 30-day program, but I was desperate. They sold my home in 21 days for MORE than what I was originally asking. I should have called them first."
                 </p>
                 <p style="color: #B8960C; font-weight: 600;">— Michael T., Conway</p>
             </div>
             
-            <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 40px; border-radius: 8px; border-left: 4px solid #B8960C;">
-                <p style="font-size: 18px; line-height: 1.8; color: #666666; font-style: italic; margin-bottom: 20px;">
+            <div style="background: #1a1a1a; padding: 40px; border-radius: 8px; border-left: 4px solid #B8960C;">
+                <p style="font-size: 18px; line-height: 1.8; color: #ccc; font-style: italic; margin-bottom: 20px;">
                     "After my listing expired, I thought I'd have to drop the price drastically. The BLK Group showed me a better way. Real marketing. Weekly updates. And a sale in 28 days at full price."
                 </p>
                 <p style="color: #B8960C; font-weight: 600;">— Jennifer K., Bryant</p>
@@ -982,57 +962,57 @@
     </section>
 
     <!-- FAQ / Objection Handling -->
-    <section style="padding: 80px 20px; background: #FAFAFA; border-top: 1px solid #E5E5E5;">
+    <section style="padding: 80px 20px; background: #111;">
         <div style="max-width: 900px; margin: 0 auto;">
-            <h2 style="font-size: 42px; color: #1a1a1a; margin-bottom: 50px; text-align: center; font-weight: 300;">Common Questions</h2>
+            <h2 style="font-size: 42px; color: #B8960C; margin-bottom: 50px; text-align: center; font-weight: 300;">Common Questions</h2>
             
             <div style="margin-bottom: 30px;">
-                <h3 style="font-size: 22px; color: #1a1a1a; margin-bottom: 15px;">Can I try selling FSBO first, then list with you later?</h3>
-                <p style="color: #666666; font-size: 17px; line-height: 1.8;">Absolutely. That's the whole point. Give it 30-60 days yourself. If it works, great. If not, we're here. No judgment. No "I told you so." Just results.</p>
+                <h3 style="font-size: 22px; color: #fff; margin-bottom: 15px;">Can I try selling FSBO first, then list with you later?</h3>
+                <p style="color: #ccc; font-size: 17px; line-height: 1.8;">Absolutely. That's the whole point. Give it 30-60 days yourself. If it works, great. If not, we're here. No judgment. No "I told you so." Just results.</p>
             </div>
             
             <div style="margin-bottom: 30px;">
-                <h3 style="font-size: 22px; color: #1a1a1a; margin-bottom: 15px;">Why only 2% commission when most agents charge 5-6%?</h3>
-                <p style="color: #666666; font-size: 17px; line-height: 1.8;">Because we respect that you tried to save money by selling yourself. We're not here to punish you for that. 2% covers our marketing costs and keeps us profitable without gouging you.</p>
+                <h3 style="font-size: 22px; color: #fff; margin-bottom: 15px;">Why only 2% commission when most agents charge 5-6%?</h3>
+                <p style="color: #ccc; font-size: 17px; line-height: 1.8;">Because we respect that you tried to save money by selling yourself. We're not here to punish you for that. 2% covers our marketing costs and keeps us profitable without gouging you.</p>
             </div>
             
             <div style="margin-bottom: 30px;">
-                <h3 style="font-size: 22px; color: #1a1a1a; margin-bottom: 15px;">What if I've already had a few showings but no offers?</h3>
-                <p style="color: #666666; font-size: 17px; line-height: 1.8;">Showings without offers usually mean one of two things: pricing or presentation. We'll help you figure out which it is and fix it. Sometimes it's as simple as better photos or staging.</p>
+                <h3 style="font-size: 22px; color: #fff; margin-bottom: 15px;">What if I've already had a few showings but no offers?</h3>
+                <p style="color: #ccc; font-size: 17px; line-height: 1.8;">Showings without offers usually mean one of two things: pricing or presentation. We'll help you figure out which it is and fix it. Sometimes it's as simple as better photos or staging.</p>
             </div>
             
             <div style="margin-bottom: 30px;">
-                <h3 style="font-size: 22px; color: #1a1a1a; margin-bottom: 15px;">Do I have to take my FSBO listing down to work with you?</h3>
-                <p style="color: #666666; font-size: 17px; line-height: 1.8;">Yes, if we list it. We'll put it on the MLS with professional marketing, which means more exposure than your FSBO listing anyway. But we move fast. Usually within 48 hours.</p>
+                <h3 style="font-size: 22px; color: #fff; margin-bottom: 15px;">Do I have to take my FSBO listing down to work with you?</h3>
+                <p style="color: #ccc; font-size: 17px; line-height: 1.8;">Yes, if we list it. We'll put it on the MLS with professional marketing, which means more exposure than your FSBO listing anyway. But we move fast. Usually within 48 hours.</p>
             </div>
             
             <div>
-                <h3 style="font-size: 22px; color: #1a1a1a; margin-bottom: 15px;">What if my house doesn't sell in 30 days?</h3>
-                <p style="color: #666666; font-size: 17px; line-height: 1.8;">You walk away. No penalties. No fees. No long-term commitment. We don't believe in trapping sellers in contracts that aren't working. You tried FSBO, you tried us, and if neither worked, you're free to go.</p>
+                <h3 style="font-size: 22px; color: #fff; margin-bottom: 15px;">What if my house doesn't sell in 30 days?</h3>
+                <p style="color: #ccc; font-size: 17px; line-height: 1.8;">You walk away. No penalties. No fees. No long-term commitment. We don't believe in trapping sellers in contracts that aren't working. You tried FSBO, you tried us, and if neither worked, you're free to go.</p>
             </div>
         </div>
     </section>
 
     <!-- Final CTA Section -->
-    <section style="padding: 80px 20px; background: #FAFAFA; border-top: 1px solid #E5E5E5; text-align: center;">
+    <section style="padding: 80px 20px; background: #000; text-align: center;">
         <div style="max-width: 800px; margin: 0 auto;">
             <h2 style="font-size: 48px; color: #B8960C; margin-bottom: 30px; font-weight: 300;">Don't Settle for Less</h2>
-            <p style="font-size: 22px; line-height: 1.8; color: #666666; margin-bottom: 40px;">
+            <p style="font-size: 22px; line-height: 1.8; color: #ccc; margin-bottom: 40px;">
                 6 months with a sub-par strategy? Or 30 days with the #1 team in Central Arkansas?
             </p>
-            <p style="font-size: 20px; color: #1a1a1a; margin-bottom: 40px;">
+            <p style="font-size: 20px; color: #fff; margin-bottom: 40px;">
                 Fill out the form below or call/text us now: <a href="tel:+14798575994" style="color: #B8960C; text-decoration: none; font-weight: 700;">(479) 857-5994</a>
             </p>
             
             <!-- Form -->
-            <form id="final-cta-form" style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); padding: 40px; border-radius: 12px; margin: 0 auto 40px; max-width: 500px; text-align: left;">
+            <form id="final-cta-form" style="background: #1a1a1a; padding: 40px; border-radius: 12px; margin: 0 auto 40px; max-width: 500px; text-align: left;">
                 <div style="margin-bottom: 20px;">
                     <input type="text" id="final-name" placeholder="Your Name" required 
-                           style="width: 100%; padding: 15px; font-size: 16px; border: 1px solid #E5E5E5; border-radius: 6px; background: #FFFFFF; color: #1a1a1a;">
+                           style="width: 100%; padding: 15px; font-size: 16px; border: 1px solid #444; border-radius: 6px; background: #0a0a0a; color: #fff;">
                 </div>
                 <div style="margin-bottom: 20px;">
                     <input type="tel" id="final-phone" placeholder="Your Phone Number" required 
-                           style="width: 100%; padding: 15px; font-size: 16px; border: 1px solid #E5E5E5; border-radius: 6px; background: #FFFFFF; color: #1a1a1a;">
+                           style="width: 100%; padding: 15px; font-size: 16px; border: 1px solid #444; border-radius: 6px; background: #0a0a0a; color: #fff;">
                 </div>
                 <button type="submit" 
                         style="width: 100%; padding: 18px; font-size: 18px; font-weight: 700; background: #B8960C; color: #000; border: none; border-radius: 6px; cursor: pointer; transition: all 0.3s;">
