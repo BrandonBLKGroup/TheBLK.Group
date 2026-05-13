@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The BLK Group - Premium Experience (Test)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Playfair Display', 'Georgia', serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+        
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Section styling */
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 80px 40px;
+        }
+        
+        /* Hero - 3D Home Rotation */
+        #hero {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            z-index: 10;
+        }
+        
+        .hero-headline {
+            font-size: 64px;
+            font-weight: 300;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.5s ease forwards;
+        }
+        
+        .hero-subheadline {
+            font-size: 28px;
+            font-weight: 400;
+            color: #666;
+            margin-top: 60px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.5s ease 0.5s forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* 3D Canvas Container */
+        #canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        /* Philosophy Section */
+        #philosophy {
+            background: #1a1a1a;
+            color: #ffffff;
+            min-height: 80vh;
+        }
+        
+        .philosophy-text {
+            font-size: 36px;
+            font-weight: 300;
+            line-height: 1.6;
+            max-width: 800px;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+        
+        .philosophy-text strong {
+            color: #B8960C;
+            font-weight: 400;
+        }
+        
+        /* Parallax Video Sections */
+        .video-section {
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+        }
+        
+        .video-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: #ffffff;
+            max-width: 800px;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+        }
+        
+        .video-content h2 {
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        
+        .video-content p {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+        
+        /* Coordinates (like Feadship) */
+        .coordinates {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.6);
+            font-family: 'Courier New', monospace;
+        }
+        
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .scroll-arrow {
+            display: block;
+            width: 24px;
+            height: 24px;
+            border-left: 2px solid #B8960C;
+            border-bottom: 2px solid #B8960C;
+            transform: rotate(-45deg);
+            margin: 10px auto 0;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) rotate(-45deg);
+            }
+            40% {
+                transform: translateY(10px) rotate(-45deg);
+            }
+            60% {
+                transform: translateY(5px) rotate(-45deg);
+            }
+        }
+        
+        /* Audio control (will be hidden initially) */
+        .audio-control {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1000;
+            background: rgba(26, 26, 26, 0.9);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: none;
+        }
+        
+        .audio-control:hover {
+            background: rgba(184, 150, 12, 0.9);
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .hero-headline {
+                font-size: 36px;
+            }
+            .philosophy-text {
+                font-size: 24px;
+            }
+            .video-content h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+    
+    <!-- Load Three.js for 3D model -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Load GSAP for scroll animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- 3D Canvas (fixed background) -->
+    <div id="canvas-container"></div>
+    
+    <!-- Audio Control (for future voice narration) -->
+    <div class="audio-control" id="audioControl">
+        SOUND: ON
+    </div>
+
+    <!-- SECTION 1: Hero with 3D Home -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="hero-headline">
+                Beyond the idea of<br>
+                <em style="font-style: italic; color: #666;">"Real Estate"</em>
+            </h1>
+            
+            <div class="scroll-indicator">
+                Scroll to explore
+                <span class="scroll-arrow"></span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Transition section with reveal text -->
+    <section id="reveal" style="background: #ffffff; min-height: 60vh;">
+        <div class="hero-content">
+            <h2 class="hero-subheadline">
+                There are Realtors,<br>
+                and then there are <strong style="color: #B8960C; font-weight: 500;">BLK Group Agents</strong>.
+            </h2>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Philosophy -->
+    <section id="philosophy">
+        <div class="philosophy-text">
+            We design and tailor every real estate transaction <strong>specifically</strong> to our client's individual wants and needs.
+        </div>
+        <div class="coordinates">34° 44' 48" N 92° 17' 24" W</div>
+    </section>
+
+    <!-- SECTION 3: Voice Narration Begins + Parallax Video -->
+    <section class="video-section" id="story-section">
+        <!-- Placeholder for video background (you'll need to add actual video files) -->
+        <video class="video-bg" autoplay loop muted playsinline>
+            <!-- <source src="luxury-home-1.mp4" type="video/mp4"> -->
+        </video>
+        <div class="video-content">
+            <h2>What Makes Us Different</h2>
+            <p>
+                [Voice narration will play here as you scroll]
+            </p>
+            <p style="margin-top: 20px; font-size: 16px; opacity: 0.8;">
+                → Brandon's voice explains the BLK Group difference
+            </p>
+        </div>
+    </section>
+    
+    <!-- More parallax sections (we'll add your current content here) -->
+    <section class="video-section" style="background: #f8f9fa;">
+        <div class="video-content" style="background: rgba(255, 255, 255, 0.9); color: #1a1a1a;">
+            <h2>700+ Homes Sold</h2>
+            <p>
+                As the #1 team in Central Arkansas, we've built our reputation on results, not promises.
+            </p>
+        </div>
+    </section>
+    
+    <section class="video-section" style="background: #1a1a1a;">
+        <div class="video-content">
+            <h2>30 Days. 3%. You're in Control.</h2>
+            <p>
+                No 6-month contracts. No cancellation fees. Just a commitment to sell your house in 30 days or you walk away.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // ========================================
+        // 3D Home Model Setup (Three.js)
+        // ========================================
+        
+        let scene, camera, renderer, house;
+        let isInitialized = false;
+        
+        function init3D() {
+            if (isInitialized) return;
+            
+            const container = document.getElementById('canvas-container');
+            
+            // Scene setup
+            scene = new THREE.Scene();
+            scene.background = null; // Transparent
+            
+            // Camera
+            camera = new THREE.PerspectiveCamera(
+                45,
+                window.innerWidth / window.innerHeight,
+                0.1,
+                1000
+            );
+            camera.position.set(0, 2, 8);
+            camera.lookAt(0, 0, 0);
+            
+            // Renderer
+            renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            container.appendChild(renderer.domElement);
+            
+            // Lights
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+            scene.add(ambientLight);
+            
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+            directionalLight.position.set(5, 10, 5);
+            scene.add(directionalLight);
+            
+            // Create a simple house geometry (placeholder)
+            // In production, you'd load a proper 3D model with GLTFLoader
+            const group = new THREE.Group();
+            
+            // House body
+            const bodyGeometry = new THREE.BoxGeometry(3, 2, 3);
+            const bodyMaterial = new THREE.MeshStandardMaterial({ 
+                color: 0xe8e8e8,
+                metalness: 0.1,
+                roughness: 0.7
+            });
+            const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
+            body.position.y = 1;
+            group.add(body);
+            
+            // Roof
+            const roofGeometry = new THREE.ConeGeometry(2.3, 1.5, 4);
+            const roofMaterial = new THREE.MeshStandardMaterial({ 
+                color: 0x8B7355,
+                metalness: 0.2,
+                roughness: 0.8
+            });
+            const roof = new THREE.Mesh(roofGeometry, roofMaterial);
+            roof.position.y = 2.75;
+            roof.rotation.y = Math.PI / 4;
+            group.add(roof);
+            
+            // Door
+            const doorGeometry = new THREE.BoxGeometry(0.5, 1, 0.1);
+            const doorMaterial = new THREE.MeshStandardMaterial({ color: 0x654321 });
+            const door = new THREE.Mesh(doorGeometry, doorMaterial);
+            door.position.set(0, 0.5, 1.51);
+            group.add(door);
+            
+            // Windows
+            const windowGeometry = new THREE.BoxGeometry(0.4, 0.4, 0.1);
+            const windowMaterial = new THREE.MeshStandardMaterial({ 
+                color: 0x87CEEB,
+                transparent: true,
+                opacity: 0.7
+            });
+            
+            const window1 = new THREE.Mesh(windowGeometry, windowMaterial);
+            window1.position.set(-0.8, 1.3, 1.51);
+            group.add(window1);
+            
+            const window2 = new THREE.Mesh(windowGeometry, windowMaterial);
+            window2.position.set(0.8, 1.3, 1.51);
+            group.add(window2);
+            
+            house = group;
+            scene.add(house);
+            
+            isInitialized = true;
+            
+            // Handle window resize
+            window.addEventListener('resize', onWindowResize, false);
+            
+            // Start animation loop
+            animate();
+        }
+        
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+        
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            if (house) {
+                // Rotate house based on scroll position
+                const scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+                house.rotation.y = scrollPercent * Math.PI * 2; // Full 360° rotation
+            }
+            
+            renderer.render(scene, camera);
+        }
+        
+        // ========================================
+        // GSAP ScrollTrigger Animations
+        // ========================================
+        
+        gsap.registerPlugin(ScrollTrigger);
+        
+        function initScrollAnimations() {
+            // Fade out 3D canvas as we scroll past hero
+            gsap.to('#canvas-container', {
+                opacity: 0,
+                scrollTrigger: {
+                    trigger: '#philosophy',
+                    start: 'top center',
+                    end: 'top top',
+                    scrub: true
+                }
+            });
+            
+            // Reveal text animations
+            gsap.from('.philosophy-text', {
+                opacity: 0,
+                y: 50,
+                scrollTrigger: {
+                    trigger: '#philosophy',
+                    start: 'top center',
+                    end: 'center center',
+                    scrub: true
+                }
+            });
+            
+            // Video section animations
+            gsap.utils.toArray('.video-section').forEach(section => {
+                gsap.from(section.querySelector('.video-content'), {
+                    opacity: 0,
+                    y: 100,
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top center',
+                        end: 'center center',
+                        scrub: true
+                    }
+                });
+            });
+        }
+        
+        // ========================================
+        // Initialize Everything
+        // ========================================
+        
+        window.addEventListener('DOMContentLoaded', () => {
+            init3D();
+            initScrollAnimations();
+            
+            // Audio control (for future voice narration)
+            const audioControl = document.getElementById('audioControl');
+            // We'll wire this up when you have the voice recording
+        });
+        
+        // ========================================
+        // Developer Notes
+        // ========================================
+        
+        console.log('%c🏠 BLK Group Premium Experience - Test Version', 'font-size: 20px; color: #B8960C; font-weight: bold;');
+        console.log('%cFeatures:', 'font-size: 14px; font-weight: bold;');
+        console.log('✓ 3D house model with scroll-triggered rotation');
+        console.log('✓ Smooth parallax sections');
+        console.log('✓ Ready for voice narration integration');
+        console.log('✓ Video background placeholders');
+        console.log('');
+        console.log('%cNext Steps:', 'font-size: 14px; font-weight: bold;');
+        console.log('1. Add luxury Arkansas home videos');
+        console.log('2. Record Brandon\'s voice narration');
+        console.log('3. Add remaining content sections');
+        console.log('4. Fine-tune scroll timing');
+    </script>
+
+</body>
+</html>
