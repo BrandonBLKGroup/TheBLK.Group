@@ -51,7 +51,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: url('../parallax-1-new.jpg') center/cover no-repeat;
+            background: url('photos/2-richland-hills/01.jpg') center/cover no-repeat;
             background-attachment: fixed;
             overflow: hidden;
         }
@@ -130,15 +130,15 @@
         }
         
         .parallax-specs {
-            background-image: url('../parallax-2-new.jpg');
+            background-image: url('photos/2-richland-hills/11.jpg');
         }
         
         .parallax-gallery {
-            background-image: url('../parallax-3-new.jpg');
+            background-image: url('photos/2-richland-hills/21.jpg');
         }
         
         .parallax-showing {
-            background-image: url('../parallax-services.jpg');
+            background-image: url('photos/2-richland-hills/39.jpg');
         }
         
         /* Black Sections */
@@ -209,6 +209,12 @@
         }
         
         /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
         .gallery-scroll {
             display: flex;
             gap: 20px;
@@ -495,15 +501,56 @@
     <section class="parallax-section parallax-gallery">
         <div class="container">
             <h2 class="section-title">Gallery</h2>
-            <div class="gallery-scroll">
-                <div class="gallery-cta" onclick="document.getElementById('showing-form').scrollIntoView({behavior: 'smooth'});">
-                    <h3>Want More Information?</h3>
-                    <p>Fill out the form below to schedule a showing or ask questions</p>
-                    <div class="gallery-cta-arrow">↓</div>
-                </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/01.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/02.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/03.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/04.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/05.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/06.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/07.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/08.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/09.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/10.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/11.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/12.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/13.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/14.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/15.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/16.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/17.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/18.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/19.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/20.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/21.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/22.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/23.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/24.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/25.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/26.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/27.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/28.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/29.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/30.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/31.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/32.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/33.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/34.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/35.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/36.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/37.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/38.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/39.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('photos/2-richland-hills/40.jpg');"></div>
+            </div>
+            <div class="gallery-cta" onclick="document.getElementById('showing-form').scrollIntoView({behavior: 'smooth'});" style="margin-top: 40px;">
+                <h3>Want More Information?</h3>
+                <p>Fill out the form below to schedule a showing or ask questions</p>
+                <div class="gallery-cta-arrow">↓</div>
             </div>
         </div>
     </section>
+
     
     <!-- Schedule Showing Section (Parallax) -->
     <section class="parallax-section parallax-showing" id="showing-form">
