@@ -362,6 +362,22 @@
                 text-align: center !important;
             }
             
+            /* COMPREHENSIVE MOBILE FIX: All 3-column grids become 1 column */
+            section > div > div[style*="grid-template-columns: repeat(3, 1fr)"],
+            div.section-inner > div[style*="grid-template-columns: repeat(3, 1fr)"],
+            div[style*="grid-template-columns: repeat(3, 1fr)"] {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 25px !important;
+            }
+            
+            /* Testimonial-specific fixes */
+            div[style*="grid-template-columns: repeat(3, 1fr)"] > div[style*="border-left: 6px solid #B8960C"] {
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            
             /* MOBILE FIX: Force stats grids to stack vertically */
             section div[style*="grid-template-columns: repeat(3, 1fr)"] {
                 display: grid !important;
