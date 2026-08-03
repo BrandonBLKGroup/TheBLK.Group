@@ -85,6 +85,7 @@
         <select id="status">
           <option>Just Listed</option><option>Just Sold</option><option>Price Change</option>
           <option>Under Contract</option><option>Coming Soon</option><option>Open House</option>
+          <option>Welcome Home</option>
         </select>
       </div>
       <div class="panel">
@@ -133,6 +134,7 @@ blkImg.onload=()=>refresh(); blkImg.src=BLK_URI;
 const val=id=>document.getElementById(id).value.trim();
 function headline(){const m={'Just Listed':['JUST','LISTED'],'Just Sold':['JUST','SOLD'],
   'Price Change':['PRICE','CHANGE'],'Under Contract':['UNDER','CONTRACT'],
+  'Welcome Home':['WELCOME','HOME'],
   'Coming Soon':['COMING','SOON'],'Open House':['OPEN','HOUSE']};
   return m[document.getElementById('status').value]||['JUST','LISTED'];}
 
