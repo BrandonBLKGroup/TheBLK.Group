@@ -362,16 +362,26 @@
                 text-align: center !important;
             }
             
-            /* MOBILE: Stats grid (9/10, 5-6%, 2%) - stack vertically */
+            /* MOBILE: Stats grid (9/10, 5-6%, 2%) - FORCE stack vertically */
             .stats-grid {
-                grid-template-columns: 1fr !important;
-                gap: 25px !important;
+                display: block !important;
             }
             
-            /* MOBILE: Testimonials grid - stack vertically */
+            .stats-grid > div {
+                display: block !important;
+                width: 100% !important;
+                margin-bottom: 25px !important;
+            }
+            
+            /* MOBILE: Testimonials grid - FORCE stack vertically */
             .testimonial-grid {
-                grid-template-columns: 1fr !important;
-                gap: 25px !important;
+                display: block !important;
+            }
+            
+            .testimonial-grid > div {
+                display: block !important;
+                width: 100% !important;
+                margin-bottom: 25px !important;
             }
             
             /* Make stat numbers smaller on mobile */
