@@ -355,6 +355,36 @@
                 line-height: 1.3;
             }
             
+            /* MOBILE: Center the 5th proof item (2%) when alone on bottom row */
+            .proof-bar .proof-item:nth-child(5) {
+                grid-column: 1 / -1;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+            
+            /* MOBILE FIX: Force stats grids to stack vertically */
+            section div[style*="grid-template-columns: repeat(3, 1fr)"] {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+            }
+            
+            /* Make stat cards fit better on mobile */
+            section div[style*="grid-template-columns: repeat(3, 1fr)"] > div {
+                padding: 20px 15px !important;
+            }
+            
+            /* Reduce font size of large numbers on mobile */
+            section div[style*="grid-template-columns: repeat(3, 1fr)"] div[style*="font-size: 64px"] {
+                font-size: 48px !important;
+            }
+            
+            /* Pain grid - stack vertically */
+            .pain-grid {
+                grid-template-columns: 1fr !important;
+                gap: 25px !important;
+            }
+            
             .pain-grid {
                 grid-template-columns: 1fr;
                 gap: 30px;
