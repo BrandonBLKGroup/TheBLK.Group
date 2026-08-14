@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FSBO? Use A Top 3 Arkansas Team, Save Up To 4% | The BLK Group at LPT Realty</title>
+    <meta name="description" content="85% of FSBOs list within 30 days. If you're going to list, use one of the top 3 teams in the State of Arkansas and save up to 4% commission. The BLK Group - 2% commission, not 5-6%.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)), url('https://theblk.group/parallax-1-new.jpg') center/cover fixed;
+            color: #1a1a1a;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        /* Text shadows for readability on parallax */
+        h2, h3, p, li, span {
+            text-shadow: 0 1px 3px rgba(255,255,255,0.7);
+        }
+        
+        h1, h2, .section-title {
+            text-shadow: 0 2px 6px rgba(255,255,255,0.8);
+        }
+        
+        /* Top Banner */
+        .top-banner {
+            background: rgba(0,0,0,0.95);
+            color: #fff;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        /* Hero */
+        .hero {
+            min-height: auto;
+            padding: 80px 20px 40px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 480px;
+            gap: 80px;
+            position: relative;
+            z-index: 1;
+            align-items: start;
+        }
+        
+        .hero-left h1 {
+            font-size: 68px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            color: #000;
+            text-align: center;
+        }
+        
+        .highlight {
+            color: #B8960C;
+        }
+        
+        .proof-bar {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+        
+        .proof-item {
+            text-align: center;
+        }
+        
+        .proof-number {
+            font-size: 42px;
+            font-weight: 900;
+            color: #B8960C;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        
+        .proof-label {
+            font-size: 13px;
+            color: #1a1a1a;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Brandon Quote */
+        .brandon-quote {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 25px;
+            align-items: center;
+            max-width: 900px;
+            margin: 30px auto 40px;
+        }
+        
+        .brandon-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            filter: grayscale(100%);
+        }
+        
+        .quote-text {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #1a1a1a;
+            font-style: italic;
+            font-weight: 500;
+        }
+        
+        .quote-author {
+            font-size: 15px;
+            font-weight: 700;
+            color: #B8960C;
+            margin-top: 12px;
+        }
+        
+        /* CTAButtons */
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 18px 36px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+            display: inline-block;
+        }
+        
+        .btn-gold {
+            background: #B8960C;
+            color: #000;
+        }
+        
+        .btn-gold:hover {
+            background: #8B7209;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #1a1a1a;
+            color: #1a1a1a;
+        }
+        
+        .btn-outline:hover {
+            background: #1a1a1a;
+            color: #fff;
+        }
+        
+        /* Sticky Form */
+        .form-card {
+            background: #FFFFFF;
+            color: #1a1a1a;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            border: 1px solid rgba(0,0,0,0.08);
+            position: sticky;
+            top: 80px;
+            align-self: start;
+        }
+        
+        .urgency-badge {
+            background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+            animation: pulse-glow 2s infinite;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 1; box-shadow: 0 0 20px rgba(255,68,68,0.4); }
+            50% { opacity: 0.85; box-shadow: 0 0 30px rgba(255,68,68,0.6); }
+        }
+        
+        .form-card h2 {
+            font-size: 32px;
+            margin-bottom: 8px;
+            font-weight: 800;
+        }
+        
+        .form-subtitle {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #B8960C;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            background: #B8960C;
+            color: #000;
+            padding: 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .submit-btn:hover {
+            background: #8B7209;
+            transform: translateY(-2px);
+        }
+        
+        .trust-line {
+            text-align: center;
+            font-size: 13px;
+            color: #999;
+            margin-top: 16px;
+        }
+        
+        /* Section Styling */
+        .section-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: #000000;
+            line-height: 1.1;
+        }
+        
+        .section-subtitle {
+            font-size: 22px;
+            color: #1a1a1a;
+            margin-bottom: 60px;
+            font-weight: 600;
+        }
+        
+        /* Pain Cards */
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .pain-card {
+            background: transparent;
+            padding: 30px;
+            border-radius: 0;
+            border-left: 4px solid #ff4444;
+        }
+        
+        .pain-title {
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 12px;
+            color: #000000;
+        }
+        
+        .pain-text {
+            font-size: 17px;
+            color: #1a1a1a;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-card {
+                position: relative !important;
+                top: 0 !important;
+                margin-top: 30px;
+            }
+            
+            .hero-left h1 {
+                font-size: 42px;
+            }
+            
+            .proof-bar {
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+                max-width: 100%;
+            }
+            
+            .proof-item {
+                padding: 15px 10px;
+            }
+            
+            .proof-item .proof-number {
+                font-size: 28px !important;
+                margin-bottom: 6px !important;
+            }
+            
+            .proof-item .proof-label {
+                font-size: 11px !important;
+                line-height: 1.3;
+            }
+            
+            /* MOBILE: Center the 5th proof item (2%) when alone on bottom row */
+            .proof-bar .proof-item:nth-child(5) {
+                grid-column: 1 / -1 !important;
+                justify-self: center !important;
+                text-align: center !important;
+            }
+            
+            /* MOBILE: Stats grid (9/10, 5-6%, 2%) - FORCE stack vertically */
+            .stats-grid {
+                display: block !important;
+            }
+            
+            .stats-grid > div {
+                display: block !important;
+                width: 100% !important;
+                margin-bottom: 25px !important;
+            }
+            
+            /* MOBILE: Testimonials grid - FORCE stack vertically */
+            .testimonial-grid {
+                display: block !important;
+            }
+            
+            .testimonial-grid > div {
+                display: block !important;
+                width: 100% !important;
+                margin-bottom: 25px !important;
+            }
+            
+            /* Make stat numbers smaller on mobile */
+            .stats-grid div[style*="font-size: 64px"] {
+                font-size: 48px !important;
+            }
+            
+            /* COMPREHENSIVE MOBILE FIX: All 3-column grids become 1 column */
+            section > div > div[style*="grid-template-columns: repeat(3, 1fr)"],
+            div.section-inner > div[style*="grid-template-columns: repeat(3, 1fr)"],
+            div[style*="grid-template-columns: repeat(3, 1fr)"] {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 25px !important;
+            }
+            
+            /* Testimonial-specific fixes */
+            div[style*="grid-template-columns: repeat(3, 1fr)"] > div[style*="border-left: 6px solid #B8960C"] {
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            
+            /* MOBILE FIX: Force stats grids to stack vertically */
+            section div[style*="grid-template-columns: repeat(3, 1fr)"] {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+            }
+            
+            /* Make stat cards fit better on mobile */
+            section div[style*="grid-template-columns: repeat(3, 1fr)"] > div {
+                padding: 20px 15px !important;
+            }
+            
+            /* Reduce font size of large numbers on mobile */
+            section div[style*="grid-template-columns: repeat(3, 1fr)"] div[style*="font-size: 64px"] {
+                font-size: 48px !important;
+            }
+            
+            /* Pain grid - stack vertically */
+            .pain-grid {
+                grid-template-columns: 1fr !important;
+                gap: 25px !important;
+            }
+            
+            .pain-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .brandon-quote {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .brandon-photo {
+                margin: 0 auto;
+            }
+            
+            .btn-call-mobile {
+                font-weight: 900 !important;
+                text-align: center !important;
+                display: block !important;
+                width: 100% !important;
+                font-size: 20px !important;
+            }
+            
+            .hero {
+                padding: 60px 20px 30px !important;
+            }
+            
+            .brandon-quote {
+                margin: 20px auto 30px !important;
+            }
+            
+            .cta-buttons {
+                margin-top: 20px !important;
+                gap: 15px !important;
+            }
+        }
+        
+        /* Text button hover */
+        a[href^="sms:"]:hover {
+            background: #8B7209 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(184,150,12,0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        Top 0.1% of Realtors Nationwide  |  Voted Best Realtors - Arkansas Soiree 2025 & 2026  |  Pinnacle Diamond Award ($30M+ Sold in 2025)  |  800+ Homes Sold  
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-left" style="max-width: 900px; margin: 0 auto;">
+                <img src="https://theblk.group/blk-logo.png" alt="The BLK Group" style="width: 160px; margin: 0 auto 40px; display: block; filter: none;">
+                <h1>IF YOU'RE GOING TO LIST,<br><span class="highlight">USE A TOP 3 ARKANSAS TEAM.<br>SAVE THE MOST MONEY.</span></h1>
+                
+                <!-- Proof Bar -->
+                <div class="proof-bar">
+                    <div class="proof-item">
+                        <div class="proof-number">Top 0.1%</div>
+                        <div class="proof-label">Realtors Nationwide</div>
+                    </div>
+                    <div class="proof-item">
+                        <div class="proof-number">800+</div>
+                        <div class="proof-label">Homes Sold</div>
+                    </div>
+                    <div class="proof-item">
+                        <div class="proof-number">Top 3</div>
+                        <div class="proof-label">Teams in Arkansas</div>
+                    </div>
+                    <div class="proof-item">
+                        <div class="proof-number">$30M+</div>
+                        <div class="proof-label">Sold in 2025</div>
+                    </div>
+                    <div class="proof-item">
+                        <div class="proof-number">2%</div>
+                        <div class="proof-label">Commission</div>
+                    </div>
+                </div>
+                
+                <!-- Why Sellers Choose Us -->
+                <div style="background: transparent; border: none; border-left: 6px solid #B8960C; padding: 30px 20px; margin: 40px auto; max-width: 900px;">
+                    <h3 style="font-size: 28px; font-weight: 900; margin-bottom: 24px; color: #1a1a1a; text-align: center;">Why FSBOs Choose The BLK Group</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+                        <div style="display: flex; gap: 12px; align-items: start;">
+                            <span style="color: #B8960C; font-size: 20px; font-weight: 700; flex-shrink: 0;">✓</span>
+                            <span style="font-size: 15px; color: #333; line-height: 1.5;"><strong>2% Commission</strong> (not 5-6% like the agents spamming you)</span>
+                        </div>
+                        <div style="display: flex; gap: 12px; align-items: start;">
+                            <span style="color: #B8960C; font-size: 20px; font-weight: 700; flex-shrink: 0;">✓</span>
+                            <span style="font-size: 15px; color: #333; line-height: 1.5;"><strong>30-Day Agreement</strong> (not 6 months)</span>
+                        </div>
+                        <div style="display: flex; gap: 12px; align-items: start;">
+                            <span style="color: #B8960C; font-size: 20px; font-weight: 700; flex-shrink: 0;">✓</span>
+                            <span style="font-size: 15px; color: #333; line-height: 1.5;"><strong>Save Up To 4%</strong> (vs 5-6% other agents charge)</span>
+                        </div>
+                        <div style="display: flex; gap: 12px; align-items: start;">
+                            <span style="color: #B8960C; font-size: 20px; font-weight: 700; flex-shrink: 0;">✓</span>
+                            <span style="font-size: 15px; color: #333; line-height: 1.5;"><strong>Fire Us Anytime</strong> (zero cancellation fees)</span>
+                        </div>
+                        <div style="display: flex; gap: 12px; align-items: start;">
+                            <span style="color: #B8960C; font-size: 20px; font-weight: 700; flex-shrink: 0;">✓</span>
+                            <span style="font-size: 15px; color: #333; line-height: 1.5;"><strong>We Handle Everything</strong> (showings, negotiations, legal)</span>
+                        </div>
+                        <div style="display: flex; gap: 12px; align-items: start;">
+                            <span style="color: #B8960C; font-size: 20px; font-weight: 700; flex-shrink: 0;">✓</span>
+                            <span style="font-size: 15px; color: #333; line-height: 1.5;"><strong>Sold in 30 Days</strong> (not struggling for months)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Brandon Quote -->
+                <div class="brandon-quote" style="max-width: 900px; margin: 30px auto 40px;">
+                    <img src="https://expiredlistingstrategy.com/brandon-headshot.jpg" alt="Brandon Bruning" class="brandon-photo">
+                    <div>
+                        <p class="quote-text">"Here's the reality: 85% of FSBOs end up listing with an agent within 30 days. If you're going to list anyway, why not use one of the top 3 teams in the State of Arkansas and save up to 4% in commission? We sold 120+ homes in 2025. We charge 2%, not 5-6%. That's it."</p>
+                        <p class="quote-author">— Brandon Bruning, Team Leader</p>
+                    </div>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="cta-buttons" style="justify-content: center; margin-top: 30px;">
+                    <button class="btn btn-gold" onclick="document.getElementById('leadForm').scrollIntoView({behavior: 'smooth'})">Get My Free Consultation</button>
+                    <a href="tel:+14798575994" class="btn btn-outline btn-call-mobile">Call Now: (479) 857-5994</a>
+                </div>
+            </div>
+            
+            <!-- Sticky Form -->
+            <div class="form-card">
+                <span class="urgency-badge">Only Accepting 8 More Sellers This Month</span>
+                <h2>Save Up To 4% Commission</h2>
+                <p class="form-subtitle">If you're going to list with an agent, use one of the top 3 teams and pay 2% instead of 5-6%.</p>
+                
+                <form id="leadForm">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" required placeholder="John Smith">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" name="phone" required placeholder="(555) 555-5555">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Property Address</label>
+                        <input type="text" name="address" required placeholder="123 Main St, Arkansas">
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Me The 2% Plan</button>
+                </form>
+                
+                <p class="trust-line">No spam. No pushy sales calls. Just a real conversation.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pain Section -->
+    <section style="padding: 60px 20px 80px; background: transparent; max-width: 1400px; margin: 0 auto;">
+        <div class="section-inner">
+            <h2 class="section-title">Sound Familiar?</h2>
+            <p class="section-subtitle">85% of FSBOs list within 30 days. When you do, use one of the top 3 teams and save up to 4% in commission.</p>
+            
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <div style="font-size: 64px; font-weight: 900; color: #ff4444; margin-bottom: 20px;">×</div>
+                    <h3 class="pain-title">Less Than 5% Know It's For Sale</h3>
+                    <p class="pain-text">You listed on Zillow and Facebook. That's it. No MLS (where 95%+ of buyers search). No agent network. No professional marketing. Your house is invisible to serious buyers.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <div style="font-size: 64px; font-weight: 900; color: #ff4444; margin-bottom: 20px;">×</div>
+                    <h3 class="pain-title">Time Wasters Everywhere</h3>
+                    <p class="pain-text">"Will you rent?" "Will you do owner financing?" Scammers, looky-loos, lowballers. You've done 10+ showings with zero serious buyers. Just endless wasted time and weekends.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <div style="font-size: 64px; font-weight: 900; color: #ff4444; margin-bottom: 20px;">×</div>
+                    <h3 class="pain-title">Constant Agent Harassment</h3>
+                    <p class="pain-text">The second you listed FSBO, your phone blew up. Agents calling 10x a day wanting 5-6% commission. Most of them sold less than 10 homes last year. It never stops.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Industry Stats Section -->
+    <section style="padding: 80px 20px; background: transparent;">
+        <div class="section-inner" style="max-width: 1000px;">
+            <h2 class="section-title">The Agents Calling You? Here's The Truth.</h2>
+            <p class="section-subtitle" style="font-size: 18px; color: #1a1a1a; margin-bottom: 50px;">Most agents contacting FSBOs are desperate for listings because they barely sell homes</p>
+            
+            <div class="stats-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 50px;">
+                <div style="background: transparent; padding: 25px; border-radius: 0; text-align: center; border-left: 5px solid #000000;">
+                    <div style="font-size: 64px; font-weight: 900; color: #000000; line-height: 1; margin-bottom: 12px;">9/10</div>
+                    <p style="font-size: 16px; font-weight: 600; color: #1a1a1a;">of agents calling you<br><strong>sold fewer than 10 homes</strong> last year</p>
+                </div>
+                
+                <div style="background: transparent; padding: 25px; border-radius: 0; text-align: center; border-left: 5px solid #000000;">
+                    <div style="font-size: 64px; font-weight: 900; color: #000000; line-height: 1; margin-bottom: 12px;">5-6%</div>
+                    <p style="font-size: 16px; font-weight: 600; color: #1a1a1a;">commission they want<br><strong>for minimal results</strong></p>
+                </div>
+                
+                <div style="background: transparent; padding: 25px; border-radius: 0; text-align: center; border-left: 5px solid #B8960C;">
+                    <div style="font-size: 64px; font-weight: 900; color: #B8960C; line-height: 1; margin-bottom: 12px;">2%</div>
+                    <p style="font-size: 16px; font-weight: 600; color: #1a1a1a;">commission we charge<br><strong>with proven results</strong></p>
+                </div>
+            </div>
+            
+            <div style="background: transparent; padding: 30px 20px; border-radius: 0; border-left: 6px solid #B8960C;">
+                <p style="font-size: 18px; line-height: 1.7; color: #1a1a1a; margin-bottom: 20px;">
+                    <strong style="color: #000000; font-weight: 900;">Here's the reality:</strong> 85% of FSBOs list with an agent within 30 days. Most agents spam you wanting 5-6% commission. We charge 2% and actually sell homes.
+                </p>
+                <p style="font-size: 18px; line-height: 1.7; color: #1a1a1a; font-weight: 600;">
+                    We sold <span style="color: #B8960C; font-weight: 800;">120+ homes in 2025</span>. We're in the top 0.1% of realtors across the nation and one of the top 3 teams in the State of Arkansas. If you're going to list, use the best and save the most money.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <!-- 30-DAY FRESH LISTING STRATEGY -->
+    <section style="padding: 80px 20px; background: transparent;">
+        <div class="section-inner" style="max-width: 1100px; margin: 0 auto;">
+            <h2 class="section-title">Why Our 30-Day Strategy Works</h2>
+            <p class="section-subtitle">Most FSBOs fail because the listing goes stale. We keep it fresh.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 60px;">
+                <div style="background: transparent; border: none; border-left: 6px solid #ff4444; padding: 30px 20px;">
+                    <h3 style="font-size: 32px; font-weight: 900; color: #000000; margin-bottom: 20px;">Your FSBO Experience</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">× Same photos for months (buyers lose interest)</li>
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">× No professional marketing beyond Zillow</li>
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">× Handling showings yourself (exhausting)</li>
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">× Legal/negotiation risk (one mistake = lawsuit)</li>
+                    </ul>
+                </div>
+                
+                <div style="background: transparent; border: none; border-left: 6px solid #B8960C; padding: 30px 20px;">
+                    <h3 style="font-size: 32px; font-weight: 900; color: #000000; margin-bottom: 20px;">BLK Group (30 Days)</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">✓ Professional photos + staging (included)</li>
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">✓ Data-driven pricing (sells faster, higher price)</li>
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">✓ Aggressive marketing (MLS + paid ads + social)</li>
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">✓ We handle all showings (you keep your life)</li>
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">✓ Legal protection + expert negotiations</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 60px;">
+                <button class="btn btn-gold" onclick="document.getElementById('leadForm').scrollIntoView({behavior: 'smooth'})">Get Your Free Consultation</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- TESTIMONIALS -->
+    <section style="padding: 100px 20px; background: transparent;">
+        <div class="section-inner">
+            <h2 class="section-title">FSBOs Who Made The Smart Choice</h2>
+            <p class="section-subtitle">They were going to list anyway. They chose the #1 team and saved thousands.</p>
+            
+            <div class="testimonial-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 60px;">
+                <div style="background: transparent; padding: 30px 20px; border-radius: 0; border-left: 6px solid #B8960C;">
+                    <p style="font-size: 18px; line-height: 1.8; color: #000000; margin-bottom: 20px; font-style: italic; font-weight: 500;">"We tried selling ourselves for 4 months. Listed with BLK Group at 2% and sold in 18 days. Saved thousands compared to the 6% agents calling us daily."</p>
+                    <p style="font-size: 14px; font-weight: 700; color: #B8960C;">— Mike & Sarah T., Conway</p>
+                </div>
+                
+                <div style="background: transparent; padding: 30px 20px; border-radius: 0; border-left: 6px solid #B8960C;">
+                    <p style="font-size: 18px; line-height: 1.8; color: #000000; margin-bottom: 20px; font-style: italic; font-weight: 500;">"Brandon was honest: our FSBO price was $15K too high. We adjusted, and he sold it in 3 weeks for more than we expected. 2% was a steal."</p>
+                    <p style="font-size: 14px; font-weight: 700; color: #B8960C;">— Jennifer L., Arkansas</p>
+                </div>
+                
+                <div style="background: transparent; padding: 30px 20px; border-radius: 0; border-left: 6px solid #B8960C;">
+                    <p style="font-size: 18px; line-height: 1.8; color: #000000; margin-bottom: 20px; font-style: italic; font-weight: 500;">"After a month FSBO with no serious offers, we gave them 30 days at 2%. Sold in 22 days. Wish we'd called them first—would've saved all that time and stress."</p>
+                    <p style="font-size: 14px; font-weight: 700; color: #B8960C;">— David R., Benton</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FINAL CTA -->
+    <section style="padding: 100px 20px; background: transparent;">
+        <div class="section-inner">
+            <h2 class="section-title">Ready To Save Up To 4%?</h2>
+            <p class="section-subtitle">If you're going to list with an agent, use one of the top 3 teams. 2% commission, not 5-6%.</p>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <button class="btn btn-gold" onclick="document.getElementById('leadForm').scrollIntoView({behavior: 'smooth'})">Get Your Free Consultation</button>
+                <br><br>
+                <a href="tel:+14798575994" class="btn btn-outline">Or Call Now: (479) 857-5994</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Exit Popup -->
+    <div id="exitPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; align-items: center; justify-content: center;">
+        <div style="background: #fff; padding: 50px; border-radius: 12px; max-width: 500px; position: relative; color: #1a1a1a;">
+            <button onclick="document.getElementById('exitPopup').classList.remove('show')" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 28px; cursor: pointer; color: #999;">&times;</button>
+            
+            <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 16px; color: #1a1a1a;">Wait! Before You Go...</h2>
+            <p style="font-size: 16px; color: #666; margin-bottom: 30px;">If you're going to list with an agent anyway, use one of the top 3 teams in the State of Arkansas and save up to 4% in commission.</p>
+            
+            <!-- Text Option -->
+            <div style="margin: 30px 0;">
+                <a href="sms:+14798575994&body=FSBO-NWA" style="display: inline-block; background: #B8960C; color: #000; padding: 18px 36px; border-radius: 8px; font-size: 18px; font-weight: 700; text-decoration: none; transition: all 0.2s; cursor: pointer;">
+                    📱 Click Here to Text "FSBO-NWA" to (479) 857-5994
+                </a>
+                <p style="font-size: 13px; color: #999; margin-top: 12px;">Your text app will open automatically with the message pre-filled. Just hit send!</p>
+            </div>
+            
+            <div style="text-align: center; color: #999; font-weight: 600; margin: 25px 0; font-size: 14px;">— OR —</div>
+            
+            <!-- Email Option -->
+            <div style="margin-top: 25px;">
+                <p style="font-size: 15px; font-weight: 600; margin-bottom: 16px; color: #1a1a1a;">Submit your email for the 2% plan:</p>
+                <form id="exitEmailForm" style="display: flex; flex-direction: column; gap: 12px;">
+                    <input type="email" required placeholder="Your email address" style="padding: 14px; border: 2px solid #ddd; border-radius: 6px; font-size: 15px;">
+                    <input type="text" required placeholder="Property address" style="padding: 14px; border: 2px solid #ddd; border-radius: 6px; font-size: 15px;">
+                    <button type="submit" style="background: #1a1a1a; color: #fff; padding: 16px; border: none; border-radius: 6px; font-size: 16px; font-weight: 700; cursor: pointer;">Send Me The 2% Plan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        #exitPopup.show {
+            display: flex !important;
+        }
+        
+        @media (max-width: 768px) {
+            #exitPopup > div {
+                margin: 20px;
+                padding: 30px 20px;
+                max-width: 90%;
+            }
+        }
+    </style>
+
+    <script>
+        // Form submission
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = {
+                name: formData.get('name'),
+                phone: formData.get('phone'),
+                address: formData.get('address') || '',
+                source: 'FSBO-NWA',
+                created_at: new Date().toISOString()
+            };
+            
+            // Send to Supabase
+            fetch('https://fzlwkbhpsklsgkinwljt.supabase.co/rest/v1/sellers', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6bHdrYmhwc2tsc2draW53bGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwNTE0MzEsImV4cCI6MjA4NzYyNzQzMX0.k3DC8UvCZ6U7Q5tujzH5YB55vfMC7sT2E4bJKlz-qM4',
+                    'Prefer': 'return=minimal'
+                },
+                body: JSON.stringify(data)
+            });
+            
+            // Email notification
+            fetch('https://script.google.com/macros/s/AKfycbwdXX0AT7DsGMvOTcj_0s8hCuZ0g5m-4kjwSctMwbTAxJ1ms7X9Uad_QKQicv7RbKrh4Q/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    domain: 'FSBOBackupPlan.com',
+                    ...data
+                })
+            });
+            
+            alert('✅ Got it! We\'ll call you within 24 hours to discuss your 2% backup plan.');
+            this.reset();
+        });
+
+        
+        // Exit intent popup - only after 15 seconds
+        let exitShown = false;
+        let exitReady = false;
+        
+        setTimeout(() => {
+            exitReady = true;
+        }, 15000);
+        
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY < 10 && !exitShown && exitReady) {
+                document.getElementById('exitPopup').classList.add('show');
+                exitShown = true;
+            }
+        });
+        
+        // Handle exit popup email form
+        const exitForm = document.getElementById('exitEmailForm');
+        if (exitForm) {
+            exitForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = this.querySelector('input[type="email"]').value;
+                const address = this.querySelector('input[type="text"]').value;
+                
+                fetch('https://fzlwkbhpsklsgkinwljt.supabase.co/rest/v1/sellers', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6bHdrYmhwc2tsc2draW53bGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwNTE0MzEsImV4cCI6MjA4NzYyNzQzMX0.k3DC8UvCZ6U7Q5tujzH5YB55vfMC7sT2E4bJKlz-qM4',
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        address: address,
+                        source: 'FSBO-NWA - Exit Popup',
+                        created_at: new Date().toISOString()
+                    })
+                });
+                
+                document.getElementById('exitPopup').classList.remove('show');
+                alert('✅ Got it! Check your email for the 2% backup plan details.');
+            });
+        }
+    </script>
+
+    <!-- Analytics Tracking -->
+    <script>
+        // Track page view on load
+        (function() {
+            const trackPageView = () => {
+                const data = {
+                    domain: 'theblk.group/fsbo-nwa',
+                    page: '/fsbo-backup-plan.html',
+                    referrer: document.referrer || null,
+                    user_agent: navigator.userAgent,
+                    created_at: new Date().toISOString()
+                };
+                
+                fetch('https://fzlwkbhpsklsgkinwljt.supabase.co/rest/v1/page_views', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6bHdrYmhwc2tsc2draW53bGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwNTE0MzEsImV4cCI6MjA4NzYyNzQzMX0.k3DC8UvCZ6U7Q5tujzH5YB55vfMC7sT2E4bJKlz-qM4',
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify(data)
+                }).catch(err => console.log('Analytics error:', err));
+            };
+            
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', trackPageView);
+            } else {
+                trackPageView();
+            }
+            
+            // Track form submissions
+            const leadForm = document.getElementById('leadForm');
+            if (leadForm) {
+                leadForm.addEventListener('submit', () => {
+                    fetch('https://fzlwkbhpsklsgkinwljt.supabase.co/rest/v1/conversions', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6bHdrYmhwc2tsc2draW53bGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwNTE0MzEsImV4cCI6MjA4NzYyNzQzMX0.k3DC8UvCZ6U7Q5tujzH5YB55vfMC7sT2E4bJKlz-qM4',
+                            'Prefer': 'return=minimal'
+                        },
+                        body: JSON.stringify({
+                            domain: 'theblk.group/fsbo-nwa',
+                            conversion_type: 'main_form',
+                            created_at: new Date().toISOString()
+                        })
+                    }).catch(err => console.log('Conversion tracking error:', err));
+                });
+            }
+            
+            // Track exit popup submissions
+            const exitForm = document.getElementById('exitEmailForm');
+            if (exitForm) {
+                exitForm.addEventListener('submit', () => {
+                    fetch('https://fzlwkbhpsklsgkinwljt.supabase.co/rest/v1/conversions', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6bHdrYmhwc2tsc2draW53bGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwNTE0MzEsImV4cCI6MjA4NzYyNzQzMX0.k3DC8UvCZ6U7Q5tujzH5YB55vfMC7sT2E4bJKlz-qM4',
+                            'Prefer': 'return=minimal'
+                        },
+                        body: JSON.stringify({
+                            domain: 'theblk.group/fsbo-nwa',
+                            conversion_type: 'exit_popup',
+                            created_at: new Date().toISOString()
+                        })
+                    }).catch(err => console.log('Conversion tracking error:', err));
+                });
+            }
+        })();
+    </script>
+
+</body>
+</html>
