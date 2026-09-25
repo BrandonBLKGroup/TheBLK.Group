@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expired Listing Ad - Creative A</title>
+<style>
+  body {margin: 0; padding: 20px; background: #1a1a1a; display: flex; justify-content: center; align-items: center; min-height: 100vh;}
+  .ad-container {width: 1080px; height: 1080px; position: relative; background: #0a0a0a; overflow: hidden;}
+  
+  /* Background home image (placeholder - replace with actual home photo) */
+  .bg-home {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080"><rect fill="%23333" width="1080" height="1080"/><text x="540" y="540" font-size="48" fill="%23666" text-anchor="middle" font-family="Arial">REPLACE WITH HOME PHOTO</text></svg>');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 80px 70px;
+    text-align: center;
+  }
+  
+  .expired-stamp {
+    background: #C12026;
+    color: #fff;
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 88px;
+    font-weight: 900;
+    letter-spacing: 12px;
+    padding: 20px 60px;
+    transform: rotate(-8deg);
+    display: inline-block;
+    margin: 0 auto 60px;
+    box-shadow: 0 8px 30px rgba(193, 32, 38, 0.6);
+    border: 6px solid #fff;
+  }
+  
+  .headline {
+    font-family: 'Arial', sans-serif;
+    font-size: 68px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+  }
+  
+  .subheadline {
+    font-family: 'Arial', sans-serif;
+    font-size: 68px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+  }
+  
+  .tagline {
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    font-style: italic;
+    color: #B8960C;
+    margin-bottom: 80px;
+  }
+  
+  .strategy {
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #B8960C;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+  
+  .bottom {
+    margin-top: auto;
+  }
+  
+  .brand {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  
+  .brand span {
+    color: #B8960C;
+  }
+  
+  .subtitle {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #ccc;
+    margin-bottom: 40px;
+  }
+  
+  .cta {
+    display: inline-block;
+    background: #B8960C;
+    color: #000;
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    padding: 18px 50px;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+  
+  .download-btn {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #B8960C;
+    color: #000;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+
+<div>
+  <div class="ad-container" id="ad">
+    <div class="bg-home"></div>
+    <div class="content">
+      <div>
+        <div class="expired-stamp">EXPIRED</div>
+        <div class="headline">YOUR HOME</div>
+        <div class="subheadline">DIDN'T SELL.</div>
+        <div class="tagline">That doesn't mean it won't.</div>
+        <div class="strategy">30-Day, 3% Commission Strategy</div>
+      </div>
+      
+      <div class="bottom">
+        <div class="brand">THE <span>BLK</span> GROUP</div>
+        <div class="subtitle">Nearly 1,000 Homes Sold</div>
+        <div class="cta">SEE WHAT WE'D DO DIFFERENTLY →</div>
+      </div>
+    </div>
+  </div>
+  
+  <button class="download-btn" onclick="downloadImage()">DOWNLOAD 1080x1080</button>
+</div>
+
+<script>
+function downloadImage() {
+  // For now, just right-click and save
+  // Or use html2canvas library for automatic download
+  alert('Right-click the image above and select "Save Image As..." to download.\n\nOr take a screenshot:\nMac: Cmd+Shift+4\nWindows: Win+Shift+S');
+}
+</script>
+
+</body>
+</html>
